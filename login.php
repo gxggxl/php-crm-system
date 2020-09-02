@@ -1,4 +1,12 @@
 <meta charset="utf-8">
+/*
+ * @Author       : gxggxl
+ * @E-mail       : gxggxl@qq.com
+ * @Date         : 2020-07-30 10:32:13
+ * @LastEditTime : 2020-09-02 23:05:24
+ * @FilePath     : /php-crm-system/login.php
+ */
+<?php include './head.php'; ?>
 <?php
     $conn = mysqli_connect('localhost','root','','test') or die('数据库连接失败');
     $conn->query("SET NAMES 'UTF8'");
