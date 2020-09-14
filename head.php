@@ -72,6 +72,3 @@
 			<!--/.nav-collapse -->
 		</div>
 	</nav>
-
-<!-- </body>
-</html> -->
