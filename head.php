@@ -9,7 +9,7 @@
 	<meta name="description" content="">
 	<meta name="author" content="">
 	<title>客户管理系统 for Bootstrap</title>
-	<link rel="icon" href="../favicon.ico">
+	<link rel="icon" href="./favicon.ico">
 	<!-- Bootstrap core CSS -->
 	<link rel="stylesheet" type="text/css" href="./css/bootstrap-3.3.7-dist/css/bootstrap.min.css" />
 	<link rel="stylesheet" href="./css/bootstrapvalidator-0.5.3/css/bootstrapValidator.min.css">
@@ -20,7 +20,7 @@
 	<!--[if lt IE 9]>
 		      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 		      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
-			<![endif]-->
+		<![endif]-->
 	<style>
 		body {
 			min-height: 2000px;
