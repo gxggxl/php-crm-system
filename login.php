@@ -60,28 +60,26 @@
 						<h3>用户登录</h3>
 						<div class="input-group input-group-md">
 							<span class="input-group-addon" id="sizing-addon1"><i class="glyphicon glyphicon-user" aria-hidden="true"></i></span>
-							<input type="text" class="form-control" placeholder="用户名" aria-describedby="sizing-addon1">
+							<input type="text" class="form-control" name="uesrname" placeholder="用户名" aria-describedby="sizing-addon1">
 						</div>
 						<div class="input-group input-group-md">
 							<span class="input-group-addon" id="sizing-addon1"><i class="glyphicon glyphicon-lock"></i></span>
-							<input type="password" class="form-control" placeholder="密码" aria-describedby="sizing-addon1">
+							<input type="password" class="form-control" name="password" placeholder="密码" aria-describedby="sizing-addon1">
 						</div>
-						<div class="well well-sm" style="text-align:center;">
-							<input type="radio" name="kind" value="tea"> 老师
-							<input type="radio" name="kind" value="stu"> 学生
-						</div>
-						<button type="submit" class="btn btn-success btn-block">
-							登录
-						</button>
+						<!-- <div class="well well-sm" style="text-align:center;">
+							<input type="radio" name="kind" value="tea"> 管理员
+							<input type="radio" name="kind" value="stu"> 客户
+						</div> -->
+						<button type="submit" class="btn btn-success btn-block">登录</button>
 					</div>
 				</div>
 				<div class="col-md-6">
 					<h3>
-						欢迎使用学生作业管理系统
+						欢迎使用客户管理系统
 					</h3>
 					<ul class="info-a">
-						<li>学生使用<em>学号</em>登录，初始密码为<em>6个1</em>，登录后请及时修改密码</li>
-						<li>老师请使用<em>工号</em>登录，初始密码为<em>6个1</em>，登录后请及时修改密码</li>
+						<li>管理员使用<em>admin</em>登录，初始密码为<em>123456</em>，登录后请及时修改密码</li>
+						<li>客户请使用<em>user</em>登录，初始密码为<em>123456</em>，登录后请及时修改密码</li>
 					</ul>
 				</div>
 			</div>
