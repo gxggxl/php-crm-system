@@ -1,4 +1,4 @@
-<?php include './head.php'; ?>
+<?php include 'head.php'; ?>
 <?php
  //    $conn = mysqli_connect('localhost','root','','test') or die('数据库连接失败');
  //    $conn->query("SET NAMES 'UTF8'");
@@ -85,4 +85,4 @@
 			</div>
 		</div>
 		
-<?php include './footer.php'; ?>
+<?php include 'footer.php'; ?>

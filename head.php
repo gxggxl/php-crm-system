@@ -64,8 +64,8 @@
 					</li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
-					<li><a href="./login.php">注册</a></li>
-					<li><a href="./registered.php">登录</a></li>
+					<li><a href="./registered.php">注册</a></li>
+					<li><a href="./login.php">登录</a></li>
 					<!-- <li class="active"><a href="./">Fixed top <span class="sr-only">(current)</span></a></li> -->
 				</ul>
 			</div>

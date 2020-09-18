@@ -1,4 +1,4 @@
-<?php include './head.php'; ?>
+<?php include 'head.php'; ?>
 <link rel="stylesheet" href="./css/bootstrapvalidator-0.5.3/css/bootstrapValidator.css">
 <script type="text/javascript" src="./css/bootstrapvalidator-0.5.3/js/bootstrapValidator.js"></script>
 <div class="caption">
@@ -179,7 +179,7 @@
 			})
 		</script>
 		
-<?php include './footer.php'; ?>
+<?php include 'footer.php'; ?>
 
 <!-- 下面是几个比较常见的验证规则。
 notEmpty：非空验证；
