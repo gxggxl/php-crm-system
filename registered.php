@@ -178,20 +178,19 @@
 				});
 			})
 		</script>
+		<!-- 下面是几个比较常见的验证规则。
+		notEmpty：非空验证；
+		stringLength：字符串长度验证；
+		regexp：正则表达式验证；
+		emailAddress：邮箱地址验证（都不用我们去写邮箱的正则了~~）
+		base64：64位编码验证；
+		between：验证输入值必须在某一个范围值以内，比如大于10小于100；
+		creditCard：身份证验证；
+		date：日期验证；
+		ip：IP地址验证；
+		numeric：数值验证；
+		url：url验证；
+		callback：自定义验证
+		Form表单的提交 -->
 		
 <?php include 'footer.php'; ?>
-
-<!-- 下面是几个比较常见的验证规则。
-notEmpty：非空验证；
-stringLength：字符串长度验证；
-regexp：正则表达式验证；
-emailAddress：邮箱地址验证（都不用我们去写邮箱的正则了~~）
-base64：64位编码验证；
-between：验证输入值必须在某一个范围值以内，比如大于10小于100；
-creditCard：身份证验证；
-date：日期验证；
-ip：IP地址验证；
-numeric：数值验证；
-url：url验证；
-callback：自定义验证
-Form表单的提交 -->
