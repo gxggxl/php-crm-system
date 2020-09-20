@@ -35,6 +35,7 @@ class Sql{
 		'charset' => 'utf8'
 	)
 	*/
+   
 	#实现数据的初始化：灵活性(允许外部修改)和通用性(给定默认值)
 	public function __construct(array $arr = []){
 		# 完成初始化
@@ -67,6 +68,7 @@ class Sql{
 		#正确返回
 		return true;
 	}
+	
 	#设置字符集
 	private function charset(){
 		#利用实现mysqli设置字符集
@@ -84,6 +86,7 @@ class Sql{
 		#正确返回
 		return true;
 	}
+	
 	#SQL执行检查
 	private function check($sql){
 		$res = @mysqli_query($this->link,$sql);
