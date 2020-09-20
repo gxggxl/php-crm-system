@@ -3,7 +3,7 @@
  * @Author       : gxggxl
  * @E-mail       : gxggxl@qq.com
  * @Date         : 2020-09-20 13:09:48
- * @LastEditTime : 2020-09-20 13:58:07
+ * @LastEditTime : 2020-09-20 19:27:49
  * @FilePath     : /php-crm-system/sql.php
  */
 include_once 'config.php';
@@ -22,6 +22,7 @@ class Sql{
 	public $columns = 0;#列数
 	public $rows;#行数
 	public $list; #二维数组
+	
 	#使用外部数据库信息
 	#构造方法初始化数据:数据较多，应该使用数组来传递数据，关联数组，而且绝大部分的开发者本意是用来测试，所以基本都是本地，因此可以给默认数据
 	/*
@@ -156,6 +157,8 @@ class Sql{
 */
 
 #接上述代码(类外测试)
+
+/*
 $s2 = new Sql($info);
 
 $tiem = time();
@@ -171,4 +174,6 @@ echo '自增长ID'.$s2->insert_id();
 // var_dump($s2->read_all('select * from user'));
 
 echo $s2->errno,$s2->error;
+*/
 
+?>
