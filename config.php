@@ -12,6 +12,14 @@ define("PASSWORD", "");
 # 默认，数据库端口
 define("PORT", "3306");
 # 默认，编码格式
-define("CHARSET", "utf-8");
+define("CHARSET", "utf8");
 
+$info = array(
+		'host' => 'localhost',
+		'port' => '3306 ',
+		'user' => 'root',
+		'password' => '',
+		'dbname' => 'test',
+		'charset' => 'utf8'
+	);
 ?>
