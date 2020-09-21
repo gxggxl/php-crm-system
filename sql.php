@@ -10,18 +10,30 @@ include_once 'config.php';
 #数据库操作类
 class Sql{
 	#定义属性:保存数据库初始化的信息
-	private $host;#主机
-	private $port;#端口
-	private $user;#数据库用户名
-	private $password;#数据库密码
-	private $dbname;#数据库名
-	private $charset;#字符集
-	private $link;#数据库连接字符串
-	public $errno;#错误编码
-	public $error;#错误信息
-	public $columns = 0;#列数
-	public $rows;#行数
-	public $list; #二维数组
+	#主机
+	private $host;
+	#端口
+	private $port;
+	#数据库用户名
+	private $user;
+	#数据库密码
+	private $password;
+	#数据库名
+	private $dbname;
+	#字符集
+	private $charset;
+	#数据库连接字符串
+	private $link;
+	#错误编码
+	public $errno;
+	#错误信息
+	public $error;
+	#列数
+	public $columns = 0;
+	#行数
+	public $rows;
+	#二维数组
+	public $list; 
 	
 	#使用外部数据库信息
 	#构造方法初始化数据:数据较多，应该使用数组来传递数据，关联数组，而且绝大部分的开发者本意是用来测试，所以基本都是本地，因此可以给默认数据
@@ -72,7 +84,8 @@ class Sql{
 	#设置字符集
 	private function charset(){
 		#利用实现mysqli设置字符集
-		$res = @mysqli_set_charset($this->link,$this->charset);#mysqli_query($this->link,"set names {$this->charset}");
+		$res = @mysqli_set_charset($this->link,$this->charset);
+		#mysqli_query($this->link,"set names {$this->charset}");
 		
 		#判定错误
 		if(!$res){
