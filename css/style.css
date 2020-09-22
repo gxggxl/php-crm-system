@@ -1,0 +1,36 @@
+html {
+	position: relative;
+	min-height: 100%;
+}
+
+body {
+	min-height: 2000px;
+	padding-top: 80px;
+}
+
+/*login start*/
+.login .input-group {
+	margin: 10px 0px;
+	/* 输入框上下外边距为10px,左右为0px */
+}
+
+.login .login-title {
+	padding: 5px;
+	border-bottom: 1px solid #ddd;
+	/*h3字体下边框*/
+}
+
+.login .info-a li {
+	list-style-type: square;
+	/*列表项图标为小正方形*/
+	margin: 10px 0;
+	/*上下外边距是10px*/
+}
+
+.login .info-a em {
+	/*强调的样式*/
+	color: #c7254e;
+	font-style: inherit;
+	background-color: #f9f2f4;
+}
+/*login End*/

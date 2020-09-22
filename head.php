@@ -17,21 +17,12 @@
 	<script type="text/javascript" src="./js/jQuery_v3.5.1.js"></script>
 	<script type="text/javascript" src="./css/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="./css/bootstrapvalidator-0.5.3/dist/js/bootstrapValidator.min.js"></script>
+	<link rel="stylesheet" href="./css/style.css">
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 	<!--[if lt IE 9]>
-		      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-		      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
-		<![endif]-->
-	<style type="text/css">
-		html{
-			position: relative;
-			min-height: 100%;
-		}
-		body {
-			min-height: 2000px;
-			padding-top: 80px;
-		}
-	</style>
+		<script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+		<script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
 </head>
 
 <body>
