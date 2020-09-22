@@ -28,9 +28,9 @@
 		</script>
 
 		<div class="container">
-			<div class="row">
+			<div class="row login">
 				<div class="col-md-6" style="border-right:1px solid #ddd;">
-					<div class="login well col-md-12">
+					<div class="well col-md-12">
 						<h3 class="login-title">用户登录</h3>
 						<div class="input-group input-group-md">
 							<span class="input-group-addon" id="sizing-addon1"><i class="glyphicon glyphicon-user" aria-hidden="true"></i></span>
