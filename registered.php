@@ -9,7 +9,7 @@
 					</div>
 				</div>
 				<div class="form-group">
-					<label class="col-md-3 control-label">Email</label>
+					<label class="col-md-3 control-label">E-mail</label>
 					<div class="col-md-6">
 						<input type="text" class="form-control" name="email" />
 					</div>
