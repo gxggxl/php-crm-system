@@ -6,6 +6,21 @@ html {
 body {
 	min-height: 1600px;
 	padding-top: 80px;
+	/* background: url(../images/bg.jpg) repeat fixed center; */
+	background: linear-gradient(-45deg,#ee6654, #ffffff, #2396d5, #23c5ab);
+	background-size: 400% 400%;
+	animation: moveBg 12s linear infinite;
+}
+@keyframes moveBg{
+    0%{
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0 50%;
+    }
 }
 
 /*login start*/
