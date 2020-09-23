@@ -1,10 +1,7 @@
 <?php include 'head.php'; ?>
-<link rel="stylesheet" href="./css/bootstrapvalidator-0.5.3/css/bootstrapValidator.css">
-<script type="text/javascript" src="./css/bootstrapvalidator-0.5.3/js/bootstrapValidator.js"></script>
-<div class="caption">
-	<div class="well well-sm col-xs-10 col-xs-offset-1">
+		<div class="caption margin">
 			<h3 class="text-center">用户注册</h3>
-			<form action="./registered.php" method="post" class="form-horizontal">
+			<form action="" method="post" class="form-horizontal">
 				<div class="form-group">
 					<label class="col-md-3 control-label">用户名</label>
 					<div class="col-md-6">
@@ -24,15 +21,9 @@
 					</div>
 				</div>
 				<div class="form-group">
-					<label class="col-md-3 control-label">电话</label>
-					<div class="col-md-6">
-						<input type="text" class="form-control" name="phoneNumber" />
-					</div>
-				</div>
-				<div class="form-group">
 					<label class="col-md-3 control-label">手机</label>
 					<div class="col-md-6">
-						<input type="text" class="form-control" name="phoneNumber1" data-bv-notempty="true" data-bv-notempty-message="用户名不能为空" />
+						<input type="text" class="form-control" name="phoneNumber" />
 					</div>
 				</div>
 				<div class="form-group">
@@ -60,7 +51,6 @@
 				</div>
 			</form>
 		</div>
-	</div>
 		<script type="text/javascript">
 			$(function() {
 				$('form').bootstrapValidator({
@@ -86,8 +76,12 @@
 									message: '用户名不能为空'
 								},
 								remote: { //后台验证，比如查询用户名是否存在
-									url: 'student/verifyUsername',
-									message: '此用户名已存在'
+									type: 'POST',
+									url: 'user_check.php',
+									message: '此用户名已存在',
+									delay: 1000
+									// url: 'student/verifyUsername',
+									// message: '此用户名已存在'
 								}
 							}
 						},
@@ -122,18 +116,6 @@
 								}
 							}
 						},
-						phoneNumber1: {
-							message: '电话号验证失败',
-							validators: {
-								notEmpty: {
-									message: '电话号不能为空'
-								},
-								regexp: { //正则验证
-									regexp: /^1\d{10}$/,
-									message: '请输入正确的电话号'
-								}
-							}
-						},
 						email: {
 							message: 'Email验证失败',
 							validators: {
@@ -142,17 +124,25 @@
 								},
 								emailAddress: { //验证email地址
 									message: '不是正确的email地址'
+								},
+								remote: {
+								    type: 'POST',
+								    url: 'user_check.php',
+								    message: 'The email is not available',
+								    delay: 2000
 								}
 							}
 						},
 						pwd: {
-							notEmpty: {
-								message: '密码不能为空'
-							},
-							stringLength: { //检测长度
-								min: 4,
-								max: 15,
-								message: '用户名需要在4~15个字符'
+							message: '密码验证失败',
+							validators: {
+								notEmpty: {
+									message: '密码不能为空'
+								},
+								stringLength: { //检测长度
+									min: 6,
+									message: '密码小于6个字符'
+								},
 							}
 						},
 						pwd1: {
@@ -160,6 +150,10 @@
 							validators: {
 								notEmpty: {
 									message: '密码不能为空'
+								},
+								stringLength: { //检测长度
+									min: 6,
+									message: '密码小于在6个字符'
 								},
 								identical: { //与指定控件内容比较是否相同，比如两次密码不一致
 									field: 'pwd', //指定控件name

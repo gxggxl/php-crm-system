@@ -16,7 +16,7 @@
 	<link rel="stylesheet" href="./css/bootstrapvalidator-0.5.3/css/bootstrapValidator.min.css">
 	<script type="text/javascript" src="./js/jQuery_v3.5.1.js"></script>
 	<script type="text/javascript" src="./css/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="./css/bootstrapvalidator-0.5.3/dist/js/bootstrapValidator.min.js"></script>
+	<script type="text/javascript" src="./css/bootstrapvalidator-0.5.3/js/bootstrapValidator.min.js"></script>
 	<link rel="stylesheet" href="./css/style.css">
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 	<!--[if lt IE 9]>
