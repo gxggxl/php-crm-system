@@ -37,12 +37,12 @@ if(isset($_POST['email'])){
 	}
 }
 
-if($pwd==$pwd1){
+if(isset($pwd)==isset($pwd1)){
 	$sql = "INSERT INTO `crm_users`(`username`, `password`, `email`, `age`, `phonenum`, `createtime`) VALUES ('{$username}','{$password}','{$email}','{$age}','{$phonenum}','{$createtime}')";
 	$res = $db->write($sql);
 	$id=$db->insert_id();
-	echo "注册成功，你的ID为".$id;
-	var_dump($res);
+	echo "注册成功，你的ID为 ".$id;
+	// var_dump($res);//int(1)
 }
 else{
 	echo "注册失败";
