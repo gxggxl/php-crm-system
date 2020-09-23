@@ -8,6 +8,7 @@ $age = $_POST["age"];
 $phonenum = $_POST["phonenum"];
 $pwd = $_POST["pwd"];
 $pwd1 = $_POST["pwd1"];
+$createtime = time();
 // Y ：年（四位数）大写 
 // m : 月（两位数，首位不足补0） 小写 
 // d ：日（两位数，首位不足补0） 小写 
@@ -17,8 +18,8 @@ $pwd1 = $_POST["pwd1"];
 // s ：带有首位零的秒（00 -59） 
 // a：小写的午前和午后（am 或 pm）
 // $time = date('Y-m-s H:i:s',time());
-$createtime = time();
 
+// 没加盐的md5加密
 $password = md5($pwd);
 
 if(isset($_POST['username'])){
@@ -26,32 +27,26 @@ if(isset($_POST['username'])){
 	//查到数据返回false，bool取反；
 	$res = (bool) $db->read_one($sql);
 	if($res){
-		echo "用户名已注册";
-		exit;
+		exit("用户名已注册");
 	}
 }
-
 if(isset($_POST['email'])){
 	$sql = "SELECT * FROM crm_users WHERE email='{$_POST['email']}'";
 	$res = (bool) $db->read_one($sql);
 	if($res){
-		echo "邮箱已注册";
-		exit;
+		exit("邮箱已注册");
 	}
 }
 
-
-	if($pwd==$pwd1){
-		$sql = "INSERT INTO `crm_users`(`username`, `password`, `email`, `age`, `phonenum`, `createtime`) VALUES ('{$username}','{$password}','{$email}','{$age}','{$phonenum}','{$createtime}')";
-		$res = $db->write($sql);
-		$id=$db->insert_id();
-		echo "注册成功，你的ID为".$id;
-		var_dump($res);
-	}
-	else{
-		echo "注册失败";
-	}
-
-
+if($pwd==$pwd1){
+	$sql = "INSERT INTO `crm_users`(`username`, `password`, `email`, `age`, `phonenum`, `createtime`) VALUES ('{$username}','{$password}','{$email}','{$age}','{$phonenum}','{$createtime}')";
+	$res = $db->write($sql);
+	$id=$db->insert_id();
+	echo "注册成功，你的ID为".$id;
+	var_dump($res);
+}
+else{
+	echo "注册失败";
+}
 
 ?>
