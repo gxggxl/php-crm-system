@@ -4,14 +4,14 @@ html {
 }
 
 body {
-	min-height: 1600px;
+	min-height: 100%;
 	padding-top: 80px;
 	/* background: url(../images/bg.jpg) repeat fixed center; */
-	background: linear-gradient(-45deg,#ee6654, #ffffff, #2396d5, #23c5ab);
+	background: linear-gradient(-45deg,#ee6654, #ffffff, #ffffff, #91b9c2);
 	background-size: 400% 400%;
 	animation: moveBg 12s linear infinite;
 }
-@keyframes moveBg{
+@keyframes /* moveBg */{
     0%{
         background-position: 0% 50%;
     }
