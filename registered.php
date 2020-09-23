@@ -69,6 +69,10 @@
 								notEmpty: { //不能为空
 									message: '用户名不能为空'
 								},
+								stringLength: { //检测长度
+									min: 4,
+									message: '用户名不能小于4个字符'
+								},
 								remote: {
 									//后台验证，询用户名是否存在
 									type: 'POST',
