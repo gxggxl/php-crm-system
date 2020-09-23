@@ -16,8 +16,8 @@
 $info = array(
 'host' => 'localhost',
 'port' => '3306 ',
-'user' => 'root',
-'password' => '',
+'user' => 'test',
+'password' => '123456',
 'dbname' => 'test',
 'charset' => 'utf8'
 );
