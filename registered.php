@@ -1,5 +1,5 @@
 <?php include 'head.php'; ?>
-		<div class="caption margin">
+		<div class="caption registered">
 			<h3 class="text-center">用户注册</h3>
 			<form action="registered_check.php" method="post" class="form-horizontal">
 				<div class="form-group">

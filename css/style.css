@@ -4,7 +4,7 @@ html {
 }
 
 body {
-	min-height: 2000px;
+	min-height: 1600px;
 	padding-top: 80px;
 }
 
@@ -34,3 +34,14 @@ body {
 	background-color: #f9f2f4;
 }
 /*login End*/
+
+/*registered start*/
+.registered{
+	margin: auto 10px;
+}
+/*registered End*/
+
+.footer{
+	margin: 5px;
+	padding: 5px;
+}

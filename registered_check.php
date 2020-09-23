@@ -24,7 +24,6 @@ $password = md5($pwd);
 
 if(isset($_POST['username'])){
 	$sql = "SELECT * FROM crm_users WHERE username='{$_POST['username']}'";
-	//查到数据返回false，bool取反；
 	$res = (bool) $db->read_one($sql);
 	if($res){
 		exit("用户名已注册");
