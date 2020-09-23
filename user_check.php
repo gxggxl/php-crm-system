@@ -6,10 +6,11 @@
  * @LastEditTime : 2020-09-23 15:24:21
  * @FilePath     : /php-crm-system/user_check.php
  */
+
 // 引入数据库操作
 include "conn.php";
 header('Content-type: application/json');
-
+// Bootstrapvalidator 用户后端实时检查
 $valid = true;//用户名可用
 // 查询用户是否存在
 if(isset($_POST['username'])){
@@ -18,7 +19,7 @@ if(isset($_POST['username'])){
 	$valid = !(bool) $db->read_one($sql);
 	// var_dump($valid);
 	// $valid = false;
-}else if(isset($_POST['email'])){
+}elseif(isset($_POST['email'])){
 	$sql = "SELECT * FROM crm_users WHERE email='{$_POST['email']}'";
 	$valid = !(bool) $db->read_one($sql);
 }
