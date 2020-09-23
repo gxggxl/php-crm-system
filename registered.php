@@ -1,7 +1,7 @@
 <?php include 'head.php'; ?>
 		<div class="caption margin">
 			<h3 class="text-center">用户注册</h3>
-			<form action="" method="post" class="form-horizontal">
+			<form action="registered_check.php" method="post" class="form-horizontal">
 				<div class="form-group">
 					<label class="col-md-3 control-label">用户名</label>
 					<div class="col-md-6">
@@ -9,9 +9,9 @@
 					</div>
 				</div>
 				<div class="form-group">
-					<label class="col-md-3 control-label">姓名</label>
+					<label class="col-md-3 control-label">Email</label>
 					<div class="col-md-6">
-						<input type="text" class="form-control" name="name" />
+						<input type="text" class="form-control" name="email" />
 					</div>
 				</div>
 				<div class="form-group">
@@ -23,13 +23,7 @@
 				<div class="form-group">
 					<label class="col-md-3 control-label">手机</label>
 					<div class="col-md-6">
-						<input type="text" class="form-control" name="phoneNumber" />
-					</div>
-				</div>
-				<div class="form-group">
-					<label class="col-md-3 control-label">Email</label>
-					<div class="col-md-6">
-						<input type="text" class="form-control" name="email" />
+						<input type="text" class="form-control" name="phonenum" />
 					</div>
 				</div>
 				<div class="form-group">
@@ -75,21 +69,12 @@
 								notEmpty: { //不能为空
 									message: '用户名不能为空'
 								},
-								remote: { //后台验证，比如查询用户名是否存在
+								remote: {
+									//后台验证，询用户名是否存在
 									type: 'POST',
 									url: 'user_check.php',
 									message: '此用户名已存在',
 									delay: 1000
-									// url: 'student/verifyUsername',
-									// message: '此用户名已存在'
-								}
-							}
-						},
-						name: {
-							message: '姓名验证失败',
-							validators: {
-								notEmpty: {
-									message: '姓名不能为空'
 								}
 							}
 						},
@@ -104,7 +89,7 @@
 								}
 							}
 						},
-						phoneNumber: {
+						phonenum: {
 							message: '电话号验证失败',
 							validators: {
 								notEmpty: {
@@ -122,14 +107,15 @@
 								notEmpty: {
 									message: 'Email不能为空'
 								},
-								emailAddress: { //验证email地址
+								emailAddress: {
+									//验证email地址
 									message: '不是正确的email地址'
 								},
 								remote: {
-								    type: 'POST',
-								    url: 'user_check.php',
-								    message: 'The email is not available',
-								    delay: 2000
+									type: 'POST',
+									url: 'user_check.php',
+									message: '邮箱已经注册',
+									delay: 2000
 								}
 							}
 						},
@@ -164,12 +150,12 @@
 					}
 				});
 
-				$("#btn").click(function() { //非submit按钮点击后进行验证，如果是submit则无需此句直接验证
-					$("form").bootstrapValidator('validate'); //提交验证
-					if ($("form").data('bootstrapValidator').isValid()) { //获取验证结果，如果成功，执行下面代码
-						alert("yes"); //验证成功后的操作，如ajax
-					}
-				});
+			// 	$("#btn").click(function() { //非submit按钮点击后进行验证，如果是submit则无需此句直接验证
+			// 		$("form").bootstrapValidator('validate'); //提交验证
+			// 		if ($("form").data('bootstrapValidator').isValid()) { //获取验证结果，如果成功，执行下面代码
+			// 			alert("yes"); //验证成功后的操作，如ajax
+			// 		}
+			// 	});
 			})
 		</script>
 		<!-- 下面是几个比较常见的验证规则。
@@ -186,5 +172,5 @@
 		url：url验证；
 		callback：自定义验证
 		Form表单的提交 -->
-		
+
 <?php include 'footer.php'; ?>
