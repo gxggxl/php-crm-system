@@ -98,6 +98,13 @@
 								regexp: { //正则验证
 									regexp: /^1\d{10}$/,
 									message: '请输入正确的电话号'
+								},
+								remote: {
+									//后台验证，询用户名是否存在
+									type: 'POST',
+									url: 'user_check.php',
+									message: '此手机号码已注册',
+									delay: 1000
 								}
 							}
 						},
@@ -114,7 +121,7 @@
 								remote: {
 									type: 'POST',
 									url: 'user_check.php',
-									message: '邮箱已经注册',
+									message: '此邮箱已经注册',
 									delay: 2000
 								}
 							}

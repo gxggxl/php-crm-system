@@ -22,6 +22,9 @@ if(isset($_POST['username'])){
 }elseif(isset($_POST['email'])){
 	$sql = "SELECT * FROM crm_users WHERE email='{$_POST['email']}'";
 	$valid = !(bool) $db->read_one($sql);
+}elseif(isset($_POST['phonenum'])){
+	$sql = "SELECT * FROM crm_users WHERE phonenum='{$_POST['phonenum']}'";
+	$valid = !(bool) $db->read_one($sql);
 }
 
 echo json_encode(
