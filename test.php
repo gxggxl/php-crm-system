@@ -22,3 +22,5 @@ var_dump($pas);
 $time = date('Y-m-s H:i:s',time());
  // int(1600849580)
 var_dump($time);
+
+?>
