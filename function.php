@@ -11,12 +11,13 @@ include_once "conn.php";
  * @param string $col 查询字段
  * @return boolean 查到返回真
  */
-function userCheck($db,$tableName,$post,$col){
-	if(isset($post)){
-		$sql = "SELECT * FROM {$tablename} WHERE {$col}='{$post}'";
-		$res = (bool)$db->read_one($sql);
-		return $res;
-	}
+function userCheck($db, $tableName, $post, $col)
+{
+    if (isset($post)) {
+        $sql = "SELECT * FROM {$tablename} WHERE {$col}='{$post}'";
+        $res = (bool)$db->read_one($sql);
+        return $res;
+    }
 }
 // var_dump($db,$tableName,$post,$col);
 // $tableName = "crm_users";
