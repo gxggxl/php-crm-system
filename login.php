@@ -1,9 +1,16 @@
 <?php include 'head.php'; ?>
+/*
+ * @Author       : gxggxl
+ * @E-mail       : gxggxl@qq.com
+ * @Date         : 2020-09-02 23:29:11
+ * @LastEditTime : 2020-09-24 22:12:18
+ * @FilePath     : /php-crm-system/login.php
+ */
 
 		<div class="container">
 			<div class="row login">
 				<div class="col-md-6" style="border-right:1px solid #ddd;">
-					<form action="./tool/login_form.php" method="post">
+					<form action="login_check.php" method="post">
 					<div class="well col-md-12">
 						<h3 class="login-title">用户登录</h3>
 						<div class="input-group input-group-md">
