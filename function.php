@@ -18,7 +18,7 @@ function userCheck($db,$tableName,$post,$col){
 		return $res;
 	}
 }
-var_dump($db,$tableName,$post,$col);
+// var_dump($db,$tableName,$post,$col);
 // $tableName = "crm_users";
 // // $user =;
 // if(isset($_POST['username'])){
