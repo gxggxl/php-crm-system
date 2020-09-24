@@ -7,20 +7,25 @@ body {
 	min-height: 100%;
 	padding-top: 80px;
 	/* background: url(../images/bg.jpg) repeat fixed center; */
-	background: linear-gradient(-45deg,#ee6654, #ffffff, #ffffff, #91b9c2);
+	background: linear-gradient(-45deg, #ee6654, #ffffff, #ffffff, #91b9c2);
 	background-size: 400% 400%;
 	animation: moveBg 12s linear infinite;
 }
-@keyframes /* moveBg */{
-    0%{
-        background-position: 0% 50%;
-    }
-    50%{
-        background-position: 100% 50%;
-    }
-    100%{
-        background-position: 0 50%;
-    }
+
+@keyframes {
+
+	/* moveBg */
+	0% {
+		background-position: 0% 50%;
+	}
+
+	50% {
+		background-position: 100% 50%;
+	}
+
+	100% {
+		background-position: 0 50%;
+	}
 }
 
 /*login start*/
@@ -48,15 +53,17 @@ body {
 	font-style: inherit;
 	background-color: #f9f2f4;
 }
+
 /*login End*/
 
 /*registered start*/
-.registered{
+.registered {
 	margin: auto 10px;
 }
+
 /*registered End*/
 
-.footer{
+.footer {
 	margin: 5px;
 	padding: 5px;
 }
