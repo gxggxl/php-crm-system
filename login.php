@@ -1,4 +1,4 @@
-<?php include 'head.php'; ?>
+<?php include 'head.php'; 
 /*
  * @Author       : gxggxl
  * @E-mail       : gxggxl@qq.com
@@ -6,7 +6,7 @@
  * @LastEditTime : 2020-09-24 22:12:18
  * @FilePath     : /php-crm-system/login.php
  */
-
+?>
 		<div class="container">
 			<div class="row login">
 				<div class="col-md-6" style="border-right:1px solid #ddd;">

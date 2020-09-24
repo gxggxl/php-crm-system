@@ -1,4 +1,5 @@
 <?php
+
 // 引入数据库操作文件
 include "conn.php";
 
@@ -18,7 +19,6 @@ var_dump($pas);
 // i ：带有首位零的分钟
 // s ：带有首位零的秒（00 -59）
 // a：小写的午前和午后（am 或 pm）
- 
 $time = date('Y-m-s H:i:s', time());
  // int(1600849580)
 var_dump($time);
