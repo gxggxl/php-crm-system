@@ -1,4 +1,4 @@
-<?php include 'head.php'; 
+<?php include_once 'head.php'; 
 /*
  * @Author       : gxggxl
  * @E-mail       : gxggxl@qq.com
@@ -15,7 +15,7 @@
 						<h3 class="login-title">用户登录</h3>
 						<div class="input-group input-group-md">
 							<span class="input-group-addon" id="sizing-addon1"><i class="glyphicon glyphicon-user" aria-hidden="true"></i></span>
-							<input type="text" class="form-control" name="uesrname" placeholder="用户名" aria-describedby="sizing-addon1">
+							<input type="text" class="form-control" name="username" placeholder="用户名" aria-describedby="sizing-addon1">
 						</div>
 						<div class="input-group input-group-md">
 							<span class="input-group-addon" id="sizing-addon1"><i class="glyphicon glyphicon-lock"></i></span>
