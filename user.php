@@ -10,4 +10,5 @@ echo "用户名:".$res['username']."<br>";
 echo "性别:".$res['sex']."<br>";
 echo "邮箱:".$res['email']."<br>";
 echo "手机:".$res['phonenum']."<br>";
+
 include 'footer.php';
