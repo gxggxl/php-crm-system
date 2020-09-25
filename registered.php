@@ -15,9 +15,11 @@
 					</div>
 				</div>
 				<div class="form-group">
-					<label class="col-md-3 control-label">年龄</label>
+					<label class="col-md-3 control-label">性别</label>
 					<div class="col-md-6">
-						<input type="text" class="form-control" name="age" />
+						<input type="radio" class="form-inline" name="sex" value="n"/> &nbsp;男
+						<input type="radio" class="form-inline" name="sex" value="m"/> &nbsp;女
+						<input type="radio" class="form-inline" name="sex" value="NULL" checked="checked"/> &nbsp;保密
 					</div>
 				</div>
 				<div class="form-group">
@@ -82,15 +84,15 @@
 								}
 							}
 						},
-						age: {
-							message: '年龄验证失败',
+						sex: {
+							message: '请选择性别',
 							validators: {
 								notEmpty: {
-									message: '年龄不能为空'
-								},
-								numeric: {
-									message: '请填写数字'
+									message: '请选择性别'
 								}
+								// numeric: {
+								// 	message: '请填写数字'
+								// }
 							}
 						},
 						phonenum: {

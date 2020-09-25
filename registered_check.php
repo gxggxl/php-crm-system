@@ -4,7 +4,7 @@ include "conn.php";
 
 $username = $_POST["username"];
 $email = $_POST["email"];
-$age = $_POST["age"];
+$sex = $_POST["sex"];
 $phonenum = $_POST["phonenum"];
 $pwd = $_POST["pwd"];
 $pwd1 = $_POST["pwd1"];
@@ -45,7 +45,7 @@ if (isset($_POST['phonenum'])) {
 }
 
 if ((isset($pwd)==isset($pwd1)) && isset($username)) {
-    $sql = "INSERT INTO `crm_users`(`username`, `password`, `email`, `age`, `phonenum`, `createtime`) VALUES ('{$username}','{$password}','{$email}','{$age}','{$phonenum}','{$createtime}')";
+    $sql = "INSERT INTO `crm_users`(`username`, `password`, `email`, `sex`, `phonenum`, `createtime`) VALUES ('{$username}','{$password}','{$email}','{$sex}','{$phonenum}','{$createtime}')";
     $res = $db->write($sql);
     $uid=$db->insert_id();
     echo "注册成功，你的ID为 ".$uid."用户名为：".$username;
