@@ -1,6 +1,7 @@
 <?php
 // 引入数据库操作文件
 include "conn.php";
+header('content-type:text/html;charset=utf-8');
 
 $username = $_POST["username"];
 $email = $_POST["email"];
@@ -51,5 +52,5 @@ if ((isset($pwd)==isset($pwd1)) && isset($username)) {
     echo "注册成功，你的ID为 ".$uid."用户名为：".$username;
 // var_dump($res);//int(1)
 } else {
-    echo "注册失败";
+    echo "注册失败，请检查表单是否填写正确。";
 }
