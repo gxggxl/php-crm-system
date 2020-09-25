@@ -19,14 +19,16 @@ if ($username == '' || $password == '') {
 } else {
 	$row = $db->read_one($sql);
 	if (empty ( $row )) {
-		echo $err_msg = "用户名和密码都不正确";
+		//开始判断是够为empty ( $row )空 
+		echo $err_msg = "用户名或密码不正确";
 	} else {
 		$_SESSION ['user_info'] = $row;
 		if (! empty ( $remember )) {
 			echo "登录成功";
 			// 如果记住登陆，则记录登录状态，把用户名和加密的密码放到cookie里面  
-			setcookie ( "username", $username, time () + 3600  );
-			setcookie ( "password", $password, time () + 3600 );
+			setcookie ( "username", $username, time () + 3600 ,"/");
+			setcookie ( "password", $password, time () + 3600 ,"/");
+			header("refresh:0;url=user.php");
 		}
 	}
 }

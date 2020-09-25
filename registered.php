@@ -17,9 +17,9 @@
 				<div class="form-group">
 					<label class="col-md-3 control-label">性别</label>
 					<div class="col-md-6">
-						<input type="radio" class="form-inline" name="sex" value="n"/> &nbsp;男
-						<input type="radio" class="form-inline" name="sex" value="m"/> &nbsp;女
-						<input type="radio" class="form-inline" name="sex" value="NULL" checked="checked"/> &nbsp;保密
+						<input type="radio" class="form-inline" name="sex" value="男"/> &nbsp;男
+						<input type="radio" class="form-inline" name="sex" value="女"/> &nbsp;女
+						<input type="radio" class="form-inline" name="sex" value="保密" checked="checked"/> &nbsp;保密
 					</div>
 				</div>
 				<div class="form-group">

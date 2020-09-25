@@ -1,4 +1,6 @@
-<?php header('content-type:text/html;charset=utf-8'); ?>
+<?php header('content-type:text/html;charset=utf-8'); 
+include_once "menu.php";
+?>
 <!DOCTYPE html>
 <html>
 
@@ -60,9 +62,8 @@
 						</ul>
 					</li>
 				</ul>
-				<ul class="nav navbar-nav navbar-right">
-					<li><a href="./registered.php">注册</a></li>
-					<li><a href="./login.php">登录</a></li>
+				<ul class="nav navbar-nav navbar-right"> 
+					<?php menu(); ?>
 					<!-- <li class="active"><a href="./">Fixed top <span class="sr-only">(current)</span></a></li> -->
 				</ul>
 			</div>
