@@ -13,8 +13,9 @@ $username = $_POST["username"];
 $password = md5 ($_POST["password"]);
 $remember = $_POST ['remember'];
 
-if (empty ( $_COOKIE ['username'] ) && empty ( $_COOKIE ['password'] )) {
-	exit("<script>alert('你已经登录！');</script>");
+if (!empty ( $_COOKIE ['username'] ) && !empty ( $_COOKIE ['password'] )) {
+	exit("<script>alert('你已经登录！');window.location='user.php';//window.location.href = document.referrer;//返回上一页并刷新，真正实现页面后退并刷新页面
+</script>");
 }
 
 $sql="SELECT username FROM crm_users WHERE username = '{$username}' AND password = '{$password}'";
