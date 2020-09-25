@@ -22,9 +22,7 @@
 							<input type="password" class="form-control" name="password" placeholder="密码" aria-describedby="sizing-addon1">
 						</div>
 						<div class="input-group input-group-md">
-							<span class="input-group-addon" id="sizing-addon1">记住我</span>
-							<input type="checkbox" class="form-control" name="remember" value="1" aria-describedby="sizing-addon1">
-							
+							<input type="checkbox" class="row" name="remember" value="1"><span>记住我</span>
 						</div>
 						<!-- <div class="well well-sm" style="text-align:center;">
 							<input type="radio" name="kind" value="tea"> 管理员
