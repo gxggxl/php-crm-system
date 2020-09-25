@@ -13,6 +13,10 @@ $username = $_POST["username"];
 $password = md5 ($_POST["password"]);
 $remember = $_POST ['remember'];
 
+if (empty ( $_COOKIE ['username'] ) && empty ( $_COOKIE ['password'] )) {
+	exit("<script>alert('你已经登录！');</script>");
+}
+
 $sql="SELECT username FROM crm_users WHERE username = '{$username}' AND password = '{$password}'";
 if ($username == '' || $password == '') {
 	echo $err_msg = "用户名和密码都不能为空";
@@ -34,5 +38,5 @@ if ($username == '' || $password == '') {
 		}
 	}
 }
-var_dump($row,$username,$password,$remember);
+// var_dump($row,$username,$password,$remember);
 ?>
