@@ -26,7 +26,7 @@ if (isset($_POST['username'])) {
     $sql = "SELECT * FROM crm_users WHERE username='{$_POST['username']}'";
     $res = (bool) $db->read_one($sql);
     if ($res) {
-        exit("{$_POST['username']}"."用户名已注册");
+        exit("用户名"."{$_POST['username']}"."已注册");
     }
 }
 if (isset($_POST['email'])) {
@@ -40,7 +40,7 @@ if (isset($_POST['phonenum'])) {
     $sql = "SELECT * FROM crm_users WHERE phonenum='{$_POST['phonenum']}'";
     $res = (bool) $db->read_one($sql);
     if ($res) {
-        exit("{$_POST['phonenum']}"."手机号码已注册");
+        exit("手机号码:"."{$_POST['phonenum']}"."已注册");
     }
 }
 
