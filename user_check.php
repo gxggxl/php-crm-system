@@ -8,7 +8,7 @@
  */
 
 // 引入数据库操作
-include "conn.php";
+include "database/conn.php";
 header('Content-type: application/json');
 // Bootstrapvalidator 用户后端实时检查
 $valid = true;//用户名可用

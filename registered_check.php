@@ -1,6 +1,6 @@
 <?php
 // 引入数据库操作文件
-include "conn.php";
+include "database/conn.php";
 header('content-type:text/html;charset=utf-8');
 
 $username = $_POST["username"];

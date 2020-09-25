@@ -7,7 +7,7 @@
  * @FilePath     : /php-crm-system/login_check.php
  */
 
-include_once "conn.php";
+include_once "database/conn.php";
 
 $username = $_POST["username"];
 $password = md5 ($_POST["password"]);
@@ -21,7 +21,9 @@ if ($username == '' || $password == '') {
 	if (empty ( $row )) {
 		//开始判断是够为empty ( $row )空 
 		echo $err_msg = "用户名或密码不正确";
-	} else {
+	} 
+	else {
+		session_start();
 		$_SESSION ['user_info'] = $row;
 		if (! empty ( $remember )) {
 			echo "登录成功";

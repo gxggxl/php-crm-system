@@ -1,6 +1,6 @@
 <?php
 
-include_once "conn.php";
+include_once "database/conn.php";
 
 /**
  * 查询用户是否存在

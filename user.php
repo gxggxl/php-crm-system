@@ -1,6 +1,6 @@
 <?php
 include_once "head.php";
-include_once "conn.php";
+include_once "database/conn.php";
 
 $sql = "SELECT * FROM crm_users WHERE username='{$_COOKIE['username']}'";
 $res = $db->read_one($sql);
