@@ -170,22 +170,5 @@ class Sql{
 	}
 }
 
-#接上述代码(类外测试)
-
-/*
-$s2 = new Sql($info);
-
-$tiem = time();
-// var_dump($s2->connect());
-// var_dump($s2->charset());
-// var_dump($s2->check('select * from user'));
-$res = $s2->read_all('desc user');
-// var_dump($res);
-$res1 = $s2->write("insert into user values ('','admin','123456','$tiem')");
-var_dump($res1);
-echo '自增长ID'.$s2->insert_id();
-
-echo $s2->errno,$s2->error;
-*/
 
 ?>
