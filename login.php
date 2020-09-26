@@ -32,14 +32,14 @@
 				</div>
 				</form>
 			</div>
-			<div class="col-md-6 well">
-				<h3>
-					欢迎使用客户管理系统
-				</h3>
-				<ul class="info-a">
-					<li>管理员使用<em>admin</em>登录，初始密码为<em>123456</em>，登录后请及时修改密码</li>
-					<li>客户请使用<em>user</em>登录，初始密码为<em>123456</em>，登录后请及时修改密码</li>
-				</ul>
+			<div class="col-md-6">
+				<div class="well">
+					<h3>欢迎使用客户管理系统</h3>
+					<ul class="info-a">
+						<li>管理员使用<em>admin</em>登录，初始密码为<em>123456</em>，登录后请及时修改密码</li>
+						<li>客户请使用<em>user</em>登录，初始密码为<em>123456</em>，登录后请及时修改密码</li>
+					</ul>
+				</div>
 			</div>
 		</div>
 	</div>
