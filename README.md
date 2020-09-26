@@ -4,7 +4,8 @@
 
 ## 更新纪录
 
-- 添加 [数据库操作类使用方法](database/README.md)
+- 2020\-09\-25 添加 [数据库操作类使用方法](database/README.md)
+- [更多详情](Changelog.md)
 
 ## 目录结构
 
