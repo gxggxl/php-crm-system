@@ -29,7 +29,14 @@ if ($username == '' || $password == '') {
 		echo $err_msg = "用户名或密码不正确";
 	} 
 	else {
-		session_start();
+		if (empty ( $remember )) {
+			echo "登录成功";
+			// 如果记住登陆，则记录登录状态，把用户名和加密的密码放到cookie里面  
+			setcookie ( "username", $username ,"/");
+			setcookie ( "password", $password ,"/");
+			header("refresh:0;url=user.php");
+		}
+		// session_start();
 		$_SESSION ['user_info'] = $row;
 		if (! empty ( $remember )) {
 			echo "登录成功";

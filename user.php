@@ -4,7 +4,10 @@ include_once "database/conn.php";
 
 $sql = "SELECT * FROM crm_users WHERE username='{$_COOKIE['username']}'";
 $res = $db->read_one($sql);
-
+// 验证登录状态
+if (empty($_COOKIE ['username']) && empty( $_COOKIE ['password'] )) {
+	exit("<script>alert('你没有登录！请登录。');window.location='login.php';</script>");
+}
 ?>
 <!-- <ul class="nav nav-pills nav-stacked">
   <li role="presentation" id="bar-1"><a href="bar-1">Bar 1</a></li>
