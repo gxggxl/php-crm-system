@@ -5,7 +5,7 @@ html {
 
 body {
 	min-height: 100%;
-	padding-top: 80px;
+	padding-top: 76px;
 	/* background: url(../images/bg.jpg) repeat fixed center; */
 	background: linear-gradient(-45deg, #ee6654, #ffffff, #ffffff, #91b9c2);
 	background-size: 400% 400%;
@@ -58,12 +58,11 @@ body {
 
 /*registered start*/
 .registered {
-	margin: auto 10px;
+	/* margin: auto 10px; */
 }
 
 /*registered End*/
 
 .footer {
-	margin: 5px;
 	padding: 5px;
 }

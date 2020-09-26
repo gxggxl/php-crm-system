@@ -1,51 +1,57 @@
 <?php include 'head.php'; ?>
 		<div class="caption registered">
-			<h3 class="text-center">用户注册</h3>
-			<form action="registered_check.php" method="post" class="form-horizontal">
-				<div class="form-group">
-					<label class="col-md-3 control-label">用户名</label>
-					<div class="col-md-6">
-						<input type="text" class="form-control" name="username" />
+			<div class="row">
+			<div class="col-md-10 col-md-offset-1">
+			<div class="well">
+				<h3 class="text-center">用户注册</h3>
+				<form action="registered_check.php" method="post" class="form-horizontal">
+					<div class="form-group">
+						<label class="col-md-3 control-label">用户名</label>
+						<div class="col-md-6">
+							<input type="text" class="form-control" name="username" />
+						</div>
 					</div>
-				</div>
-				<div class="form-group">
-					<label class="col-md-3 control-label">E-mail</label>
-					<div class="col-md-6">
-						<input type="text" class="form-control" name="email" />
+					<div class="form-group">
+						<label class="col-md-3 control-label">E-mail</label>
+						<div class="col-md-6">
+							<input type="text" class="form-control" name="email" />
+						</div>
 					</div>
-				</div>
-				<div class="form-group">
-					<label class="col-md-3 control-label">性别</label>
-					<div class="col-md-6">
-						<input type="radio" class="form-inline" name="sex" value="男"/> &nbsp;男
-						<input type="radio" class="form-inline" name="sex" value="女"/> &nbsp;女
-						<input type="radio" class="form-inline" name="sex" value="保密" checked="checked"/> &nbsp;保密
+					<div class="form-group">
+						<label class="col-md-3 control-label">性别</label>
+						<div class="col-md-6">
+							<input type="radio" class="form-inline" name="sex" value="男"/> &nbsp;男
+							<input type="radio" class="form-inline" name="sex" value="女"/> &nbsp;女
+							<input type="radio" class="form-inline" name="sex" value="保密" checked="checked"/> &nbsp;保密
+						</div>
 					</div>
-				</div>
-				<div class="form-group">
-					<label class="col-md-3 control-label">手机</label>
-					<div class="col-md-6">
-						<input type="text" class="form-control" name="phonenum" />
+					<div class="form-group">
+						<label class="col-md-3 control-label">手机</label>
+						<div class="col-md-6">
+							<input type="text" class="form-control" name="phonenum" />
+						</div>
 					</div>
-				</div>
-				<div class="form-group">
-					<label class="col-md-3 control-label">密码</label>
-					<div class="col-md-6">
-						<input type="text" class="form-control" name="pwd" />
+					<div class="form-group">
+						<label class="col-md-3 control-label">密码</label>
+						<div class="col-md-6">
+							<input type="text" class="form-control" name="pwd" />
+						</div>
 					</div>
-				</div>
-				<div class="form-group">
-					<label class="col-md-3 control-label">确认密码</label>
-					<div class="col-md-6">
-						<input type="text" class="form-control" name="pwd1" />
+					<div class="form-group">
+						<label class="col-md-3 control-label">确认密码</label>
+						<div class="col-md-6">
+							<input type="text" class="form-control" name="pwd1" />
+						</div>
 					</div>
-				</div>
-				<div class="form-group">
-					<div class="col-md-6 col-md-offset-3">
-						<button id="btn" type="submit" class="btn btn-primary btn-block active">提交</button>
+					<div class="form-group">
+						<div class="col-md-6 col-md-offset-3">
+							<button id="btn" type="submit" class="btn btn-primary btn-block active">提交</button>
+						</div>
 					</div>
-				</div>
-			</form>
+				</form>	
+			</div>
+			</div>
+			</div>
 		</div>
 		<script type="text/javascript">
 			$(function() {
