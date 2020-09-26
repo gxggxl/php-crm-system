@@ -5,8 +5,8 @@
 		<div class="container-fluid">
 			<div class="row">
 				<div class="clo-md-12">
-					<div class="well">
-						<span class="text-center">Copyright &copy; 2020 
+					<div class="well text-center">
+						<span>Copyright &copy; 2020 
 							<a href="http://beian.miit.gov.cn/" target="_blank">桂ICP备18002684号-3</a>&nbsp;|&nbsp;
 							<a href="https://gxusb.com" target="_blank">Blog</a>&nbsp;|&nbsp;
 							<a href="https://github.com/gxggxl/php-crm-system" target="_blank">项目开源地址</a>
