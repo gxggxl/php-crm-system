@@ -41,8 +41,8 @@ if ($username == '' || $password == '') {
 		if (! empty ( $remember )) {
 			echo "登录成功";
 			// 如果记住登陆，则记录登录状态，把用户名和加密的密码放到cookie里面  
-			setcookie ( "username", $username, time () + 3600 ,"/");
-			setcookie ( "password", $password, time () + 3600 ,"/");
+			setcookie ( "username", $username, time () + 3600*24*7 ,"/");
+			setcookie ( "password", $password, time () + 3600*24*7 ,"/");
 			header("refresh:0;url=user.php");
 		}
 	}
