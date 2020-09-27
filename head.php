@@ -64,7 +64,9 @@ include_once "menu.php";
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
 <?php menu();?>
-<!-- <li class="active"><a href="./">Fixed top <span class="sr-only">(current)</span></a></li> -->
+<!-- <li class="active">
+	<a href="./">Fixed top <span class="sr-only">(current)</span></a>
+</li> -->
 				</ul>
 			</div>
 			<!--/.nav-collapse -->
