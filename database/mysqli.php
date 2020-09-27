@@ -146,7 +146,11 @@ class Sql{
 		return mysqli_insert_id($this->link);
 	}
 
-	# 读取数据:一条记录
+	/**
+	 * [read_one 读取一条记录]
+	 * @param  [srting] $sql [数据库语句]
+	 * @return [Array]   	 [一维数组]
+	 */
 	public function read_one($sql){
 		# 执行检查
 		$res = $this->check($sql);
@@ -159,8 +163,11 @@ class Sql{
 		# 没有结果
 		return false;
 	}
-
-	# 读取多条数据
+	/**
+	 * [read_all 读取多条数据]
+	 * @param  [srting] $sql [数据库语句]
+	 * @return [Array]     	 [二维数组]
+	 */
 	public function read_all($sql){
 		# 执行检查
 		$res = $this->check($sql);
