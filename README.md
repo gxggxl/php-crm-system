@@ -11,6 +11,8 @@
 
 ```text
 .
+├── Changelog.md
+├── LICENSE
 ├── README.md
 ├── cookie_check.php
 ├── css
@@ -24,12 +26,14 @@
 │   │   └── js
 │   └── style.css
 ├── database
+│   ├── README.md
 │   ├── config.php
 │   ├── conn.php
-│   └── sql.php
+│   └── mysqli.php
 ├── footer.php
 ├── function.php
 ├── head.php
+├── home.php
 ├── images
 │   └── bg.jpg
 ├── index.php
@@ -38,6 +42,9 @@
 ├── login.php
 ├── login_check.php
 ├── menu.php
+├── page
+│   ├── demo.php
+│   └── page.class.php
 ├── registered.php
 ├── registered_check.php
 ├── test.php
