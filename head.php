@@ -1,4 +1,4 @@
-<?php header('content-type:text/html;charset=utf-8'); 
+<?php header('content-type:text/html;charset=utf-8');
 include_once "menu.php";
 ?>
 <!DOCTYPE html>
@@ -62,9 +62,9 @@ include_once "menu.php";
 						</ul>
 					</li>
 				</ul>
-				<ul class="nav navbar-nav navbar-right"> 
-					<?php menu(); ?>
-					<!-- <li class="active"><a href="./">Fixed top <span class="sr-only">(current)</span></a></li> -->
+				<ul class="nav navbar-nav navbar-right">
+<?php menu();?>
+<!-- <li class="active"><a href="./">Fixed top <span class="sr-only">(current)</span></a></li> -->
 				</ul>
 			</div>
 			<!--/.nav-collapse -->
