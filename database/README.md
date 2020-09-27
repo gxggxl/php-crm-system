@@ -5,7 +5,7 @@
 构造方法初始化数据:数据较多，应该使用数组来传递数据，关联数组，而且绝大部分的开发者本意是用来测试，所以基本都是本地，因此可以给默认数据
 
 ```php
-$info = array(
+$dbinfo = array(
 	'host' => 'localhost',
 	'port' => '3306 ',
 	'user' => 'root',
@@ -34,7 +34,7 @@ $info = array(
 
 ```php
 // 实例化数据库对象
-$db = new Sql($info);
+$db = new Sql($dbinfo);
 
 // var_dump($db->connect());
 // var_dump($db->charset());
