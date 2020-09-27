@@ -35,7 +35,9 @@ if (empty($_COOKIE['username']) && empty($_COOKIE['password'])) {
 	<div class="col-md-8">
 		<div class="well well-sm">
 <?php
+echo "<pre>";
 print_r($res);
+echo "</pre>";
 echo "uid:".$res['uid']."<br>";
 echo "用户名:".$res['username']."<br>";
 echo "性别:".$res['sex']."<br>";
