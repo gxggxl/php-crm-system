@@ -1,4 +1,4 @@
-<?php 
+<?php
 /*
  * @Author       : gxggxl
  * @E-mail       : gxggxl@qq.com
@@ -33,7 +33,7 @@ class Sql{
 	# 行数
 	public $rows;
 	# 二维数组
-	public $list; 
+	public $list;
 
 	# 实现数据的初始化：灵活性(允许外部修改)和通用性(给定默认值)
 	public function __construct(array $arr = []){
@@ -44,7 +44,7 @@ class Sql{
 		$this->password = $arr['password'] ?? 'root';
 		$this->dbname = $arr['dbname'] ?? 'test';
 		$this->charset = $arr['charset'] ?? 'utf8';
-		
+
 		# 实现初始化数据库操作
 		# 为了中断执行
 		if(!$this->connect()) return;
@@ -74,7 +74,7 @@ class Sql{
 		//
 		//           佛祖保佑       永不宕机     永无BUG
 	}
-	
+
 	# 连接认证
 	private function connect(){
 		$this->link = @mysqli_connect($this->host,$this->user,$this->password,$this->dbname,$this->port);
@@ -91,7 +91,7 @@ class Sql{
 		# 正确返回
 		return true;
 	}
-	
+
 	# 设置字符集
 	private function charset(){
 		# 利用实现mysqli设置字符集
@@ -109,7 +109,7 @@ class Sql{
 		# 正确返回
 		return true;
 	}
-	
+
 	# SQL执行检查
 	private function check($sql){
 		$res = @mysqli_query($this->link,$sql);
@@ -122,7 +122,7 @@ class Sql{
 		# 正确返回
 		return $res;
 	}
-	
+
 	# SQL写操作
 	public function write($sql){
 		# 调用SQL检查方法检查和执行
@@ -134,7 +134,7 @@ class Sql{
 	public function insert_id(){
 		return mysqli_insert_id($this->link);
 	}
-	
+
 	# 读取数据:一条记录
 	public function read_one($sql){
 		# 执行检查
@@ -148,7 +148,7 @@ class Sql{
 		# 没有结果
 		return false;
 	}
-	
+
 	# 读取多条数据
 	public function read_all($sql){
 		# 执行检查
