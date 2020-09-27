@@ -3,11 +3,11 @@
 // 引入数据库操作文件
 include "database/conn.php";
 
-$pass=md5(md5("123456")."gx");
+$pass = md5(md5("123456")."gx");
 // string(32) "e0ba03690d506d5a6c03ba1228ea5ca5"
 var_dump($pass);
 
-$pas=md5("123456");
+$pas = md5("123456");
 // string(32) "e10adc3949ba59abbe56e057f20f883e"
 var_dump($pas);
 
@@ -20,5 +20,5 @@ var_dump($pas);
 // s ：带有首位零的秒（00 -59）
 // a：小写的午前和午后（am 或 pm）
 $time = date('Y-m-s H:i:s', time());
- // int(1600849580)
+// int(1600849580)
 var_dump($time);
