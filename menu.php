@@ -1,5 +1,8 @@
 <?php
-
+/**
+ * [menu 菜单]
+ * @return [html] [输出HTML]
+ */
 function menu() {
 	if (!isset($_COOKIE['username'])) {
 		echo "<li><a href='registered.php'>注册</a></li>";
