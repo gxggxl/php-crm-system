@@ -16,7 +16,7 @@ $result=mysqli_query($link,"select * from crm_users");
 
 $total=mysqli_num_rows($result);
 
-$num=3;
+$num=5;
 
 $page=new Page($total,$num);
 
@@ -26,6 +26,7 @@ $result = mysqli_query($link,$sql);
 
 echo '<table border="1" align="center" cellspacing="" cellpadding="" width="900">';
 echo '<caption><h1>Users</h1></caption>';
+echo '<tr><th>uid</th><th>username</th><th>sex</th><th>email</th><th>phonenum</th><th>createtime</th></tr>';
 	while($row=mysqli_fetch_assoc($result)){
 		echo '<tr>';
 		echo '<td>'.$row["uid"].'</td>';
@@ -36,7 +37,6 @@ echo '<caption><h1>Users</h1></caption>';
 		echo '<td>'.$row["createtime"].'</td>';
 		echo '<tr>';
 	}
-	// <tr><th>Header</th></tr>
 echo '<tr><td colspan="6" align="right">'.$page->fpage().'</td></tr>';
 echo '</table>';
 
