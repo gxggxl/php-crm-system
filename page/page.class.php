@@ -34,7 +34,7 @@ class Page{
 		var_dump($this);
 	} 
 	private function setLimit(){
-		return "Limit ".($this->page-1)*$this->listRows.", {$this->listRows}";
+		return "LIMIT ".($this->page-1)*$this->listRows.", {$this->listRows}";
 	}
 	
 	private function getUri(){
