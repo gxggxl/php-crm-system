@@ -3,35 +3,36 @@
  * @Author       : gxggxl
  * @E-mail       : gxggxl@qq.com
  * @Date         : 2020-09-20 13:09:48
- * @LastEditTime : 2020-09-20 19:27:49
- * @FilePath     : /php-crm-system/sql.php
+ * @LastEditTime : 2020-09-27 20:24:07
+ * @FilePath     : /php-crm-system/database/mysqli.php
  */
-#数据库操作类
+
+# 数据库操作类
 class Sql{
-	#定义属性:保存数据库初始化的信息
-	#主机
+	# 定义属性:保存数据库初始化的信息
+	# 主机
 	private $host;
-	#端口
+	# 端口
 	private $port;
-	#数据库用户名
+	# 数据库用户名
 	private $user;
-	#数据库密码
+	# 数据库密码
 	private $password;
-	#数据库名
+	# 数据库名
 	private $dbname;
-	#字符集
+	# 字符集
 	private $charset;
-	#数据库连接字符串
+	# 数据库连接字符串
 	private $link;
-	#错误编码
+	# 错误编码
 	public $errno;
-	#错误信息
+	# 错误信息
 	public $error;
-	#列数
+	# 列数
 	public $columns = 0;
-	#行数
+	# 行数
 	public $rows;
-	#二维数组
+	# 二维数组
 	public $list; 
 
 	# 实现数据的初始化：灵活性(允许外部修改)和通用性(给定默认值)
@@ -69,7 +70,6 @@ class Sql{
 		//     =====`-.____`.___ \_____/___.-`___.-'=====
 		//                       `=---='
 		//
-		//
 		//     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 		//
 		//           佛祖保佑       永不宕机     永无BUG
@@ -96,8 +96,7 @@ class Sql{
 	private function charset(){
 		# 利用实现mysqli设置字符集
 		$res = @mysqli_set_charset($this->link,$this->charset);
-		#mysqli_query($this->link,"set names {$this->charset}");
-		
+		# mysqli_query($this->link,"set names {$this->charset}");
 		# 判定错误
 		if(!$res){
 			echo "设置字符集失败<br>";
@@ -114,7 +113,6 @@ class Sql{
 	# SQL执行检查
 	private function check($sql){
 		$res = @mysqli_query($this->link,$sql);
-		
 		# 判定错误
 		if(!$res){
 			$this->errno = mysqli_errno($this->link);
@@ -139,36 +137,33 @@ class Sql{
 	
 	# 读取数据:一条记录
 	public function read_one($sql){
-		#执行检查
+		# 执行检查
 		$res = $this->check($sql);
-		#判定结果
+		# 判定结果
 		if($res){
-		#有结果
+		# 有结果
 		$this->columns = @mysqli_field_count($this->link);
 			return mysqli_fetch_assoc($res);
 		}
-		#没有结果
+		# 没有结果
 		return false;
 	}
 	
-	#读取多条数据
+	# 读取多条数据
 	public function read_all($sql){
-		#执行检查
+		# 执行检查
 		$res = $this->check($sql);
-		
-		#错误检查
+		# 错误检查
 		if( !$res) return false;
-		#结果正确 记录结果数量
+		# 结果正确 记录结果数量
 		$this->rows = @mysqli_num_rows($res);
 		$this->columns = @mysqli_field_count($this->link);
-		
-		#根据需求解析数据 循环取出所有记录:形成二维数组
+		# 根据需求解析数据 循环取出所有记录:形成二维数组
 		$list = [];
 		while($row = mysqli_fetch_assoc($res)) $list[] = $row;
-		#返回结果
+		# 返回结果
 		return $list;
 	}
 }
-
 
 ?>
