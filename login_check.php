@@ -12,6 +12,7 @@ include_once "database/conn.php";
 $username = $_POST["username"];
 $password = md5 ($_POST["password"]);
 $remember = $_POST ['remember'];
+// $vcode = $_POST["vcode"];
 
 // 验证登录状态
 if (!empty ( $_COOKIE ['username'] ) && !empty ( $_COOKIE ['password'] )) {

@@ -21,13 +21,13 @@
 						<span class="input-group-addon" id="sizing-addon1"><i class="glyphicon glyphicon-lock"></i></span>
 						<input type="password" class="form-control" name="password" placeholder="密码" aria-describedby="sizing-addon1">
 					</div>
-					<div class="input-group input-group-md">
-						<input type="checkbox" class="row" name="remember" value="1"><span>记住我</span>
-					</div>
-					<!-- <div class="well well-sm" style="text-align:center;">
-						<input type="radio" name="kind" value="tea"> 管理员
-						<input type="radio" name="kind" value="stu"> 客户
+					<!-- <div class="input-group input-group-md">
+						<span class="input-group-addon" id="sizing-addon1"><i class="glyphicon glyphicon-exclamation-sign"></i></span>
+						<input type="text" class="form-control" name="vcode" placeholder="验证码" aria-describedby="sizing-addon1">
 					</div> -->
+					<div class="well-sm text-center">
+						<input type="checkbox" class="row" name="remember" value="1"><span>记住密码</span>
+					</div>
 					<button type="submit" class="btn btn-success btn-block">登录</button>
 				</div>
 				</form>

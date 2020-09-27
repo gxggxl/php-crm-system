@@ -18,7 +18,7 @@ if (empty($_COOKIE ['username']) && empty( $_COOKIE ['password'] )) {
 <div class="container-fluid">
 	<div class="row">
 	<div class="col-md-2">
-		<div class="well">
+		<div class="well well-sm">
 			<ul class="nav nav-pills nav-stacked">
 			  <li role="presentation" id="bar-1"><a href="bar-1">Bar 1</a></li>
 			  <li role="presentation" id="bar-2">
@@ -33,7 +33,7 @@ if (empty($_COOKIE ['username']) && empty( $_COOKIE ['password'] )) {
 		</div>
 	</div>
 	<div class="col-md-8">
-		<div class="well">
+		<div class="well well-sm">
 			<?php
 			var_dump($res);
 			echo "uid:".$res['uid']."<br>";
@@ -46,7 +46,7 @@ if (empty($_COOKIE ['username']) && empty( $_COOKIE ['password'] )) {
 	</div>
 	
 	<div class="col-md-2">
-		<div class="well">
+		<div class="well well-sm">
 			<?php
 			echo "uid:".$res['uid']."<br>";
 			echo "用户名:".$res['username']."<br>";
