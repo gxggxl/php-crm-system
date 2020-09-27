@@ -1,4 +1,4 @@
-<?php include_once 'head.php'; 
+<?php include_once 'head.php';
 /*
  * @Author       : gxggxl
  * @E-mail       : gxggxl@qq.com
@@ -7,7 +7,7 @@
  * @FilePath     : /php-crm-system/login.php
  */
 ?>
-	<div class="container">
+<div class="container">
 		<div class="row login">
 			<div class="col-md-6" style="border-right:1px solid #ddd;">
 				<form action="login_check.php" method="post">
@@ -43,5 +43,5 @@
 			</div>
 		</div>
 	</div>
-		
-<?php include 'footer.php'; ?>
+
+<?php include 'footer.php';?>
