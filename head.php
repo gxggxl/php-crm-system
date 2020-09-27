@@ -16,7 +16,7 @@ include_once "menu.php";
 	<!-- Bootstrap core CSS -->
 	<link rel="stylesheet" type="text/css" href="./css/bootstrap-3.3.7-dist/css/bootstrap.min.css" />
 	<link rel="stylesheet" href="./css/bootstrapvalidator-0.5.3/css/bootstrapValidator.min.css">
-	<script type="text/javascript" src="./js/jQuery_v3.5.1.js"></script>
+	<script type="text/javascript" src="./js/jQuery_v3.5.1.min.js"></script>
 	<script type="text/javascript" src="./css/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="./css/bootstrapvalidator-0.5.3/js/bootstrapValidator.min.js"></script>
 	<link rel="stylesheet" href="./css/style.css">
