@@ -31,7 +31,9 @@ class Page{
 		$this->page=!empty($_GET["page"]) ? $_GET["page"]:1;
 		$this->pageNum=ceil($this->total/$this->listRows);//向上取整
 		$this->limit=$this->setLimit();
-		var_dump($this);
+		echo "<pre>";
+		print_r($this);
+		echo "</pre>";
 	} 
 	private function setLimit(){
 		return "LIMIT ".($this->page-1)*$this->listRows.", {$this->listRows}";
