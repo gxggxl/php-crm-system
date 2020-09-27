@@ -92,7 +92,10 @@ class Sql{
 		return true;
 	}
 
-	# 设置字符集
+	/**
+	 * [charset 设置字符集]
+	 * @return [boolean]     [返回结果]
+	 */
 	private function charset(){
 		# 利用实现mysqli设置字符集
 		$res = @mysqli_set_charset($this->link,$this->charset);
@@ -110,7 +113,11 @@ class Sql{
 		return true;
 	}
 
-	# SQL执行检查
+	/**
+	 * [check SQL语句检查]
+	 * @param  [string] $sql [sql语句]
+	 * @return [boolean]     [返回结果]
+	 */
 	private function check($sql){
 		$res = @mysqli_query($this->link,$sql);
 		# 判定错误
@@ -130,7 +137,11 @@ class Sql{
 		# 根据结果判定:如果$res为true, 说明执行成功，应该获取受影响的行数，如果为false就返回false
 		return $res ? mysqli_affected_rows($this->link) : false;
 	}
-	# 获取自增长ID的方法
+
+	/**
+	 * [insert_id 获取自增长ID的方法]
+	 * @return [int] [返回增长ID]
+	 */
 	public function insert_id(){
 		return mysqli_insert_id($this->link);
 	}
