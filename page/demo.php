@@ -16,11 +16,13 @@ $result=mysqli_query($link,"select * from crm_users");
 
 $total=mysqli_num_rows($result);
 
-$num=10;
+$num=3;
 
 $page=new Page($total,$num);
 
 $sql="select * from crm_users {$page->limit}";
+
+$result = mysqli_query($link,$sql);
 
 echo '<table border="1" align="center" cellspacing="" cellpadding="" width="900">';
 echo '<caption><h1>Users</h1></caption>';
