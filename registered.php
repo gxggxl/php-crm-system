@@ -1,5 +1,5 @@
-<?php include 'head.php'; ?>
-		<div class="caption registered">
+<?php include 'head.php';?>
+<div class="caption registered">
 			<div class="row">
 			<div class="col-md-10 col-md-offset-1">
 			<div class="well">
@@ -48,7 +48,7 @@
 							<button id="btn" type="submit" class="btn btn-primary btn-block active">提交</button>
 						</div>
 					</div>
-				</form>	
+				</form>
 			</div>
 			</div>
 			</div>
@@ -178,4 +178,4 @@
 			})
 		</script>
 
-<?php include 'footer.php'; ?>
+<?php include 'footer.php';?>
