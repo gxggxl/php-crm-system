@@ -5,7 +5,7 @@ include_once "database/conn.php";
 $sql = "SELECT * FROM crm_users WHERE username='{$_COOKIE['username']}'";
 $res = $db->read_one($sql);
 // 验证登录状态
-if (empty($_COOKIE ['username']) && empty( $_COOKIE ['password'] )) {
+if (empty($_COOKIE['username']) && empty($_COOKIE['password'])) {
 	exit("<script>alert('你没有登录！请登录。');window.location='login.php';</script>");
 }
 ?>
@@ -34,27 +34,27 @@ if (empty($_COOKIE ['username']) && empty( $_COOKIE ['password'] )) {
 	</div>
 	<div class="col-md-8">
 		<div class="well well-sm">
-			<?php
-			var_dump($res);
-			echo "uid:".$res['uid']."<br>";
-			echo "用户名:".$res['username']."<br>";
-			echo "性别:".$res['sex']."<br>";
-			echo "邮箱:".$res['email']."<br>";
-			echo "手机:".$res['phonenum']."<br>";
-			?>
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur distinctio porro dolorum animi blanditiis neque mollitia odit maiores possimus perspiciatis aperiam at molestias earum ipsum atque necessitatibus est ex sit?</div>
+<?php
+var_dump($res);
+echo "uid:".$res['uid']."<br>";
+echo "用户名:".$res['username']."<br>";
+echo "性别:".$res['sex']."<br>";
+echo "邮箱:".$res['email']."<br>";
+echo "手机:".$res['phonenum']."<br>";
+?>
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur distinctio porro dolorum animi blanditiis neque mollitia odit maiores possimus perspiciatis aperiam at molestias earum ipsum atque necessitatibus est ex sit?</div>
 	</div>
-	
+
 	<div class="col-md-2">
 		<div class="well well-sm">
-			<?php
-			echo "uid:".$res['uid']."<br>";
-			echo "用户名:".$res['username']."<br>";
-			echo "性别:".$res['sex']."<br>";
-			echo "邮箱:".$res['email']."<br>";
-			echo "手机:".$res['phonenum']."<br>";
-			?>
-		</div>
+<?php
+echo "uid:".$res['uid']."<br>";
+echo "用户名:".$res['username']."<br>";
+echo "性别:".$res['sex']."<br>";
+echo "邮箱:".$res['email']."<br>";
+echo "手机:".$res['phonenum']."<br>";
+?>
+</div>
 	</div>
 	</div>
 </div>
@@ -67,4 +67,4 @@ if (empty($_COOKIE ['username']) && empty( $_COOKIE ['password'] )) {
 	}
 </script>
 
-<?php include_once 'footer.php'; ?>
+<?php include_once 'footer.php';?>
