@@ -7,9 +7,27 @@ body {
 	min-height: 100%;
 	padding-top: 76px;
 	/* background: url(../images/bg.jpg) repeat fixed center; */
+	background: -o-linear-gradient(135deg, #ee6654, #ffffff, #ffffff, #91b9c2);
 	background: linear-gradient(-45deg, #ee6654, #ffffff, #ffffff, #91b9c2);
 	background-size: 400% 400%;
-	animation: moveBg 12s linear infinite;
+	-webkit-animation: moveBg 12s linear infinite;
+	        animation: moveBg 12s linear infinite;
+}
+
+@-webkit-keyframes {
+
+	/* moveBg */
+	0% {
+		background-position: 0% 50%;
+	}
+
+	50% {
+		background-position: 100% 50%;
+	}
+
+	100% {
+		background-position: 0 50%;
+	}
 }
 
 @keyframes {
