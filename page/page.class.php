@@ -26,10 +26,7 @@ class Page {
 		"first"  => "首页",
 		"last"   => "末页",
 	);
-	/*
-	 * $total
-	 * $listRows
-	 */
+
 	public function __construct($total, $listRows = 5) {
 		$this->total    = $total;
 		$this->listRows = $listRows;
@@ -77,7 +74,7 @@ class Page {
 	}
 
 	private function pStart() {
-		if ($this->total == 0) {
+		if ($this->total <= 0) {
 			return 0;
 		} else {
 			return ($this->page-1)*$this->listRows+1;
