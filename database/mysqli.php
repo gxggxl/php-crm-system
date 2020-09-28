@@ -55,9 +55,13 @@ class Sql {
 		$this->charset();
 	}
 
-	# 连接认证
+	/**
+	 * [connect 连接认证]
+	 * @return [bool] [description]
+	 */
 	private function connect() {
-		$this->link = @mysqli_connect($this->host, $this->user, $this->password, $this->dbname, $this->port);
+		$this->link = @mysqli_connect($this->host, $this->port, $this->user, $this->password,
+			$this->dbname);
 		# 加工结果
 		if (!$this->link) {
 			# 记录错误信息，返回false
@@ -74,7 +78,7 @@ class Sql {
 
 	/**
 	 * [charset 设置字符集]
-	 * @return [boolean]     [返回结果]
+	 * @return [boolean]    [返回结果]
 	 */
 	private function charset() {
 		# 利用实现mysqli设置字符集
@@ -110,7 +114,11 @@ class Sql {
 		return $res;
 	}
 
-	# SQL写操作
+	/**
+	 * [write 数据库写操作]
+	 * @param  [string] $sql [数据库语句]
+	 * @return [int]    [返回受影响的行数]
+	 */
 	public function write($sql) {
 		# 调用SQL检查方法检查和执行
 		$res = $this->check($sql);
@@ -154,7 +162,6 @@ class Sql {
 		# 错误检查
 		if (!$res) {return false;
 		}
-
 		# 结果正确 记录结果数量
 		$this->rows    = @mysqli_num_rows($res);
 		$this->columns = @mysqli_field_count($this->link);
