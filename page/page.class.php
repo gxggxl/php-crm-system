@@ -19,7 +19,13 @@ class Page {
 	// 页数
 	private $pageNum;
 	// 分页显示配置
-	private $config = array('header' => "记录", "prev" => "上一页", "next" => "下一页", "first" => "首页", "last" => "末页");
+	private $config = array(
+		"header" => "记录",
+		"prev"   => "上一页",
+		"next"   => "下一页",
+		"first"  => "首页",
+		"last"   => "末页",
+	);
 	/*
 	 * $total
 	 * $listRows
