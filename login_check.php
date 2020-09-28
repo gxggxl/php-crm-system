@@ -8,9 +8,9 @@
  */
 
 include_once "database/conn.php";
-
-$username = $_POST["username"];
-$password = md5($_POST["password"]);
+// 删除左侧空格
+$username = trim($_POST["username"]);
+$password = md5(trim($_POST["password"]));
 $remember = $_POST['remember'];
 // $vcode = $_POST["vcode"];
 
