@@ -31,7 +31,5 @@ if (isset($_POST['phonenum'])) {
 }
 
 echo json_encode(
-	array(
-		'valid' => $valid,
-	)
+	array('valid' => $valid)
 );
