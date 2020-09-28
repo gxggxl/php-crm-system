@@ -39,10 +39,10 @@ class Sql {
 	public function __construct(array $arr = []) {
 		# 完成初始化
 		$this->host     = $arr['host']??'localhost';
-		$this->port     = $arr['port']??'3306';
 		$this->user     = $arr['user']??'root';
 		$this->password = $arr['password']??'root';
 		$this->dbname   = $arr['dbname']??'test';
+		$this->port     = $arr['port']??'3306';
 		$this->charset  = $arr['charset']??'utf8';
 
 		# 实现初始化数据库操作
@@ -60,8 +60,8 @@ class Sql {
 	 * @return [bool] [description]
 	 */
 	private function connect() {
-		$this->link = @mysqli_connect($this->host, $this->port, $this->user, $this->password,
-			$this->dbname);
+		$this->link = @mysqli_connect($this->host, $this->user, $this->password,
+			$this->dbname, $this->port, );
 		# 加工结果
 		if (!$this->link) {
 			# 记录错误信息，返回false
@@ -128,7 +128,7 @@ class Sql {
 
 	/**
 	 * [insert_id 获取自增长ID的方法]
-	 * @return [int] [返回增长ID]
+	 * @return [int] [返回最后一个查询中自动生成的 ID]
 	 */
 	public function insert_id() {
 		return mysqli_insert_id($this->link);
