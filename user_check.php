@@ -13,16 +13,19 @@ header('Content-type: application/json');
 // Bootstrapvalidator 用户后端实时检查
 $valid = true;//用户名可用
 // 查询用户是否存在
-if (isset($_POST['username'])) {
+$username = $_POST['username'];
+if (isset($username)) {
 	$sql = "SELECT * FROM crm_users WHERE username='{$_POST['username']}'";
 	//查到数据返回false，bool取反；
 	$valid = !(bool) $db->read_one($sql);
 	// var_dump($valid);
 	// $valid = false;
-} elseif (isset($_POST['email'])) {
+}
+if (isset($_POST['email'])) {
 	$sql   = "SELECT * FROM crm_users WHERE email='{$_POST['email']}'";
 	$valid = !(bool) $db->read_one($sql);
-} elseif (isset($_POST['phonenum'])) {
+}
+if (isset($_POST['phonenum'])) {
 	$sql   = "SELECT * FROM crm_users WHERE phonenum='{$_POST['phonenum']}'";
 	$valid = !(bool) $db->read_one($sql);
 }
