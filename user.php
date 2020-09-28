@@ -61,7 +61,6 @@ echo "手机:".$res['phonenum']."<br>";
 	</div>
 </div>
 
-
 <script>
 	function chevron_toggle(){
 	    $("#collapseParent").find("span").toggleClass("glyphicon-chevron-up");
