@@ -2,13 +2,13 @@
 // 引入数据库操作文件
 include "database/conn.php";
 header('content-type:text/html;charset=utf-8');
-
-$username   = $_POST["username"];
-$email      = $_POST["email"];
+// 删除左侧空格
+$username   = trim($_POST["username"]);
+$email      = trim($_POST["email"]);
 $sex        = $_POST["sex"];
-$phonenum   = $_POST["phonenum"];
-$pwd        = $_POST["pwd"];
-$pwd1       = $_POST["pwd1"];
+$phonenum   = trim($_POST["phonenum"]);
+$pwd        = trim($_POST["pwd"]);
+$pwd1       = trim($_POST["pwd1"]);
 $createtime = time();
 // Y ：年（四位数）大写
 // m : 月（两位数，首位不足补0） 小写
