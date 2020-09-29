@@ -16,5 +16,3 @@ $dbinfo = array(
 	'dbname'   => 'test',
 	'charset'  => 'utf8',
 );
-
-?>

@@ -36,6 +36,11 @@ class Sql {
 	public $error;
 
 	# 实现数据的初始化：灵活性(允许外部修改)和通用性(给定默认值)
+
+	/**
+	 * Sql constructor.
+	 * @param array $arr
+	 */
 	public function __construct(array $arr = []) {
 		# 完成初始化
 		$this->host     = $arr['host']??'localhost';
@@ -57,7 +62,7 @@ class Sql {
 
 	/**
 	 * [connect 连接认证]
-	 * @return [bool] [description]
+	 * @return bool [bool] [description]
 	 */
 	private function connect() {
 		$this->link = @mysqli_connect($this->host, $this->user, $this->password,
@@ -78,7 +83,7 @@ class Sql {
 
 	/**
 	 * [charset 设置字符集]
-	 * @return [boolean]    [返回结果]
+	 * @return bool [boolean]    [返回结果]
 	 */
 	private function charset() {
 		# 利用实现mysqli设置字符集
@@ -100,7 +105,7 @@ class Sql {
 	/**
 	 * [check SQL语句检查]
 	 * @param  [string] $sql [sql语句]
-	 * @return [boolean]     [返回结果]
+	 * @return bool|mysqli_result [boolean]     [返回结果]
 	 */
 	private function check($sql) {
 		$res = @mysqli_query($this->link, $sql);
@@ -117,7 +122,7 @@ class Sql {
 	/**
 	 * [write 数据库写操作]
 	 * @param  [string] $sql [数据库语句]
-	 * @return [int]    [返回受影响的行数]
+	 * @return bool|int [int]    [返回受影响的行数]
 	 */
 	public function write($sql) {
 		# 调用SQL检查方法检查和执行
@@ -128,7 +133,7 @@ class Sql {
 
 	/**
 	 * [insert_id 获取自增长ID的方法]
-	 * @return [int] [返回最后一个查询中自动生成的 ID]
+	 * @return int|string [int] [返回最后一个查询中自动生成的 ID]
 	 */
 	public function insert_id() {
 		return mysqli_insert_id($this->link);
@@ -137,7 +142,7 @@ class Sql {
 	/**
 	 * [read_one 读取一条记录]
 	 * @param  [srting] $sql [数据库语句]
-	 * @return [Array]   	 [一维数组]
+	 * @return bool|string[]|null [Array]   [一维数组]
 	 */
 	public function read_one($sql) {
 		# 执行检查
@@ -151,10 +156,11 @@ class Sql {
 		# 没有结果
 		return false;
 	}
+
 	/**
 	 * [read_all 读取多条数据]
 	 * @param  [srting] $sql [数据库语句]
-	 * @return [Array]     	 [二维数组]
+	 * @return array|bool [Array]         [二维数组]
 	 */
 	public function read_all($sql) {
 		# 执行检查
@@ -173,4 +179,3 @@ class Sql {
 	}
 }
 
-?>

@@ -13,5 +13,3 @@ include_once "config.php";
 include_once "mysqli.php";
 // 实例化数据库操作对象，并引入配置信息
 $db = new Sql($dbinfo);
-
-?>
