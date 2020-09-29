@@ -2,3 +2,7 @@ DemoResources
 *.json
 tree.md
 压缩后的文件.zip
+.idea/workspace.xml
+.idea/vcs.xml
+.idea/php.xml
+.idea/php-crm-system.iml
