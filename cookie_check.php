@@ -2,8 +2,7 @@
 
 //一般发在头文件进行登陆判断
 /**
- * [cookieCheck 登陆判断]
- * @return [bool] [description]
+ * 登陆判断
  */
 function cookieCheck() {
 	if (!isset($_COOKIE['username'])) {
