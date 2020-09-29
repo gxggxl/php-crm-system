@@ -169,12 +169,12 @@
 					}
 				});
 
-			// 	$("#btn").click(function() { //非submit按钮点击后进行验证，如果是submit则无需此句直接验证
-			// 		$("form").bootstrapValidator('validate'); //提交验证
-			// 		if ($("form").data('bootstrapValidator').isValid()) { //获取验证结果，如果成功，执行下面代码
-			// 			alert("yes"); //验证成功后的操作，如ajax
-			// 		}
-			// 	});
+				// $("#btn").click(function() { //非submit按钮点击后进行验证，如果是submit则无需此句直接验证
+				// 	$("form").bootstrapValidator('validate'); //提交验证
+				// 	if ($("form").data('bootstrapValidator').isValid()) { //获取验证结果，如果成功，执行下面代码
+				// 		alert("yes"); //验证成功后的操作，如ajax
+				// 	}
+				// });
 			})
 		</script>
 
