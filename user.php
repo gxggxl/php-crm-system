@@ -44,7 +44,7 @@ $rows = $db->read_all($sql1);
 // var_dump($limit,$page ,$sql1);
 
 /**
-* 数字检测奇偶
+* 检测数字奇偶
 * @var $num The number to check
 * @return BOOL
 */
