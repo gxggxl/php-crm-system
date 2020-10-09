@@ -31,6 +31,7 @@ if (empty($_COOKIE['username']) && empty($_COOKIE['password'])) {
 <?php
 $sql2 = "select * from crm_users";
 $db->read_all($sql2);
+//获取行数
 $total = $db->rows;
 
 $pageSize=isset($_GET['size'])?$_GET['size']:5;
