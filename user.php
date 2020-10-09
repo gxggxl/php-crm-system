@@ -53,15 +53,15 @@ function checkNum($num){
 }
 echo '<table class="table table-hover table-bordered table-responsive text-nowrap">';
 echo '<caption><h1 class="text-center">Users</h1></caption>';
-echo '<tbody>';
-echo '<tr>
+echo '<thead><tr>
 		<th scope="row">uid</th>
 		<th scope="row">username</th>
 		<th scope="row">sex</th>
 		<th scope="row">email</th>
 		<th scope="row">phonenum</th>
 		<th scope="row">createtime</th>
-		</tr>';
+		</tr></thead>';
+echo '<tbody>';
 for($i=0; $i <count($rows) ; $i++){
 	//表格隔行加了点颜色
 	if(checkNum($i)===false){
