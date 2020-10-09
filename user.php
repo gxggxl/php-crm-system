@@ -67,6 +67,7 @@ echo '<tr>
 		<th scope="row">createtime</th>
 		</tr>';
 for($i=0; $i <count($rows) ; $i++){
+	//表格隔行加了点颜色
 	if(checkNum($i)===false){
 		echo '<tr class="success">';
 		}else{
