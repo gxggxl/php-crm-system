@@ -1,19 +1,14 @@
 <?php
 include_once "head.php";
 include_once "database/conn.php";
-include "page/page.class.php";
+include_once "page/page.class.php";
 
 // 验证登录状态
 if (empty($_COOKIE['username']) && empty($_COOKIE['password'])) {
 	exit("<script>alert('你没有登录！请登录。');window.location='login.php';</script>");
 }
 ?>
-<!-- <ul class="nav nav-pills nav-stacked">
-  <li role="presentation" id="bar-1"><a href="bar-1">Bar 1</a></li>
-  <li role="presentation" id="bar-2"><a href="bar-2">Bar 2</a></li>
-  <li role="presentation" id="bar-3"><a href="bar-3">Bar 3</a></li>
-</ul>
- -->
+
 <div class="container-fluid">
 	<div class="row">
 	<div class="col-md-2">
