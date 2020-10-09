@@ -4,6 +4,8 @@ html {
 }
 
 body {
+	margin-right: calc(-1 * (100vw - 100%));
+    overflow-x: hidden;
 	min-height: 100%;
 	padding-top: 76px;
 	/* background: url(../images/bg.jpg) repeat fixed center; */
