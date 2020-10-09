@@ -24,7 +24,7 @@ $limit=$page->limit();
 $sql = "select * from crm_users limit {$limit}";
 $result = mysqli_query($link, $sql);
 // var_dump($result);
-echo '<table border="1" align="center" cellspacing="" cellpadding="" width="700">';
+echo '<table border="1" align="center" cellspacing="" cellpadding="" width="720">';
 echo '<caption><h1>Users</h1></caption>';
 echo '<tr><th>uid</th><th>username</th><th>sex</th><th>email</th><th>phonenum</th><th>createtime</th></tr>';
 while ($row = mysqli_fetch_assoc($result)) {
