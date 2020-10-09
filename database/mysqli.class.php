@@ -62,7 +62,7 @@ class Sql {
 
 	/**
 	 * [connect 连接认证]
-	 * @return bool [bool] [description]
+	 * @return bool [boolean] [description]
 	 */
 	private function connect() {
 		$this->link = @mysqli_connect($this->host, $this->user, $this->password,
@@ -160,7 +160,7 @@ class Sql {
 	/**
 	 * [read_all 读取多条数据]
 	 * @param  [srting] $sql [数据库语句]
-	 * @return array|bool [Array]         [二维数组]
+	 * @return array|bool [Array]   [二维数组]
 	 */
 	public function read_all($sql) {
 		# 执行检查
@@ -172,7 +172,7 @@ class Sql {
 		$this->rows    = @mysqli_num_rows($res);
 		$this->columns = @mysqli_field_count($this->link);
 		# 根据需求解析数据 循环取出所有记录:形成二维数组
-		$list                                          = [];
+		$list = [];
 		while ($row = mysqli_fetch_assoc($res))$list[] = $row;
 		# 返回结果
 		return $list;
