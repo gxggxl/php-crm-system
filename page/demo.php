@@ -10,20 +10,24 @@
 header("Content-Type:text/html;charset=utf-8");
 include "page.class.php";
 
+
 $link = mysqli_connect("127.0.0.1", "test", "123456", "test");
 
 $result = mysqli_query($link, "select * from crm_users");
 
 $total = mysqli_num_rows($result);
 
-$num = 5;
+// $num = 5;
+// $we ="select * FROM `crm_users` WHERE `username` LIKE '%admin%'";
 
-$page = new Page($total, $num);
+$page = new Page($total);
 
-$sql = "select * from crm_users {$page->limit}";
+$limit=$page->limit();
+
+$sql = "select * from crm_users limit {$limit}";
 
 $result = mysqli_query($link, $sql);
-
+// var_dump($result);
 echo '<table border="1" align="center" cellspacing="" cellpadding="" width="900">';
 echo '<caption><h1>Users</h1></caption>';
 echo '<tr><th>uid</th><th>username</th><th>sex</th><th>email</th><th>phonenum</th><th>createtime</th></tr>';
@@ -37,7 +41,7 @@ while ($row = mysqli_fetch_assoc($result)) {
 	echo '<td>'.$row["createtime"].'</td>';
 	echo '<tr>';
 }
-echo '<tr><td colspan="6" align="right">'.$page->fpage().'</td></tr>';
+echo '<tr><td colspan="6" align="right">'.$page->showPage().'</td></tr>';
 echo '</table>';
 
 ?>

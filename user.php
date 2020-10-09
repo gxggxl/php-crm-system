@@ -1,9 +1,8 @@
 <?php
 include_once "head.php";
 include_once "database/conn.php";
+include "page/page.class.php";
 
-$sql = "SELECT * FROM crm_users WHERE username='{$_COOKIE['username']}'";
-$res = $db->read_one($sql);
 // 验证登录状态
 if (empty($_COOKIE['username']) && empty($_COOKIE['password'])) {
 	exit("<script>alert('你没有登录！请登录。');window.location='login.php';</script>");
@@ -33,23 +32,71 @@ if (empty($_COOKIE['username']) && empty($_COOKIE['password'])) {
 		</div>
 	</div>
 	<div class="col-md-8">
-		<div class="well well-sm">
+		<div class="well well-sm table-responsive">
 <?php
-echo "<pre>";
-print_r($res);
-echo "</pre>";
-echo "uid:".$res['uid']."<br>";
-echo "用户名:".$res['username']."<br>";
-echo "性别:".$res['sex']."<br>";
-echo "邮箱:".$res['email']."<br>";
-echo "手机:".$res['phonenum']."<br>";
+$sql2 = "select * from crm_users";
+$db->read_all($sql2);
+$total = $db->rows;
+
+$num=isset($_GET['size'])?$_GET['size']:5;
+// var_dump($total);
+
+$page = new Page($total,$num);
+$limit=$page->limit();
+$sql1 = "select * from crm_users limit {$limit}";
+$rows = $db->read_all($sql1);
+// var_dump($limit,$page ,$sql1);
+
+/**
+* 数字检测奇偶
+* @var $num The number to check
+* @return BOOL
+*/
+function checkNum($num){
+  return ($num%2) ? true : false;
+}
+echo '<table class="table table-hover table-bordered table-responsive table-striped">';
+echo '<caption><h1 class="text-center">Users</h1></caption>';
+echo '<tbody>';
+echo '<tr>
+		<th scope="row">uid</th>
+		<th scope="row">username</th>
+		<th scope="row">sex</th>
+		<th scope="row">email</th>
+		<th scope="row">phonenum</th>
+		<th scope="row">createtime</th>
+		</tr>';
+for($i=0; $i <count($rows) ; $i++){
+	if(checkNum($i)===false){
+		echo '<tr class="success">';
+		}else{
+			echo '<tr>';
+	}
+	echo '<td>'.$rows[$i]["uid"].'</td>';
+	echo '<td>'.$rows[$i]["username"].'</td>';
+	echo '<td>'.$rows[$i]["sex"].'</td>';
+	echo '<td>'.$rows[$i]["email"].'</td>';
+	echo '<td>'.$rows[$i]["phonenum"].'</td>';
+	echo '<td>'.$rows[$i]["createtime"].'</td>';
+	echo '</tr>';
+}
+echo '<tr><td colspan="6" align="right">'.$page->showPage().'</td></tr>';
+echo '</tbody>';
+echo '</table>';
+
+// var_dump(count($rows,0));
+// echo "<pre>";
+// print_r($rows);
+// echo "</pre>";
 ?>
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur distinctio porro dolorum animi blanditiis neque mollitia odit maiores possimus perspiciatis aperiam at molestias earum ipsum atque necessitatibus est ex sit?</div>
+		</div>
 	</div>
 
 	<div class="col-md-2">
 		<div class="well well-sm">
 <?php
+$sql = "SELECT * FROM crm_users WHERE username='{$_COOKIE['username']}'";
+$res = $db->read_one($sql);
 echo "uid:".$res['uid']."<br>";
 echo "用户名:".$res['username']."<br>";
 echo "性别:".$res['sex']."<br>";

@@ -1,98 +1,66 @@
 <?php
-/*
- * @Author       : gxggxl
- * @E-mail       : gxggxl@qq.com
- * @Date         : 2020-09-27 14:40:37
- * @LastEditTime : 2020-09-27 20:11:21
- * @FilePath     : /php-crm-system/page/page.class.php
- */
 
-class Page {
-	// 数据表中总条数
-	private $total;
-	// 每页显示的行数
-	private $listRows;
-	// 每页显示记录数
-	private $limit;
-	// 页面URL
-	private $uri;
-	// 页数
-	private $pageNum;
-	// 分页显示配置
-	private $config = array(
-		"header" => "记录",
-		"prev"   => "上一页",
-		"next"   => "下一页",
-		"first"  => "首页",
-		"last"   => "末页",
-	);
-
-	public function __construct($total, $listRows = 5) {
-		$this->total    = $total;
-		$this->listRows = $listRows;
-		$this->uri      = $this->getUri();
-		$this->page     = !empty($_GET["page"])?$_GET["page"]:1;
-		$this->pageNum  = ceil($this->total/$this->listRows);//向上取整
-		$this->limit    = $this->setLimit();
-		echo "<pre>";
-		print_r($this);
-		echo "</pre>";
+class Page{
+	//成员属性
+	private $page = 1;//当前页
+	private $maxRows = 0;//总条数
+	private $pageSize = 0;//每页显示多少条
+	private $maxPage = 0;//总页数
+	private $url = null;//当前页面的URL地址
+	private $uelParam = '';//当前页面的参数
+	//成员方法
+	function __construct($maxRows,$pageSize = 5){
+		//进行初始化赋值操作
+		$this->maxRows = $maxRows;
+		$this->pageSize = $pageSize;
+		//定义当前页
+		$this->page = isset($_GET['page'])?$_GET['page']:1;
+		//获取当前页面的URL地址
+		$this->url = $_SERVER['PHP_SELF'];
+		//获取总页数
+		$this->getMaxPage();
+		//验证当前页的值
+		$this->checkPage();
+		//调用URL参数
+		$this->urlParam();
 	}
-
-	private function setLimit() {
-		return "LIMIT ".($this->page-1)*$this->listRows.", {$this->listRows}";
-	}
-
-	private function getUri() {
-		$url = $_SERVER["REQUEST_URI"].(strpos($_SERVER["REQUEST_URI"], '?')?'':"?");
-		// echo $url;
-		// var_dump(strpos($_SERVER["REQUEST_URI"],'?'));
-		// boolean false 没查到"?"
-		// int
-		$parse = parse_url($url);
-
-		if (isset($parse["query"])) {
-			parse_str($parse["query"], $parms);
-			unset($parms["page"]);
-			// del "page=xx"
-			$url = $parse['path'].'?'.http_build_query($parms);
-			// echo http_build_query($parms);
-			//print_r($parms);
+	//过滤当前URL地址中的参数信息
+	private function urlParam(){
+		foreach ($_GET as $key => $value) {
+			//判断参数值和参数名是否有效
+			if($value !='' && $key != 'page'){
+				$this->urlParam .= '&'.$key.'='.$value;
+			}
 		}
-		return $url;
-		// echo "<pre>";
-		// print_r($_SERVER);
-		// echo "</pre>";
+		// echo $this->urlParam;
 	}
-
-	public function __get($args) {
-		if ($args == "limit") {
-			return $this->limit;
-		} else {
-			return null;
+	//[getMaxPage 计算总页数]
+	private function getMaxPage(){
+		$this->maxPage = ceil($this->maxRows/$this->pageSize);
+	}
+	//验证当前页
+	private function checkPage(){
+		if($this->page>$this->maxPage){
+			$this->page = $this->maxPage;
+		}
+		if($this->page < 1){
+			$this->page = 1;
 		}
 	}
-
-	private function pStart() {
-		if ($this->total <= 0) {
-			return 0;
-		} else {
-			return ($this->page-1)*$this->listRows+1;
-		}
+	//输出页码
+	public function showPage(){
+		$str='';
+		$str.= '当前页'.$this->page.'/'.$this->maxPage.'页，共'.$this->maxRows.'条&nbsp;&nbsp;';
+		$str.='<a href="'.$this->url.'?page=1'.$this->urlParam.'">首页</a>&nbsp;&nbsp;';
+		$str.='<a href="'.$this->url.'?page='.($this->page-1).$this->urlParam.'">上一页</a>&nbsp;&nbsp;';
+		$str.='<a href="'.$this->url.'?page='.($this->page+1).$this->urlParam.'">下一页</a>&nbsp;&nbsp;';
+		$str.='<a href="'.$this->url.'?page='.$this->maxPage.$this->urlParam.'">尾页</a>&nbsp;&nbsp;';
+		return $str;
 	}
-
-	private function pEnd() {
-		return min($this->page*$this->listRows, $this->total);
-	}
-
-	function fpage() {
-		// return '分页信息';
-		$html .= "&nbsp;&nbsp;共有<b>{$this->total}</b>{$this->config["header"]}&nbsp;&nbsp;";
-		$html .= "&nbsp;&nbsp;每页显示<b>".($this->pEnd()-$this->pStart()+1)."</b>条，本页<b>{$this->pStart()}-{$this->PEnd()}</b>条&nbsp;&nbsp;";
-		$html .= "&nbsp;&nbsp;<b>{$this->page}/{$this->pageNum}</b>页&nbsp;&nbsp;";
-		return $html;
+	//返回分页的limit条件
+	public function limit(){
+		$num = ($this->page - 1) * $this->pageSize;
+		$limit = $num.','.$this->pageSize;
+		return $limit;
 	}
 }
-
-?>
-
