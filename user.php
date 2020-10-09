@@ -51,7 +51,7 @@ $rows = $db->read_all($sql1);
 function checkNum($num){
   return ($num%2) ? true : false;
 }
-echo '<table class="table table-hover table-bordered table-condensed table-responsive text-nowrap">';
+echo '<table class="table table-hover table-condensed table-responsive text-nowrap">';
 echo '<caption><h1 class="text-center">Users</h1></caption>';
 echo '<thead><tr>
 		<th scope="row">uid</th>
