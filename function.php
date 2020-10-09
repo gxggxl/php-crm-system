@@ -30,7 +30,7 @@ function userCheck($db, $tableName, $post, $col) {
 
 /**
 * 数字检测奇偶
-* @var $num The number to check
+* @var $num
 * @return BOOL
 */
 function checkNum($num){
@@ -39,8 +39,9 @@ function checkNum($num){
 
 /**
  * [logout 退出登录]
- * @return [type] [清除COOKIE]
+ * [清除COOKIE]
  */
+
 function logout() {
 	unset($_SESSION['user_info']);
 	if (!empty($_COOKIE['username']) || !empty($_COOKIE['password'])) {
