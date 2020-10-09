@@ -5,6 +5,7 @@
 ## 更新纪录
 
 - 2020\-09\-25 添加 [数据库操作类使用方法](database/README.md)
+- 2020\-10\-09 实现 [分页类](https://test.gxusb.com/page/demo.php)
 - [更多详情](Changelog.md)
 
 ## 目录结构
