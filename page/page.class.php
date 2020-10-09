@@ -37,15 +37,24 @@ class Page{
 	}
 	//[getMaxPage 计算总页数]
 	private function getMaxPage(){
-		$this->maxPage = ceil($this->maxRows/$this->pageSize);
+		if($this->pageSize <1 ){
+			$this->pageSize = 1;
+		}
+		$this->maxPage = @ceil($this->maxRows / $this->pageSize);
 	}
 	//验证当前页
 	private function checkPage(){
-		if($this->page>$this->maxPage){
+		if($this->page > $this->maxPage){
 			$this->page = $this->maxPage;
 		}
 		if($this->page < 1){
 			$this->page = 1;
+		}
+		if($this->pageSize > $this->maxRows){
+			$this->pageSize = $this->maxRows;
+		}
+		if($this->pageSize < 1){
+			$this->pageSize = 1;
 		}
 	}
 	//输出页码
