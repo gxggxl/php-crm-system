@@ -22,6 +22,7 @@ $pageSize=isset($_GET['size'])?$_GET['size']:5;
 // $we ="select * FROM `crm_users` WHERE `username` LIKE '%admin%'";
 
 $page = new Page($total,$pageSize);
+// var_dump($page);
 
 $limit=$page->limit();
 
