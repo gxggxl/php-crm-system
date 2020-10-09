@@ -16,11 +16,12 @@ $link = mysqli_connect("127.0.0.1", "test", "123456", "test");
 $result = mysqli_query($link, "select * from crm_users");
 
 $total = mysqli_num_rows($result);
+$pageSize=isset($_GET['size'])?$_GET['size']:5;
 
 // $num = 5;
 // $we ="select * FROM `crm_users` WHERE `username` LIKE '%admin%'";
 
-$page = new Page($total);
+$page = new Page($total,$pageSize);
 
 $limit=$page->limit();
 
