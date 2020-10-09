@@ -1,4 +1,11 @@
 <?php
+/*
+ * @Author       : gxggxl
+ * @E-mail       : gxggxl@qq.com
+ * @Date         : 2020-10-08 20:33:39
+ * @LastEditTime : 2020-10-09 21:07:21
+ * @FilePath     : /php-crm-system/page/page.class.php
+ */
 
 class Page{
 	//成员属性
@@ -22,7 +29,6 @@ class Page{
 		//验证当前页的值
 		$this->checkPage();
 		//调用URL参数
-		// $this->getUrl();
 		$this->urlParam();
 	}
 	//过滤当前URL地址中的参数信息
@@ -37,9 +43,8 @@ class Page{
 	}
 	//[getMaxPage 计算总页数]
 	private function getMaxPage(){
-		if($this->pageSize <1 ){
-			$this->pageSize = 1;
-		}
+		//判断除数
+		if($this->pageSize <1 ) $this->pageSize = 1;
 		$this->maxPage = @ceil($this->maxRows / $this->pageSize);
 	}
 	//验证当前页
