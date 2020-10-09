@@ -12,7 +12,7 @@ if (empty($_COOKIE['username']) && empty($_COOKIE['password'])) {
 <div class="container-fluid">
 	<div class="row">
 	<div class="col-md-2">
-		<div class="well well-sm">
+		<div class="panel panel-default">
 			<ul class="nav nav-pills nav-stacked">
 			  <li role="presentation" id="bar-1"><a href="bar-1">Bar 1</a></li>
 			  <li role="presentation" id="bar-2">
@@ -27,7 +27,7 @@ if (empty($_COOKIE['username']) && empty($_COOKIE['password'])) {
 		</div>
 	</div>
 	<div class="col-md-8">
-		<div class="well well-sm table-responsive">
+		<div class="panel panel-default table-responsive">
 <?php
 $sql2 = "select * from crm_users";
 $db->read_all($sql2);
@@ -100,7 +100,7 @@ echo "性别:".$res['sex']."<br>";
 echo "邮箱:".$res['email']."<br>";
 echo "手机:".$res['phonenum']."<br>";
 ?>
-</div>
+		</div>
 	</div>
 	</div>
 </div>
