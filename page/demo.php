@@ -3,31 +3,25 @@
  * @Author       : gxggxl
  * @E-mail       : gxggxl@qq.com
  * @Date         : 2020-09-27 14:41:08
- * @LastEditTime : 2020-09-27 20:11:29
+ * @LastEditTime : 2020-10-09 21:13:40
  * @FilePath     : /php-crm-system/page/demo.php
  */
-
-header("Content-Type:text/html;charset=utf-8");
 include "page.class.php";
-
+header("Content-Type:text/html;charset=utf-8");
 
 $link = mysqli_connect("127.0.0.1", "test", "123456", "test");
-
 $result = mysqli_query($link, "select * from crm_users");
-
+//获取记录总条数
 $total = mysqli_num_rows($result);
 $pageSize=isset($_GET['size'])?$_GET['size']:5;
 
-// $num = 5;
 // $we ="select * FROM `crm_users` WHERE `username` LIKE '%admin%'";
 
 $page = new Page($total,$pageSize);
 // var_dump($page);
-
 $limit=$page->limit();
 
 $sql = "select * from crm_users limit {$limit}";
-
 $result = mysqli_query($link, $sql);
 // var_dump($result);
 echo '<table border="1" align="center" cellspacing="" cellpadding="" width="900">';
