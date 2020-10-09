@@ -50,7 +50,7 @@ class Page{
 	//输出页码
 	public function showPage(){
 		$str='';
-		$str.= '当前页'.$this->page.'/'.$this->maxPage.'页，共'.$this->maxRows.'条&nbsp;&nbsp;';
+		$str.= '当前'.$this->page.'页/'.$this->maxPage.'页，共'.$this->maxRows.'条&nbsp;&nbsp;';
 		$str.='<a href="'.$this->url.'?page=1'.$this->urlParam.'">首页</a>&nbsp;&nbsp;';
 		$str.='<a href="'.$this->url.'?page='.($this->page-1).$this->urlParam.'">上一页</a>&nbsp;&nbsp;';
 		$str.='<a href="'.$this->url.'?page='.($this->page+1).$this->urlParam.'">下一页</a>&nbsp;&nbsp;';
