@@ -33,10 +33,10 @@ $sql2 = "select * from crm_users";
 $db->read_all($sql2);
 $total = $db->rows;
 
-$num=isset($_GET['size'])?$_GET['size']:5;
+$pageSize=isset($_GET['size'])?$_GET['size']:5;
 // var_dump($total);
 
-$page = new Page($total,$num);
+$page = new Page($total,$pageSize);
 $limit=$page->limit();
 $sql1 = "select * from crm_users limit {$limit}";
 $rows = $db->read_all($sql1);
