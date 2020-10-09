@@ -29,6 +29,15 @@ function userCheck($db, $tableName, $post, $col) {
 // }
 
 /**
+* 数字检测奇偶
+* @var $num The number to check
+* @return BOOL
+*/
+function checkNum($num){
+  return ($num%2) ? true : false;
+}
+
+/**
  * [logout 退出登录]
  * @return [type] [清除COOKIE]
  */
