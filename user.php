@@ -45,7 +45,7 @@ $rows = $db->read_all($sql1);
 
 /**
 * 检测数字奇偶
-* @var $num The number to check
+* @var $num
 * @return BOOL
 */
 function checkNum($num){
