@@ -9,10 +9,10 @@
 
 # 数据库配置项
 $dbinfo = array(
-	'host'     => 'localhost',
-	'port'     => '3306 ',
-	'user'     => 'test',
-	'password' => '123456',
-	'dbname'   => 'test',
-	'charset'  => 'utf8',
+    'host' => 'localhost',
+    'port' => '3306 ',
+    'user' => 'test',
+    'password' => '123456',
+    'dbname' => 'test',
+    'charset' => 'utf8',
 );
