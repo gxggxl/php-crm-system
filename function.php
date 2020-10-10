@@ -4,15 +4,15 @@ include_once "database/conn.php";
 
 /**
  * [userCheck 查询用户是否存在]
- * @param  [object] $db        [数据库对象]
- * @param  [string] $tableName [数据库表名]
- * @param  [string] $post      [表单值]
- * @param  [string] $col       [查询字段]
- * @return [boolean]           [返回布尔值]
+ * @param $db
+ * @param $tableName
+ * @param $post
+ * @param $col
+ * @return bool [boolean]           [返回布尔值]
  */
 function userCheck($db, $tableName, $post, $col) {
 	if (isset($post)) {
-		$sql = "SELECT * FROM {$tablename} WHERE {$col}='{$post}'";
+		$sql = "SELECT * FROM {$tableName} WHERE {$col}='{$post}'";
 		$res = (bool) $db->read_one($sql);
 		return $res;
 	}
@@ -53,7 +53,7 @@ function logout() {
 
 /**
  * [menu 菜单]
- * @return [html] [输出HTML]
+ * @return void [html] [输出HTML]
  */
 function menu() {
 	if (!isset($_COOKIE['username'])) {
