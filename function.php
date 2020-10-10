@@ -8,7 +8,7 @@ include_once "database/conn.php";
  * @param $tableName
  * @param $post
  * @param $col
- * @return bool [boolean]           [返回布尔值]
+ * @return bool   [返回布尔值]
  */
 function userCheck($db, $tableName, $post, $col) {
 	if (isset($post)) {
@@ -29,7 +29,7 @@ function userCheck($db, $tableName, $post, $col) {
 // }
 
 /**
-* 数字检测奇偶
+* 检测数字奇偶
 * @var $num
 * @return BOOL
 */
@@ -53,7 +53,7 @@ function logout() {
 
 /**
  * [menu 菜单]
- * @return void [html] [输出HTML]
+ * @return void [输出HTML]
  */
 function menu() {
 	if (!isset($_COOKIE['username'])) {
