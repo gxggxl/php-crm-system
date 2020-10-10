@@ -17,16 +17,6 @@ function userCheck($db, $tableName, $post, $col) {
 		return $res;
 	}
 }
-// var_dump($db,$tableName,$post,$col);
-// $tableName = "crm_users";
-// // $user =;
-// if(isset($_POST['username'])){
-// $valid = userCheck($db,$tableName,$_POST['username'],"username");
-// }elseif(isset($_POST['phonenum'])){
-// $valid = userCheck($db,$tableName,$_POST['phonenum'],"phonenum");
-// }elseif(isset($_POST['email'])){
-// $valid = userCheck($db,$tableName,$_POST['email'],"email");
-// }
 
 /**
 * 检测数字奇偶
