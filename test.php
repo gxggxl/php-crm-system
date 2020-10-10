@@ -5,7 +5,7 @@
  * @DateTime : 2020/10/10 16:33
  */
 // 引入数据库操作文件
-include_once "database/conn.php";
+include_once dirname(__FILE__)."/database/conn.php";
 
 $pass = md5(md5("123456") . "gx");
 // string(32) "e0ba03690d506d5a6c03ba1228ea5ca5"

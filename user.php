@@ -1,6 +1,6 @@
 <?php
-include_once "head.php";
-include_once "database/conn.php";
+include dirname(__FILE__)."/head.php";
+include_once $_SERVER['DOCUMENT_ROOT']."/database/conn.php";
 include_once "page/page.class.php";
 
 // 验证登录状态
