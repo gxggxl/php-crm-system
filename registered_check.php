@@ -45,7 +45,7 @@ if (isset($_POST['phonenum'])) {
 	}
 }
 
-if ((isset($pwd) == isset($pwd1)) && isset($username)) {
+if (isset($pwd) == isset($pwd1) && (isset($username)&&$username!=null)) {
 	$sql = "INSERT INTO `crm_users`(`username`, `password`, `email`, `sex`, `phonenum`, `createtime`) VALUES ('{$username}','{$password}','{$email}','{$sex}','{$phonenum}','{$createtime}')";
 	$res = $db->write($sql);
 	$uid = $db->insert_id();
@@ -53,4 +53,5 @@ if ((isset($pwd) == isset($pwd1)) && isset($username)) {
 	// var_dump($res);//int(1)
 } else {
 	echo "注册失败，请检查表单是否填写正确。";
+    exit("<script>alert('注册失败，请检查表单是否填写正确。');window.location='registered.php';</script>");
 }
