@@ -2,7 +2,7 @@
 
 /**
  * [logout 退出登录]
- * @return [type] [清除COOKIE]
+ * @return void [清除COOKIE]
  */
 function logout() {
 	unset($_SESSION['user_info']);
@@ -13,5 +13,3 @@ function logout() {
 	}
 }
 logout();
-
-?>
