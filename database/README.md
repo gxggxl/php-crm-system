@@ -43,7 +43,7 @@ $db = new Sql($dbinfo);
 var_dump($db->check('select * from user'));
 
 // 读取所有数据 并打印，循环取出所有记录:形成二维数组，返回数组
-$res = $db->read_all('desc user');
+$res = $db->readAll('desc user');
 var_dump($res);
 
 // 数据库写操作，需要传入数据库语句。

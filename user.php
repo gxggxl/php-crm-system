@@ -30,7 +30,7 @@ if (empty($_COOKIE['username']) && empty($_COOKIE['password'])) {
 		<div class="panel panel-default table-responsive">
 <?php
 $sql2 = "select * from crm_users";
-$db->read_all($sql2);
+$db->readAll($sql2);
 //获取行数
 $total = $db->rows;
 
@@ -40,7 +40,7 @@ $pageSize=isset($_GET['size'])?$_GET['size']:10;
 $page = new Page($total,$pageSize);
 $limit=$page->limit();
 $sql1 = "select * from crm_users limit {$limit}";
-$rows = $db->read_all($sql1);
+$rows = $db->readAll($sql1);
 // var_dump($limit,$page ,$sql1);
 
 /**
@@ -93,7 +93,7 @@ echo '</table>';
 		<div class="well well-sm">
 <?php
 $sql = "SELECT * FROM crm_users WHERE username='{$_COOKIE['username']}'";
-$res = $db->read_one($sql);
+$res = $db->readOne($sql);
 echo "uid:".$res['uid']."<br>";
 echo "用户名:".$res['username']."<br>";
 echo "性别:".$res['sex']."<br>";

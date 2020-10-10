@@ -130,7 +130,7 @@ class Sql
      * @param  [string] $sql [数据库语句]
      * @return bool|string[]|null  [一维数组]
      */
-    public function read_one($sql)
+    public function readOne($sql)
     {
         # 执行检查
         $res = $this->check($sql);
@@ -149,7 +149,7 @@ class Sql
      * @param  [string] $sql [数据库语句]
      * @return array|bool  [二维数组]
      */
-    public function read_all($sql)
+    public function readAll($sql)
     {
         # 执行检查
         $res = $this->check($sql);

@@ -13,7 +13,7 @@ $sql = "SELECT username FROM crm_users WHERE username = '{$username}' AND passwo
 if ($username == '' || $password == '') {
 	$err_msg = "用户名和密码都不能为空";
 } else {
-	$row = $db->read_one($sql);
+	$row = $db->readOne($sql);
 	if (empty($row)) {
 		$err_msg = "用户名和密码都不正确";
 	} else {

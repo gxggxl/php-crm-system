@@ -25,21 +25,21 @@ $password = md5($pwd);
 
 if (isset($_POST['username'])) {
 	$sql = "SELECT * FROM crm_users WHERE username='{$_POST['username']}'";
-	$res = (bool) $db->read_one($sql);
+	$res = (bool) $db->readOne($sql);
 	if ($res) {
 		exit("用户名"."{$_POST['username']}" ."已注册");
 	}
 }
 if (isset($_POST['email'])) {
 	$sql = "SELECT * FROM crm_users WHERE email='{$_POST['email']}'";
-	$res = (bool) $db->read_one($sql);
+	$res = (bool) $db->readOne($sql);
 	if ($res) {
 		exit("{$_POST['email']}" ."邮箱已注册");
 	}
 }
 if (isset($_POST['phonenum'])) {
 	$sql = "SELECT * FROM crm_users WHERE phonenum='{$_POST['phonenum']}'";
-	$res = (bool) $db->read_one($sql);
+	$res = (bool) $db->readOne($sql);
 	if ($res) {
 		exit("手机号码:"."{$_POST['phonenum']}" ."已注册");
 	}
