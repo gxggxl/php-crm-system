@@ -13,13 +13,13 @@ $link = mysqli_connect("127.0.0.1", "test", "123456", "test");
 $result = mysqli_query($link, "select * from crm_users");
 //获取记录总条数
 $total = mysqli_num_rows($result);
-$pageSize=isset($_GET['size'])?$_GET['size']:5;
+$pageSize = isset($_GET['size']) ? $_GET['size'] : 5;
 
 // $we ="select * FROM `crm_users` WHERE `username` LIKE '%admin%'";
 
-$page = new Page($total,$pageSize);
+$page = new Page($total, $pageSize);
 // var_dump($page);
-$limit=$page->limit();
+$limit = $page->limit();
 
 $sql = "select * from crm_users limit {$limit}";
 $result = mysqli_query($link, $sql);
@@ -28,14 +28,14 @@ echo '<table border="1" align="center" cellspacing="" cellpadding="" width="720"
 echo '<caption><h1>Users</h1></caption>';
 echo '<tr><th>uid</th><th>username</th><th>sex</th><th>email</th><th>phonenum</th><th>createtime</th></tr>';
 while ($row = mysqli_fetch_assoc($result)) {
-	echo '<tr>';
-	echo '<td>'.$row["uid"].'</td>';
-	echo '<td>'.$row["username"].'</td>';
-	echo '<td>'.$row["sex"].'</td>';
-	echo '<td>'.$row["email"].'</td>';
-	echo '<td>'.$row["phonenum"].'</td>';
-	echo '<td>'.$row["createtime"].'</td>';
-	echo '<tr>';
+    echo '<tr>';
+    echo '<td>' . $row["uid"] . '</td>';
+    echo '<td>' . $row["username"] . '</td>';
+    echo '<td>' . $row["sex"] . '</td>';
+    echo '<td>' . $row["email"] . '</td>';
+    echo '<td>' . $row["phonenum"] . '</td>';
+    echo '<td>' . $row["createtime"] . '</td>';
+    echo '<tr>';
 }
-echo '<tr><td colspan="6" align="right">'.$page->showPage().'</td></tr>';
+echo '<tr><td colspan="6" align="right">' . $page->showPage() . '</td></tr>';
 echo '</table>';
