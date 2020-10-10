@@ -1,9 +1,13 @@
 <?php
-
+/**
+ * @author   ：gxggxl
+ * @BlogURL  : https://gxusb.com
+ * @DateTime : 2020/10/10 16:33
+ */
 // 引入数据库操作文件
-include "database/conn.php";
+include_once "database/conn.php";
 
-$pass = md5(md5("123456")."gx");
+$pass = md5(md5("123456") . "gx");
 // string(32) "e0ba03690d506d5a6c03ba1228ea5ca5"
 var_dump($pass);
 
@@ -25,6 +29,6 @@ $time = date('Y-m-s H:i:s', time());
 var_dump($time);
 
 $str = "  Hello World!";
-var_dump($str."<br>");
+var_dump($str . "<br>");
 //删除左侧空格
 var_dump(trim($str));

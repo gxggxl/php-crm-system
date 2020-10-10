@@ -1,10 +1,8 @@
 <?php
-/*
- * @Author       : gxggxl
- * @E-mail       : gxggxl@qq.com
- * @Date         : 2020-10-08 20:33:39
- * @LastEditTime : 2020-10-09 21:07:21
- * @FilePath     : /php-crm-system/page/page.class.php
+/**
+ * @author   ：gxggxl
+ * @BlogURL  : https://gxusb.com
+ * @DateTime : 2020/10/10 16:33
  */
 
 class Page{
