@@ -15,6 +15,9 @@ $pas = md5("123456");
 // string(32) "e10adc3949ba59abbe56e057f20f883e"
 var_dump($pas);
 
+//获取用户IP地址
+print_r('<pre>用户IP地址：'.$_SERVER['SERVER_ADDR'].'</pre>');
+
 // Y ：年（四位数）大写
 // m : 月（两位数，首位不足补0） 小写
 // d ：日（两位数，首位不足补0） 小写

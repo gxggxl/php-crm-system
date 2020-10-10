@@ -10,6 +10,7 @@ $phonenum   = trim($_POST["phonenum"]);
 $pwd        = trim($_POST["pwd"]);
 $pwd1       = trim($_POST["pwd1"]);
 $createtime = time();
+$ip=$_SERVER['SERVER_ADDR'];
 // Y ：年（四位数）大写
 // m : 月（两位数，首位不足补0） 小写
 // d ：日（两位数，首位不足补0） 小写
@@ -46,7 +47,7 @@ if (isset($_POST['phonenum'])) {
 }
 
 if (isset($pwd) == isset($pwd1) && (isset($username)&&$username!=null)) {
-	$sql = "INSERT INTO `crm_users`(`username`, `password`, `email`, `sex`, `phonenum`, `createtime`) VALUES ('{$username}','{$password}','{$email}','{$sex}','{$phonenum}','{$createtime}')";
+	$sql = "INSERT INTO `crm_users`(`username`, `password`, `email`, `sex`, `phonenum`, `createtime`,`ip`) VALUES ('{$username}','{$password}','{$email}','{$sex}','{$phonenum}','{$createtime}','{$ip}')";
 	$res = $db->write($sql);
 	$uid = $db->insert_id();
 	echo "注册成功，你的ID为 ".$uid."用户名为：".$username;
