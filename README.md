@@ -1,5 +1,3 @@
-# php-crm-system
-
 ## 客户管理系统
 
 ## 更新纪录
@@ -16,11 +14,11 @@
 ├── README.md
 ├── cookie_check.php
 ├── css
-│   ├── bootstrap-3.3.7-dist
+│   ├── bootstrap-3.3.7
 │   │   ├── css
 │   │   ├── fonts
 │   │   └── js
-│   ├── bootstrapvalidator-0.5.3
+│   ├── bootstrap-validator-0.5.3
 │   │   ├── README.md
 │   │   ├── css
 │   │   └── js
@@ -52,7 +50,6 @@
 ├── test.php
 ├── tool
 │   ├── checkLogin.php
-│   ├── login_form.php
 │   └── logout.php
 ├── user.php
 └── user_check.php
