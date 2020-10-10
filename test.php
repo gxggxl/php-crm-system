@@ -17,6 +17,11 @@ var_dump($pas);
 
 //获取用户IP地址
 print_r('<pre>用户IP地址：'.$_SERVER['SERVER_ADDR'].'</pre>');
+//获取用户UA
+print_r('<pre>用户UA：'.$_SERVER['HTTP_USER_AGENT'].'</pre>');
+//var_dump($_SERVER);
+
+var_dump(__DIR__);//文件路径
 
 // Y ：年（四位数）大写
 // m : 月（两位数，首位不足补0） 小写
@@ -27,11 +32,11 @@ print_r('<pre>用户IP地址：'.$_SERVER['SERVER_ADDR'].'</pre>');
 // s ：带有首位零的秒（00 -59）
 // a：小写的午前和午后（am 或 pm）
 
-$time = date('Y-m-s H:i:s', time());
-// int(1600849580)
-var_dump($time);
+//$time = date('Y-m-d H:i:s', time());
+//// int(1600849580)
+//var_dump($time);
 
-$str = "  Hello World!";
-var_dump($str . "<br>");
-//删除左侧空格
-var_dump(trim($str));
+//$str = "  Hello World!";
+//var_dump($str . "<br>");
+////删除左侧空格
+//var_dump(trim($str));

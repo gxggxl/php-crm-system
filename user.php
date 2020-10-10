@@ -59,7 +59,7 @@ echo '<thead><tr>
 		<th scope="row">性别</th>
 		<th scope="row">E-mail</th>
 		<th scope="row">phonenum</th>
-		<th scope="row">createtime</th>
+		<th scope="row">注册时间</th>
 		<th scope="row">注册IP地址</th>
 		</tr></thead>';
 echo '<tbody>';
@@ -75,7 +75,7 @@ for($i=0; $i <count($rows) ; $i++){
 	echo '<td>'.$rows[$i]["sex"].'</td>';
 	echo '<td>'.$rows[$i]["email"].'</td>';
 	echo '<td>'.$rows[$i]["phonenum"].'</td>';
-	echo '<td>'.$rows[$i]["createtime"].'</td>';
+	echo '<td>'.date('Y年m月d日 H:i:s', $rows[$i]["createtime"]).'</td>';
     echo '<td>'.$rows[$i]["ip"].'</td>';
 	echo '</tr>';
 }
