@@ -54,10 +54,10 @@ function checkNum($num){
 echo '<table class="table table-hover table-condensed table-responsive text-nowrap">';
 echo '<caption><h1 class="text-center">Users</h1></caption>';
 echo '<thead><tr>
-		<th scope="row">uid</th>
-		<th scope="row">username</th>
-		<th scope="row">sex</th>
-		<th scope="row">email</th>
+		<th scope="row">用户ID</th>
+		<th scope="row">用户名</th>
+		<th scope="row">性别</th>
+		<th scope="row">E-mail</th>
 		<th scope="row">phonenum</th>
 		<th scope="row">createtime</th>
 		<th scope="row">注册IP地址</th>
