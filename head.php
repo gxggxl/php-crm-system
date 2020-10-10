@@ -18,7 +18,7 @@ include_once "menu.php";
 	<link rel="stylesheet" type="text/css" href="css/bootstrap-3.3.7/css/bootstrap.min.css" />
 	<!-- <link rel="stylesheet" href="./css/bootstrap-3.3.7-dist/css/bootstrap-theme.min.css"> -->
 	<link rel="stylesheet" href="css/bootstrap-validator-0.5.3/css/bootstrapValidator.min.css">
-	<script type="text/javascript" src="./js/jQuery_v3.5.1.js"></script>
+	<script type="text/javascript" src="js/jquery_v3.5.1.js"></script>
 	<link rel="stylesheet" href="./css/style.css">
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 	<!--[if lt IE 9]>

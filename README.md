@@ -39,7 +39,7 @@
 │   └── bg.jpg
 ├── index.php
 ├── js
-│   └── jQuery_v3.5.1.js
+│   └── jquery_v3.5.1.js
 ├── login.php
 ├── login_check.php
 ├── menu.php
