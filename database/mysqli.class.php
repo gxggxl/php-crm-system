@@ -160,8 +160,7 @@ class Sql {
 		# 执行检查
 		$res = $this->check($sql);
 		# 错误检查
-		if (!$res) {return false;
-		}
+		if (!$res) return false;
 		# 结果正确 记录结果数量
 		$this->rows    = @mysqli_num_rows($res);
 		$this->columns = @mysqli_field_count($this->link);
