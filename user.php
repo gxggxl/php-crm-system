@@ -60,6 +60,7 @@ echo '<thead><tr>
 		<th scope="row">email</th>
 		<th scope="row">phonenum</th>
 		<th scope="row">createtime</th>
+		<th scope="row">注册IP地址</th>
 		</tr></thead>';
 echo '<tbody>';
 for($i=0; $i <count($rows) ; $i++){
@@ -75,6 +76,7 @@ for($i=0; $i <count($rows) ; $i++){
 	echo '<td>'.$rows[$i]["email"].'</td>';
 	echo '<td>'.$rows[$i]["phonenum"].'</td>';
 	echo '<td>'.$rows[$i]["createtime"].'</td>';
+    echo '<td>'.$rows[$i]["ip"].'</td>';
 	echo '</tr>';
 }
 echo '<tr><td colspan="6" align="right">'.$page->showPage().'</td></tr>';
