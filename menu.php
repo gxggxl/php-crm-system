@@ -1,7 +1,7 @@
 <?php
 /**
  * [menu 菜单]
- * @return [html] [输出HTML]
+ * @return void [html] [输出HTML]
  */
 function menu() {
 	if (!isset($_COOKIE['username'])) {
