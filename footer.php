@@ -16,7 +16,7 @@
 		</div>
 	</div>
 </footer>
-<script type="text/javascript" src="./css/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="./css/bootstrapvalidator-0.5.3/js/bootstrapValidator.min.js"></script>
+<script type="text/javascript" src="css/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="css/bootstrap-validator-0.5.3/js/bootstrapValidator.min.js"></script>
 </body>
 </html>

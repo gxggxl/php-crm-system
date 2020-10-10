@@ -15,9 +15,9 @@ include_once "menu.php";
 	<title>客户管理系统 for Bootstrap</title>
 	<link rel="icon" href="./favicon.ico">
 	<!-- Bootstrap core CSS -->
-	<link rel="stylesheet" type="text/css" href="./css/bootstrap-3.3.7-dist/css/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-3.3.7/css/bootstrap.min.css" />
 	<!-- <link rel="stylesheet" href="./css/bootstrap-3.3.7-dist/css/bootstrap-theme.min.css"> -->
-	<link rel="stylesheet" href="./css/bootstrapvalidator-0.5.3/css/bootstrapValidator.min.css">
+	<link rel="stylesheet" href="css/bootstrap-validator-0.5.3/css/bootstrapValidator.min.css">
 	<script type="text/javascript" src="./js/jQuery_v3.5.1.js"></script>
 	<link rel="stylesheet" href="./css/style.css">
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
