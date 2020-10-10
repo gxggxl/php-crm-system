@@ -39,6 +39,3 @@ while ($row = mysqli_fetch_assoc($result)) {
 }
 echo '<tr><td colspan="6" align="right">'.$page->showPage().'</td></tr>';
 echo '</table>';
-
-?>
-
