@@ -51,18 +51,14 @@ class Sql {
 		$this->charset  = $arr['charset']??'utf8';
 
 		# 实现初始化数据库操作
-		if (!$this->connect()) {
-			# 为了中断执行
-			return;
-		}
-
+		if (!$this->connect()) return;
 		# 设置字符集
 		$this->charset();
 	}
 
 	/**
 	 * [connect 连接认证]
-	 * @return bool [boolean] [description]
+	 * @return bool
 	 */
 	private function connect() {
 		$this->link = @mysqli_connect($this->host, $this->user, $this->password,
@@ -71,8 +67,8 @@ class Sql {
 		if (!$this->link) {
 			# 记录错误信息，返回false
 			echo "数据库连接失败<br>";
-			echo "错误编码:".mysqli_connect_errno($this->link)."<br>";
-			echo "错误信息:".mysqli_connect_error($this->link)."<br>";
+			echo "错误编码:".mysqli_connect_errno()."<br>";
+			echo "错误信息:".mysqli_connect_error()."<br>";
 			// $this->errno = mysqli_connect_errno();
 			// $this->error = mysqli_connect_error();
 			return false;
@@ -83,7 +79,7 @@ class Sql {
 
 	/**
 	 * [charset 设置字符集]
-	 * @return bool [boolean]    [返回结果]
+	 * @return bool [返回结果]
 	 */
 	private function charset() {
 		# 利用实现mysqli设置字符集
@@ -105,7 +101,7 @@ class Sql {
 	/**
 	 * [check SQL语句检查]
 	 * @param  [string] $sql [sql语句]
-	 * @return bool|mysqli_result [boolean]     [返回结果]
+	 * @return bool|mysqli_result [返回结果]
 	 */
 	private function check($sql) {
 		$res = @mysqli_query($this->link, $sql);
@@ -122,7 +118,7 @@ class Sql {
 	/**
 	 * [write 数据库写操作]
 	 * @param  [string] $sql [数据库语句]
-	 * @return bool|int [int]    [返回受影响的行数]
+	 * @return bool|int  [返回受影响的行数]
 	 */
 	public function write($sql) {
 		# 调用SQL检查方法检查和执行
@@ -133,7 +129,7 @@ class Sql {
 
 	/**
 	 * [insert_id 获取自增长ID的方法]
-	 * @return int|string [int] [返回最后一个查询中自动生成的 ID]
+	 * @return int|string [返回最后一个查询中自动生成的 ID]
 	 */
 	public function insert_id() {
 		return mysqli_insert_id($this->link);
@@ -141,8 +137,8 @@ class Sql {
 
 	/**
 	 * [read_one 读取一条记录]
-	 * @param  [srting] $sql [数据库语句]
-	 * @return bool|string[]|null [Array]   [一维数组]
+	 * @param  [string] $sql [数据库语句]
+	 * @return bool|string[]|null  [一维数组]
 	 */
 	public function read_one($sql) {
 		# 执行检查
@@ -159,8 +155,8 @@ class Sql {
 
 	/**
 	 * [read_all 读取多条数据]
-	 * @param  [srting] $sql [数据库语句]
-	 * @return array|bool [Array]   [二维数组]
+	 * @param  [string] $sql [数据库语句]
+	 * @return array|bool  [二维数组]
 	 */
 	public function read_all($sql) {
 		# 执行检查
@@ -178,4 +174,3 @@ class Sql {
 		return $list;
 	}
 }
-
