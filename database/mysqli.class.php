@@ -67,10 +67,8 @@ class Sql {
 		if (!$this->link) {
 			# 记录错误信息，返回false
 			echo "数据库连接失败<br>";
-			echo "错误编码:".mysqli_connect_errno()."<br>";
-			echo "错误信息:".mysqli_connect_error()."<br>";
-			// $this->errno = mysqli_connect_errno();
-			// $this->error = mysqli_connect_error();
+			echo "错误编码:".$this->errno = mysqli_connect_errno()."<br>";
+			echo "错误信息:".$this->error = mysqli_connect_error()."<br>";
 			return false;
 		}
 		# 正确返回
