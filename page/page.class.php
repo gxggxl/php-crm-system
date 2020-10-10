@@ -9,12 +9,12 @@
 
 class Page{
 	//成员属性
-	private $page = 1;//当前页
-	private $maxRows = 0;//总条数
-	private $pageSize = 0;//每页显示多少条
+	private $page;//当前页
+	private $maxRows;//总条数
+	private $pageSize;//每页显示多少条
 	private $maxPage = 0;//总页数
-	private $url = null;//当前页面的URL地址
-	private $uelParam = '';//当前页面的参数
+	private $url;//当前页面的URL地址
+	private $urlParam = '';//当前页面的参数
 	//成员方法
 	function __construct($maxRows,$pageSize = 5){
 		//进行初始化赋值操作
@@ -62,7 +62,11 @@ class Page{
 			$this->pageSize = 1;
 		}
 	}
-	//输出页码
+
+    /**
+     * 输出页码
+     * @return string
+     */
 	public function showPage(){
 		$str='';
 		$str.= '当前第'.$this->page.'页/共'.$this->maxPage.'页，共'.$this->maxRows.'条记录&nbsp;&nbsp;';
@@ -72,10 +76,13 @@ class Page{
 		$str.='<a href="'.$this->url.'?page='.$this->maxPage.$this->urlParam.'">尾页</a>&nbsp;&nbsp;';
 		return $str;
 	}
-	//返回分页的limit条件
+
+    /**
+     * 返回分页的limit条件
+     * @return string
+     */
 	public function limit(){
 		$num = ($this->page - 1) * $this->pageSize;
-		$limit = $num.','.$this->pageSize;
-		return $limit;
+        return $num.','.$this->pageSize;
 	}
 }
