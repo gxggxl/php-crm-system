@@ -9,7 +9,7 @@ body {
 	min-height: 100%;
 	padding-top: 76px;
 	/* background: url(../images/bg.jpg) repeat fixed center; */
-	background: linear-gradient(-45deg, #ee6654, #E46BFE, #ffffff, #91b9c2);
+	background: linear-gradient(-45deg, #a6ee90, #72bfef, #55afef, #90ef81);
 	background-size: 400% 400%;
 	-webkit-animation: moveBg 12s linear infinite;
 	        animation: moveBg 12s linear infinite;
