@@ -52,6 +52,5 @@ if (isset($pwd) == isset($pwd1) && (isset($username)&&$username!=null)) {
 	echo "注册成功，你的ID为 ".$uid."用户名为：".$username;
 	// var_dump($res);//int(1)
 } else {
-	echo "注册失败，请检查表单是否填写正确。";
     exit("<script>alert('注册失败，请检查表单是否填写正确。');window.location='registered.php';</script>");
 }
