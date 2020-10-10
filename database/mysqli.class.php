@@ -88,8 +88,6 @@ class Sql {
 			echo "设置字符集失败<br>";
 			echo "错误编码:".$this->errno = mysqli_errno($this->link)."<br>";
 			echo "错误信息:".$this->error = mysqli_error($this->link)."<br>";
-			// $this->errno = mysqli_errno($this->link);
-			// $this->error = mysqli_error($this->link);
 			return false;
 		}
 		# 正确返回
