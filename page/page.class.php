@@ -41,7 +41,7 @@ class Page{
 		}
 		// echo $this->urlParam;
 	}
-	//[getMaxPage 计算总页数]
+	// getMaxPage 计算总页数
 	private function getMaxPage(){
 		//判断除数
 		if($this->pageSize <1 ) $this->pageSize = 1;
