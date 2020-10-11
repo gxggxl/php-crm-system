@@ -7,7 +7,7 @@ body {
 	margin-right: calc(-1 * (100vw - 100%));
 	overflow-x: hidden;
 	min-height: 100%;
-	padding-top: 76px;
+	padding-top: 68px;
 	/* background: url(../images/bg.jpg) repeat fixed center; */
 	background: linear-gradient(-45deg, #a6ee90, #64b8ee, #55afef, #90ef81);
 	background-size: 400% 400%;
@@ -16,7 +16,6 @@ body {
 }
 
 @-webkit-keyframes moveBg {
-	/* moveBg */
 	0% {
 		background-position: 0 50%;
 	}
@@ -31,7 +30,6 @@ body {
 }
 
 @keyframes moveBg {
-	/* moveBg */
 	0% {
 		background-position: 0 50%;
 	}
@@ -86,5 +84,7 @@ body {
 /*registered End*/
 
 .footer {
-	padding: 5px;
+	padding: 10px;
+	background-color: #f5f5f5;
+	border-radius: 5px;
 }
