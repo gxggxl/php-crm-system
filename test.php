@@ -5,7 +5,7 @@
  * @DateTime : 2020/10/10 16:33
  */
 // 引入数据库操作文件
-include_once dirname(__FILE__)."/database/conn.php";
+include_once dirname(__FILE__) . "/database/conn.php";
 
 $pass = md5(md5("123456") . "gx");
 // string(32) "e0ba03690d506d5a6c03ba1228ea5ca5"
@@ -16,9 +16,9 @@ $pas = md5("123456");
 var_dump($pas);
 
 //获取用户IP地址
-print_r('<pre>用户IP地址：'.$_SERVER['SERVER_ADDR'].'</pre>');
+print_r('<pre>用户IP地址：' . $_SERVER['SERVER_ADDR'] . '</pre>');
 //获取用户UA
-print_r('<pre>用户UA：'.$_SERVER['HTTP_USER_AGENT'].'</pre>');
+print_r('<pre>用户UA：' . $_SERVER['HTTP_USER_AGENT'] . '</pre>');
 //var_dump($_SERVER);
 
 var_dump(__DIR__);//文件路径

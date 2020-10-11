@@ -126,9 +126,9 @@ class Sql
     }
 
     /**
-     * [read_one 读取一条记录]
+     * [readne 读取一条记录]
      * @param  [string] $sql [数据库语句]
-     * @return bool|string[]|null  [一维数组]
+     * @return bool|string[]|null
      */
     public function readOne($sql)
     {
@@ -145,7 +145,7 @@ class Sql
     }
 
     /**
-     * [read_all 读取多条数据]
+     * [readAll 读取多条数据]
      * @param  [string] $sql [数据库语句]
      * @return array|bool  [二维数组]
      */
