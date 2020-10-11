@@ -37,7 +37,8 @@
 │   └── bg.jpg
 ├── index.php
 ├── js
-│   └── jquery_v3.5.1.js
+│   ├── jquery-v3.5.1.js
+│   └── jquery-v3.5.1.min.js
 ├── login.php
 ├── login_check.php
 ├── menu.php
