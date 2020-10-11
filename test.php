@@ -2,7 +2,8 @@
 /**
  * @author   ：gxggxl
  * @BlogURL  : https://gxusb.com
- * @DateTime : 2020/10/10 16:33
+ * @DateTime : 2020/10/11 18:29
+ * @FilePath : test.php
  */
 // 引入数据库操作文件
 include_once dirname(__FILE__) . "/database/conn.php";
