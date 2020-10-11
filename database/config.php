@@ -7,10 +7,10 @@
  * @FilePath     : /php-crm-system/database/config.php
  */
 
-# 数据库配置项
+// 数据库配置项
 $dbinfo = array(
     'host' => 'localhost',
-    'port' => '3306 ',
+    'port' => '3306',
     'user' => 'test',
     'password' => '123456',
     'dbname' => 'test',

@@ -4,8 +4,7 @@
  * 登陆判断
  * 一般发在头文件进行登陆判断
  */
-function cookieCheck()
-{
+function cookieCheck() {
     if (!isset($_COOKIE['username'])) {
         //window写法(标准)
         // echo "<script>alert('当前用户未登录！');window.location='login.php'</script>";

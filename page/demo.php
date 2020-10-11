@@ -34,7 +34,7 @@ while ($row = mysqli_fetch_assoc($result)) {
     echo '<td>' . $row["sex"] . '</td>';
     echo '<td>' . $row["email"] . '</td>';
     echo '<td>' . $row["phonenum"] . '</td>';
-    echo '<td>' .date('Y年m月d日 H:i:s', $row["createtime"]) . '</td>';
+    echo '<td>' . date('Y年m月d日 H:i:s', $row["createtime"]) . '</td>';
     echo '<tr>';
 }
 echo '<tr><td colspan="6" align="right">' . $page->showPage() . '</td></tr>';

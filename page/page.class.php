@@ -16,8 +16,7 @@ class Page
     private $urlParam = '';//当前页面的参数
 
     //成员方法
-    function __construct($maxRows, $pageSize = 5)
-    {
+    function __construct($maxRows, $pageSize = 5) {
         //进行初始化赋值操作
         $this->maxRows = $maxRows;
         $this->pageSize = $pageSize;
@@ -33,29 +32,23 @@ class Page
         $this->urlParam();
     }
 
-    //过滤当前URL地址中的参数信息
-
-    private function getMaxPage()
-    {
+    // getMaxPage 计算总页数
+    private function getMaxPage() {
         //判断除数
         if ($this->pageSize < 1) $this->pageSize = 1;
         $this->maxPage = @ceil($this->maxRows / $this->pageSize);
     }
 
-    // getMaxPage 计算总页数
-
-    private function checkPage()
-    {
+    //验证当前页
+    private function checkPage() {
         if ($this->page > $this->maxPage) $this->page = $this->maxPage;
         if ($this->page < 1) $this->page = 1;
         if ($this->pageSize > $this->maxRows) $this->pageSize = $this->maxRows;
         if ($this->pageSize < 1) $this->pageSize = 1;
     }
 
-    //验证当前页
-
-    private function urlParam()
-    {
+    //过滤当前URL地址中的参数信息
+    private function urlParam() {
         foreach ($_GET as $key => $value) {
             //判断参数值和参数名是否有效
             if ($value != '' && $key != 'page') {
@@ -69,8 +62,7 @@ class Page
      * 输出页码
      * @return string
      */
-    public function showPage()
-    {
+    public function showPage() {
         $str = '';
         $str .= '当前第' . $this->page . '页/共' . $this->maxPage . '页，共' . $this->maxRows . '条记录&nbsp;&nbsp;';
         $str .= '<a href="' . $this->url . '?page=1' . $this->urlParam . '">首页</a>&nbsp;&nbsp;';
@@ -84,8 +76,7 @@ class Page
      * 返回分页的limit条件
      * @return string
      */
-    public function limit()
-    {
+    public function limit() {
         $num = ($this->page - 1) * $this->pageSize;
         return $num . ',' . $this->pageSize;
     }

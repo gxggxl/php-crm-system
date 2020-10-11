@@ -11,18 +11,18 @@
 class Sql
 {
     # 定义属性:保存数据库初始化的信息
-    public $columns = 0;// 主机
-    public $rows;// 端口
-    public $list;// 数据库用户名
-    public $errno;// 数据库密码
-    public $error;// 数据库名
-    private $host;// 字符集
-    private $port;# 数据库连接字符串
-    private $user;// 列数
-    private $password;// 行数
-    private $dbname;// 二维数组
-    private $charset;// 错误编码
-    private $link;// 错误信息
+    public $columns = 0;// 列数
+    public $rows;// 行数
+    public $list;// 二维数组
+    public $errno;// 错误信息
+    public $error;// 错误编码
+    private $host;// 主机
+    private $port;// 端口
+    private $user;// 数据库用户名
+    private $password;// 数据库密码
+    private $dbname;// 数据库名
+    private $charset;// 字符集
+    private $link;// 数据库连接字符串
 
     # 实现数据的初始化：灵活性(允许外部修改)和通用性(给定默认值)
 
@@ -30,8 +30,7 @@ class Sql
      * Sql constructor.
      * @param array $arr
      */
-    public function __construct(array $arr = [])
-    {
+    public function __construct(array $arr = []) {
         # 完成初始化
         $this->host = $arr['host'] ?? 'localhost';
         $this->user = $arr['user'] ?? 'root';
@@ -49,8 +48,7 @@ class Sql
      * [connect 连接认证]
      * @return bool
      */
-    private function connect()
-    {
+    private function connect() {
         $this->link = @mysqli_connect($this->host, $this->user, $this->password,
             $this->dbname, $this->port,);
         # 加工结果
@@ -69,8 +67,7 @@ class Sql
      * [charset 设置字符集]
      * @return bool [返回结果]
      */
-    private function charset()
-    {
+    private function charset() {
         # 利用实现mysqli设置字符集
         $res = @mysqli_set_charset($this->link, $this->charset);
         # mysqli_query($this->link,"set names {$this->charset}");
@@ -90,8 +87,7 @@ class Sql
      * @param  [string] $sql [数据库语句]
      * @return bool|int  [返回受影响的行数]
      */
-    public function write($sql)
-    {
+    public function write($sql) {
         # 调用SQL检查方法检查和执行
         $res = $this->check($sql);
         # 根据结果判定:如果$res为true, 说明执行成功，应该获取受影响的行数，如果为false就返回false
@@ -103,8 +99,7 @@ class Sql
      * @param  [string] $sql [sql语句]
      * @return bool|mysqli_result [返回结果]
      */
-    private function check($sql)
-    {
+    private function check($sql) {
         $res = @mysqli_query($this->link, $sql);
         # 判定错误
         if (!$res) {
@@ -120,18 +115,16 @@ class Sql
      * [insert_id 获取自增长ID的方法]
      * @return int|string [返回最后一个查询中自动生成的 ID]
      */
-    public function insert_id()
-    {
+    public function insert_id() {
         return mysqli_insert_id($this->link);
     }
 
     /**
-     * [readne 读取一条记录]
+     * [reaOne 读取一条记录]
      * @param  [string] $sql [数据库语句]
      * @return bool|string[]|null
      */
-    public function readOne($sql)
-    {
+    public function readOne($sql) {
         # 执行检查
         $res = $this->check($sql);
         # 判定结果
@@ -149,8 +142,7 @@ class Sql
      * @param  [string] $sql [数据库语句]
      * @return array|bool  [二维数组]
      */
-    public function readAll($sql)
-    {
+    public function readAll($sql) {
         # 执行检查
         $res = $this->check($sql);
         # 错误检查
