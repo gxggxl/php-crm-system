@@ -83,7 +83,7 @@ if (empty($_COOKIE['username']) && empty($_COOKIE['password'])) {
                         echo '<td>' . $rows[$i]["ip"] . '</td>';
                         echo '</tr>';
                     }
-                    echo '<tr><td align="right" colspan="7">' . $page->showPage() . '</td></tr>';
+                    echo '<tr><td style="text-align: right" colspan="7">' . $page->showPage() . '</td></tr>';
                     echo '</tbody>';
                     echo '</table>';
 
