@@ -6,7 +6,7 @@ header('content-type:text/html;charset=utf-8');
 $username = trim($_POST["username"]);
 $email = trim($_POST["email"]);
 $sex = $_POST["sex"];
-$phone_num = trim($_POST["phone_num"]);
+$phone_num = $_POST["phone_num"];
 $pwd = trim($_POST["pwd"]);
 $pwd1 = trim($_POST["pwd1"]);
 $create_time = time();
@@ -37,12 +37,12 @@ if (isset($_POST['phone_num'])) {
 	}
 }
 
-if (empty($pwd) == empty($pwd1) && (isset($username) && isset($username) != null)) {
+if (isset($pwd) == isset($pwd1) && (isset($username) && $username != null)) {
 	$sql = "INSERT INTO `crm_users`(`username`, `password`, `email`, `sex`, phone_num, `create_time`,`ip`)"
 		. " VALUES ('{$username}','{$password}','{$email}','{$sex}','{$phone_num}','{$create_time}','{$ip}')";
 	$res = $db->write($sql);
 	$uid = $db->insert_id();
-	echo "注册成功，你的ID为 " . $uid . "用户名为：" . $username;
+	echo "注册成功，你的ID为 " . $uid . "用户名为：" . $username.'手机号码为：'.$phone_num;
 	// var_dump($res);//int(1)
 } else {
 	exit("<script>alert('注册失败，请检查表单是否填写正确。');window.location='registered.php';</script>");
