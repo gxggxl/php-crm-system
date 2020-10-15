@@ -16,33 +16,34 @@ $ip = $_SERVER['SERVER_ADDR'];
 $password = md5($pwd);
 
 if (isset($_POST['username'])) {
-    $sql = "SELECT * FROM crm_users WHERE username='{$_POST['username']}'";
-    $res = (bool)$db->readOne($sql);
-    if ($res) {
-        exit("用户名" . "{$_POST['username']}" . "已注册");
-    }
+	$sql = "SELECT * FROM crm_users WHERE username='{$_POST['username']}'";
+	$res = (bool)$db->readOne($sql);
+	if ($res) {
+		exit("用户名" . "{$_POST['username']}" . "已注册");
+	}
 }
 if (isset($_POST['email'])) {
-    $sql = "SELECT * FROM crm_users WHERE email='{$_POST['email']}'";
-    $res = (bool)$db->readOne($sql);
-    if ($res) {
-        exit("{$_POST['email']}" . "邮箱已注册");
-    }
+	$sql = "SELECT * FROM crm_users WHERE email='{$_POST['email']}'";
+	$res = (bool)$db->readOne($sql);
+	if ($res) {
+		exit("{$_POST['email']}" . "邮箱已注册");
+	}
 }
 if (isset($_POST['phone_num'])) {
-    $sql = "SELECT * FROM crm_users WHERE phone_num='{$_POST['phone_num']}'";
-    $res = (bool)$db->readOne($sql);
-    if ($res) {
-        exit("手机号码:" . "{$_POST['phone_num']}" . "已注册");
-    }
+	$sql = "SELECT * FROM crm_users WHERE phone_num='{$_POST['phone_num']}'";
+	$res = (bool)$db->readOne($sql);
+	if ($res) {
+		exit("手机号码:" . "{$_POST['phone_num']}" . "已注册");
+	}
 }
 
-if (isset($pwd) == isset($pwd1) && (isset($username) && $username != null)) {
-    $sql = "INSERT INTO `crm_users`(`username`, `password`, `email`, `sex`, phone_num, `create_time`,`ip`) VALUES ('{$username}','{$password}','{$email}','{$sex}','{$phone_num}','{$create_time}','{$ip}')";
-    $res = $db->write($sql);
-    $uid = $db->insert_id();
-    echo "注册成功，你的ID为 " . $uid . "用户名为：" . $username;
-    // var_dump($res);//int(1)
+if (empty($pwd) == empty($pwd1) && (isset($username) && isset($username) != null)) {
+	$sql = "INSERT INTO `crm_users`(`username`, `password`, `email`, `sex`, phone_num, `create_time`,`ip`)"
+		. " VALUES ('{$username}','{$password}','{$email}','{$sex}','{$phone_num}','{$create_time}','{$ip}')";
+	$res = $db->write($sql);
+	$uid = $db->insert_id();
+	echo "注册成功，你的ID为 " . $uid . "用户名为：" . $username;
+	// var_dump($res);//int(1)
 } else {
-    exit("<script>alert('注册失败，请检查表单是否填写正确。');window.location='registered.php';</script>");
+	exit("<script>alert('注册失败，请检查表单是否填写正确。');window.location='registered.php';</script>");
 }
