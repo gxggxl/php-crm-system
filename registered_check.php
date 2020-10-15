@@ -6,10 +6,10 @@ header('content-type:text/html;charset=utf-8');
 $username = trim($_POST["username"]);
 $email = trim($_POST["email"]);
 $sex = $_POST["sex"];
-$phonenum = trim($_POST["phonenum"]);
+$phone_num = trim($_POST["phone_num"]);
 $pwd = trim($_POST["pwd"]);
 $pwd1 = trim($_POST["pwd1"]);
-$createtime = time();
+$create_time = time();
 $ip = $_SERVER['SERVER_ADDR'];
 
 // 没加盐的md5加密
@@ -29,16 +29,16 @@ if (isset($_POST['email'])) {
         exit("{$_POST['email']}" . "邮箱已注册");
     }
 }
-if (isset($_POST['phonenum'])) {
-    $sql = "SELECT * FROM crm_users WHERE phonenum='{$_POST['phonenum']}'";
+if (isset($_POST['phone_num'])) {
+    $sql = "SELECT * FROM crm_users WHERE phone_num='{$_POST['phone_num']}'";
     $res = (bool)$db->readOne($sql);
     if ($res) {
-        exit("手机号码:" . "{$_POST['phonenum']}" . "已注册");
+        exit("手机号码:" . "{$_POST['phone_num']}" . "已注册");
     }
 }
 
 if (isset($pwd) == isset($pwd1) && (isset($username) && $username != null)) {
-    $sql = "INSERT INTO `crm_users`(`username`, `password`, `email`, `sex`, `phonenum`, `createtime`,`ip`) VALUES ('{$username}','{$password}','{$email}','{$sex}','{$phonenum}','{$createtime}','{$ip}')";
+    $sql = "INSERT INTO `crm_users`(`username`, `password`, `email`, `sex`, phone_num, `create_time`,`ip`) VALUES ('{$username}','{$password}','{$email}','{$sex}','{$phone_num}','{$create_time}','{$ip}')";
     $res = $db->write($sql);
     $uid = $db->insert_id();
     echo "注册成功，你的ID为 " . $uid . "用户名为：" . $username;

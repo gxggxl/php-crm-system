@@ -25,8 +25,8 @@ if (isset($_POST['email'])) {
 	$sql   = "SELECT * FROM crm_users WHERE email='{$_POST['email']}'";
 	$valid = !(bool) $db->readOne($sql);
 }
-if (isset($_POST['phonenum'])) {
-	$sql   = "SELECT * FROM crm_users WHERE phonenum='{$_POST['phonenum']}'";
+if (isset($_POST['phone_num'])) {
+	$sql   = "SELECT * FROM crm_users WHERE phone_num='{$_POST['phone_num']}'";
 	$valid = !(bool) $db->readOne($sql);
 }
 

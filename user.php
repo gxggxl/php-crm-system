@@ -78,12 +78,12 @@ if (empty($_COOKIE['username']) && empty($_COOKIE['password'])) {
                         echo '<td>' . $rows[$i]["username"] . '</td>';
                         echo '<td>' . $rows[$i]["sex"] . '</td>';
                         echo '<td>' . $rows[$i]["email"] . '</td>';
-                        echo '<td>' . $rows[$i]["phonenum"] . '</td>';
-                        echo '<td>' . date('Y年m月d日 H:i:s', $rows[$i]["createtime"]) . '</td>';
+                        echo '<td>' . $rows[$i]["phone_num"] . '</td>';
+                        echo '<td>' . date('Y年m月d日 H:i:s', $rows[$i]["create_time"]) . '</td>';
                         echo '<td>' . $rows[$i]["ip"] . '</td>';
                         echo '</tr>';
                     }
-                    echo '<tr><td colspan="7" align="right">' . $page->showPage() . '</td></tr>';
+                    echo '<tr><td align="right" colspan="7">' . $page->showPage() . '</td></tr>';
                     echo '</tbody>';
                     echo '</table>';
 
@@ -104,7 +104,7 @@ if (empty($_COOKIE['username']) && empty($_COOKIE['password'])) {
                     echo "用户名:" . $res['username'] . "<br>";
                     echo "性别:" . $res['sex'] . "<br>";
                     echo "邮箱:" . $res['email'] . "<br>";
-                    echo "手机:" . $res['phonenum'] . "<br>";
+                    echo "手机:" . $res['phone_num'] . "<br>";
                     ?>
                 </div>
             </div>
