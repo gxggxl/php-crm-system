@@ -83,18 +83,6 @@ class Sql
     }
 
     /**
-     * [write 数据库写操作]
-     * @param  [string] $sql [数据库语句]
-     * @return bool|int  [返回受影响的行数]
-     */
-    public function write($sql) {
-        # 调用SQL检查方法检查和执行
-        $res = $this->check($sql);
-        # 根据结果判定:如果$res为true, 说明执行成功，应该获取受影响的行数，如果为false就返回false
-        return $res ? mysqli_affected_rows($this->link) : false;
-    }
-
-    /**
      * [check SQL语句检查]
      * @param  [string] $sql [sql语句]
      * @return bool|mysqli_result [返回结果]
@@ -109,6 +97,18 @@ class Sql
         }
         # 正确返回
         return $res;
+    }
+
+    /**
+     * [write 数据库写操作]
+     * @param  [string] $sql [数据库语句]
+     * @return bool|int  [返回受影响的行数]
+     */
+    public function write($sql) {
+        # 调用SQL检查方法检查和执行
+        $res = $this->check($sql);
+        # 根据结果判定:如果$res为true, 说明执行成功，应该获取受影响的行数，如果为false就返回false
+        return $res ? mysqli_affected_rows($this->link) : false;
     }
 
     /**
