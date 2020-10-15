@@ -84,10 +84,10 @@ class Sql
 
 	/**
 	 * [check SQL语句检查]
-	 * @param  string $sql [sql语句]
+	 * @param string $sql [sql语句]
 	 * @return bool|mysqli_result [返回结果]
 	 */
-	private function check($sql) {
+	private function check(string $sql) {
 		$res = @mysqli_query($this->link, $sql);
 		# 判定错误
 		if (!$res) {
@@ -100,9 +100,9 @@ class Sql
 	}
 
 	/**
-	 * write 数据库写操作
-	 * @param $sql 数据库语句
-	 * @return false|int 返回受影响的行数
+	 * [write 数据库写操作]
+	 * @param  [string] $sql [数据库语句]
+	 * @return bool|int  [返回受影响的行数]
 	 */
 	public function write($sql) {
 		# 调用SQL检查方法检查和执行
