@@ -3,8 +3,8 @@
  * @Author       : gxggxl
  * @E-mail       : gxggxl@qq.com
  * @Date         : 2020-09-20 13:09:48
- * @LastEditTime : 2020-09-28 19:40:07
- * @FilePath     : /php-crm-system/database/mysqli.php
+ * @LastEditTime : 2020-10-15 13:00:07
+ * @FilePath     : /php-crm-system/database/mysqli.class.php
  */
 
 # 数据库操作类
