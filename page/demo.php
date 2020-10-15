@@ -24,7 +24,7 @@ $limit = $page->limit();
 $sql = "select * from crm_users limit {$limit}";
 $result = mysqli_query($link, $sql);
 // var_dump($result);
-echo '<table border="1" align="center" width="760">';
+echo '<table border="1" style="width: 760px;margin: 50px auto;">';
 echo '<caption><h1>Users</h1></caption>';
 echo '<tr><th>uid</th><th>username</th><th>sex</th><th>email</th><th>phone_num</th><th>create_time</th></tr>';
 while ($row = mysqli_fetch_assoc($result)) {
@@ -37,5 +37,5 @@ while ($row = mysqli_fetch_assoc($result)) {
     echo '<td>' . date('Y年m月d日 H:i:s', $row["create_time"]) . '</td>';
     echo '<tr>';
 }
-echo '<tr><td colspan="6" align="right">' . $page->showPage() . '</td></tr>';
+echo '<tr><td colspan="6" style="text-align: right">' . $page->showPage() . '</td></tr>';
 echo '</table>';
