@@ -6,41 +6,41 @@
 				<h3 class="text-center">用户注册</h3>
 				<form action="registered_check.php" method="post" class="form-horizontal">
 					<div class="form-group">
-						<label class="col-md-3 control-label">用户名</label>
+						<label for="username" class="col-md-3 control-label">用户名</label>
 						<div class="col-md-6">
-							<input type="text" class="form-control" name="username" />
+							<input type="text" class="form-control" id="username" name="username" />
 						</div>
 					</div>
 					<div class="form-group">
-						<label class="col-md-3 control-label">E-mail</label>
+						<label for="email" class="col-md-3 control-label">E-mail</label>
 						<div class="col-md-6">
-							<input type="text" class="form-control" name="email" />
+							<input type="text" class="form-control" id="email" name="email" />
 						</div>
 					</div>
 					<div class="form-group">
-						<label class="col-md-3 control-label">性别</label>
+						<label for="sex" class="col-md-3 control-label">性别</label>
 						<div class="col-md-6">
-							<input type="radio" class="form-inline" name="sex" value="男"/> &nbsp;男
-							<input type="radio" class="form-inline" name="sex" value="女"/> &nbsp;女
-							<input type="radio" class="form-inline" name="sex" value="保密" checked="checked"/> &nbsp;保密
+							<input type="radio" class="form-inline" id="sex" name="sex" value="男"/> &nbsp;男
+							<input type="radio" class="form-inline" id="sex" name="sex" value="女"/> &nbsp;女
+							<input type="radio" class="form-inline" id="sex" name="sex" value="保密" checked="checked"/> &nbsp;保密
 						</div>
 					</div>
 					<div class="form-group">
-						<label class="col-md-3 control-label">手机</label>
+						<label for="phone" class="col-md-3 control-label">手机</label>
 						<div class="col-md-6">
-							<input type="text" class="form-control" name="phone_num" />
+							<input type="text" class="form-control" id="phone" name="phone_num" />
 						</div>
 					</div>
 					<div class="form-group">
-						<label class="col-md-3 control-label">密码</label>
+						<label for="pwd" class="col-md-3 control-label">密码</label>
 						<div class="col-md-6">
-							<input type="text" class="form-control" name="pwd" />
+							<input type="text" class="form-control" id="pwd" name="pwd" />
 						</div>
 					</div>
 					<div class="form-group">
-						<label class="col-md-3 control-label">确认密码</label>
+						<label for="pwd1" class="col-md-3 control-label">确认密码</label>
 						<div class="col-md-6">
-							<input type="text" class="form-control" name="pwd1" />
+							<input type="text" class="form-control" id="pwd1" name="pwd1" />
 						</div>
 					</div>
 					<div class="form-group">
