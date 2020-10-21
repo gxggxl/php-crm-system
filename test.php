@@ -41,4 +41,3 @@ var_dump(__DIR__);//文件路径
 //var_dump($str . "<br>");
 ////删除左侧空格
 //var_dump(trim($str));
-
