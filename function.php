@@ -25,7 +25,7 @@ function userCheck($db, $tableName, $post, $col)
  */
 function checkNum($num)
 {
-    return ($num % 2) ? true : false;
+    return (bool)($num%2);
 }
 
 /**
