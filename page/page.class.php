@@ -35,16 +35,26 @@ class Page
     // getMaxPage 计算总页数
     private function getMaxPage() {
         //判断除数
-        if ($this->pageSize < 1) $this->pageSize = 1;
+        if ($this->pageSize < 1) {
+	        $this->pageSize = 1;
+        }
         $this->maxPage = @ceil($this->maxRows / $this->pageSize);
     }
 
     //验证当前页
     private function checkPage() {
-        if ($this->page > $this->maxPage) $this->page = $this->maxPage;
-        if ($this->page < 1) $this->page = 1;
-        if ($this->pageSize > $this->maxRows) $this->pageSize = $this->maxRows;
-        if ($this->pageSize < 1) $this->pageSize = 1;
+        if ($this->page > $this->maxPage) {
+	        $this->page = $this->maxPage;
+        }
+        if ($this->page < 1) {
+	        $this->page = 1;
+        }
+        if ($this->pageSize > $this->maxRows) {
+	        $this->pageSize = $this->maxRows;
+        }
+        if ($this->pageSize < 1) {
+	        $this->pageSize = 1;
+        }
     }
 
     //过滤当前URL地址中的参数信息
