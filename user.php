@@ -67,7 +67,7 @@ if (empty($_COOKIE['username']) && empty($_COOKIE['password'])) {
 		                  <th scope="row">注册IP地址</th>
 		                  </tr></thead>';
                     echo '<tbody>';
-                    for ($i = 0; $i < count($rows); $i++) {
+                    for ($i = 0, $iMax = count($rows); $i < $iMax; $i++) {
                         //表格隔行加了点颜色
                         if (checkNum($i) === false) {
                             echo '<tr class="success">';
