@@ -37,7 +37,7 @@ if (isset($_POST['phone_num'])) {
 	}
 }
 
-if (isset($pwd) === isset($pwd1) && (isset($username))) {
+if (isset($pwd) == isset($pwd1) && ($username != null)) {
 	$sql = "INSERT INTO `crm_users`(`username`, `password`, `email`, `sex`, phone_num, `create_time`,`ip`)"
 		. " VALUES ('{$username}','{$password}','{$email}','{$sex}','{$phone_num}','{$create_time}','{$ip}')";
 	$res = $db->write($sql);
