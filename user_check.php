@@ -30,6 +30,7 @@ if (isset($_POST['phone_num'])) {
 	$valid = !(bool) $db->readOne($sql);
 }
 
-echo json_encode(
-	array('valid' => $valid)
-);
+try {
+	echo json_encode(array('valid' => $valid), JSON_THROW_ON_ERROR);
+} catch (JsonException $e) {
+}
