@@ -16,7 +16,7 @@ class Page
     private $urlParam = '';//当前页面的参数
 
     //成员方法
-    function __construct($maxRows, $pageSize = 5) {
+    public function __construct($maxRows, $pageSize = 5) {
         //进行初始化赋值操作
         $this->maxRows = $maxRows;
         $this->pageSize = $pageSize;
