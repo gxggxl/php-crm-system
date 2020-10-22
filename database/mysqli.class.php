@@ -28,6 +28,7 @@ class Sql
 
 	/**
 	 * Sql constructor.
+	 *
 	 * @param array $arr
 	 */
 	public function __construct(array $arr = []) {
@@ -48,6 +49,7 @@ class Sql
 
 	/**
 	 * [connect 连接认证]
+	 *
 	 * @return bool
 	 */
 	private function connect() {
@@ -67,6 +69,7 @@ class Sql
 
 	/**
 	 * [charset 设置字符集]
+	 *
 	 * @return bool [返回结果]
 	 */
 	private function charset() {
@@ -86,6 +89,7 @@ class Sql
 
 	/**
 	 * [check SQL语句检查]
+	 *
 	 * @param string $sql [sql语句]
 	 * @return bool|mysqli_result [返回结果]
 	 */
@@ -103,6 +107,7 @@ class Sql
 
 	/**
 	 * [write 数据库写操作]
+	 *
 	 * @param  [string] $sql [数据库语句]
 	 * @return bool|int  [返回受影响的行数]
 	 */
@@ -115,6 +120,7 @@ class Sql
 
 	/**
 	 * [insert_id 获取自增长ID的方法]
+	 *
 	 * @return int|string [返回最后一个查询中自动生成的 ID]
 	 */
 	public function insert_id() {
@@ -123,6 +129,7 @@ class Sql
 
 	/**
 	 * [reaOne 读取一条记录]
+	 *
 	 * @param  [string] $sql [数据库语句]
 	 * @return bool|string[]|null
 	 */
@@ -141,6 +148,7 @@ class Sql
 
 	/**
 	 * [readAll 读取多条数据]
+	 *
 	 * @param  [string] $sql [数据库语句]
 	 * @return array|bool  [二维数组]
 	 */
