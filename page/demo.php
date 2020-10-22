@@ -16,7 +16,7 @@ $result = mysqli_query($link, "select * from crm_users");
 //获取记录总条数
 $total = mysqli_num_rows($result);
 //设计每页显示条数
-$pageSize = $_GET['size'] ?? 5;
+$pageSize = isset($_GET['size']) ? $_GET['size'] : 5;
 
 // $we ="select * FROM `crm_users` WHERE `username` LIKE '%admin%'";
 
