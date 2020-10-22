@@ -3,7 +3,7 @@ header('content-type:text/html;charset=utf-8');
 include_once "menu.php";
 ?>
 <!DOCTYPE html>
-<html>
+<html lang="zh">
 
 <head>
     <meta charset="utf-8">
