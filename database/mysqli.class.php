@@ -39,7 +39,9 @@ class Sql
 		$this->port = $arr['port'] ?? '3306';
 		$this->charset = $arr['charset'] ?? 'utf8';
 		# 实现初始化数据库操作
-		if (!$this->connect()) return;
+		if (!$this->connect()) {
+			return;
+		}
 		# 设置字符集
 		$this->charset();
 	}
@@ -146,13 +148,17 @@ class Sql
 		# 执行检查
 		$res = $this->check($sql);
 		# 错误检查
-		if (!$res) return false;
+		if (!$res) {
+			return false;
+		}
 		# 结果正确 记录结果数量
 		$this->rows = @mysqli_num_rows($res);
 		$this->columns = @mysqli_field_count($this->link);
 		# 根据需求解析数据 循环取出所有记录:形成二维数组
 		$list = [];
-		while ($row = mysqli_fetch_assoc($res)) $list[] = $row;
+		while ($row = mysqli_fetch_assoc($res)) {
+			$list[] = $row;
+		}
 		# 返回结果
 		return $list;
 	}
