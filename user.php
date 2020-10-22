@@ -1,5 +1,5 @@
 <?php
-include dirname(__FILE__) . "/head.php";
+include __DIR__ . "/head.php";
 include_once $_SERVER['DOCUMENT_ROOT'] . "/database/conn.php";
 include_once "page/page.class.php";
 
@@ -36,7 +36,7 @@ if (empty($_COOKIE['username']) && empty($_COOKIE['password'])) {
                     //获取行数
                     $total = $db->rows;
 
-                    $pageSize = isset($_GET['size']) ? $_GET['size'] : 10;
+                    $pageSize = $_GET['size'] ?? 10;
                     // var_dump($total);
 
                     $page = new Page($total, $pageSize);
@@ -52,7 +52,7 @@ if (empty($_COOKIE['username']) && empty($_COOKIE['password'])) {
                      */
                     function checkNum($num)
                     {
-                        return ($num % 2) ? true : false;
+                        return (bool)($num%2);
                     }
 
                     echo '<table class="table table-hover table-condensed table-responsive text-nowrap">';
