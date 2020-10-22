@@ -61,7 +61,7 @@ class Page
 	private function urlParam() {
 		foreach ($_GET as $key => $value) {
 			//判断参数值和参数名是否有效
-			if ($value !== '' && $key !== 'page') {
+			if ($value != '' && $key != 'page') {
 				$this->urlParam .= '&' . $key . '=' . $value;
 			}
 		}
