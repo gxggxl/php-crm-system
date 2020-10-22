@@ -12,10 +12,12 @@ include_once "database/conn.php";
  */
 function userCheck($db, $tableName, $post, $col)
 {
-    if (isset($post)) {
-        $sql = "SELECT * FROM {$tableName} WHERE {$col}='{$post}'";
-        return (bool)$db->read_one($sql);
+    if (!isset($post)) {
+        return false;
     }
+
+	$sql = "SELECT * FROM {$tableName} WHERE {$col}='{$post}'";
+	return (bool)$db->read_one($sql);
 }
 
 /**
