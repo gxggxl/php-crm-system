@@ -17,17 +17,17 @@ $username = $_POST['username'];
 if (isset($username)) {
 	$sql = "SELECT * FROM crm_users WHERE username='{$_POST['username']}'";
 	//查到数据返回false，bool取反；
-	$valid = !(bool) $db->readOne($sql);
+	$valid = !(bool)$db->readOne($sql);
 	// var_dump($valid);
 	// $valid = false;
 }
 if (isset($_POST['email'])) {
-	$sql   = "SELECT * FROM crm_users WHERE email='{$_POST['email']}'";
-	$valid = !(bool) $db->readOne($sql);
+	$sql = "SELECT * FROM crm_users WHERE email='{$_POST['email']}'";
+	$valid = !(bool)$db->readOne($sql);
 }
 if (isset($_POST['phone_num'])) {
-	$sql   = "SELECT * FROM crm_users WHERE phone_num='{$_POST['phone_num']}'";
-	$valid = !(bool) $db->readOne($sql);
+	$sql = "SELECT * FROM crm_users WHERE phone_num='{$_POST['phone_num']}'";
+	$valid = !(bool)$db->readOne($sql);
 }
 
 try {
