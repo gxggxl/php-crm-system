@@ -19,21 +19,21 @@ if (isset($_POST['username'])) {
 	$sql = "SELECT * FROM crm_users WHERE username='{$_POST['username']}'";
 	$res = (bool)$db->readOne($sql);
 	if ($res) {
-		exit("用户名" . "{$_POST['username']}" . "已注册");
+		exit("用户名" . ($_POST['username']) . "已注册");
 	}
 }
 if (isset($_POST['email'])) {
 	$sql = "SELECT * FROM crm_users WHERE email='{$_POST['email']}'";
 	$res = (bool)$db->readOne($sql);
 	if ($res) {
-		exit("{$_POST['email']}" . "邮箱已注册");
+		exit(($_POST['email']) . "邮箱已注册");
 	}
 }
 if (isset($_POST['phone_num'])) {
 	$sql = "SELECT * FROM crm_users WHERE phone_num='{$_POST['phone_num']}'";
 	$res = (bool)$db->readOne($sql);
 	if ($res) {
-		exit("手机号码:" . "{$_POST['phone_num']}" . "已注册");
+		exit("手机号码:" . ($_POST['phone_num']) . "已注册");
 	}
 }
 
