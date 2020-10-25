@@ -1,8 +1,8 @@
 <?php include 'head.php';?>
-<div class="caption registered">
+<div class="container registered">
 			<div class="row">
 			<div class="col-md-10 col-md-offset-1">
-			<div class="well">
+			<div class="panel">
 				<h3 class="text-center">用户注册</h3>
 				<form action="registered_check.php" method="post" class="form-horizontal">
 					<div class="form-group">
