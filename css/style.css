@@ -4,7 +4,7 @@ html {
 }
 
 body {
-	position: relative;
+	/*position: relative;*/
 	margin-right: calc(-1 * (100vw - 100%));
 	overflow-x: hidden;
 	min-height: 100%;
@@ -86,7 +86,7 @@ body {
 
 /*registered start*/
 .registered {
-	 margin: auto 10px;
+	 /*margin: auto 10px;*/
 }
 
 /*registered End*/
