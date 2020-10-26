@@ -3,12 +3,11 @@
  * @Author       : gxggxl
  * @E-mail       : gxggxl@qq.com
  * @Date         : 2020-09-02 23:29:11
- * @LastEditTime : 2020-09-24 22:12:18
  * @FilePath     : /php-crm-system/login.php
  */
 ?>
-    <div class="container">
-        <div class="row login">
+    <div class="container login">
+        <div class="row">
             <div class="col-md-6" style="border-right:1px solid #ddd;">
                 <form action="login_check.php" method="post">
                     <div class="well col-md-12">

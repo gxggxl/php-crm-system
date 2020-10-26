@@ -82,13 +82,33 @@ body {
 	top: -1.5px;
 }
 
+.login{
+	position: relative;
+	margin: 10px auto 10px auto;
+}
+
+@media (min-width: 992px) {
+	.login{
+		position: relative;
+		margin: 100px auto 80px auto;
+	}
+}
+
 /*login End*/
+
 
 /*registered start*/
 .registered {
-	 /*margin: auto 10px;*/
+	position: relative;
+	margin: 10px auto 10px auto;
 }
 
+@media (min-width: 992px) {
+	.registered{
+		position: relative;
+		margin: 80px auto 15px auto;
+	}
+}
 /*registered End*/
 
 .footer {
