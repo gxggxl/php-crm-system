@@ -86,7 +86,7 @@
 									type: 'POST',
 									url: 'user_check.php',
 									message: '此用户名已存在',
-									delay: 1000
+									delay: 1800
 								}
 							}
 						},
@@ -116,7 +116,7 @@
 									type: 'POST',
 									url: 'user_check.php',
 									message: '此手机号码已注册',
-									delay: 1000
+									delay: 2000
 								}
 							}
 						},
@@ -134,7 +134,7 @@
 									type: 'POST',
 									url: 'user_check.php',
 									message: '此邮箱已经注册',
-									delay: 2000
+									delay: 2500
 								}
 							}
 						},
