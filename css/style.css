@@ -1,12 +1,10 @@
 html {
-	position: relative;
-	min-height: 100%;
+	margin-right: calc(-1 * (100vw - 100%));
+	overflow-x: hidden;
 }
 
 body {
-	/*position: relative;*/
-	margin-right: calc(-1 * (100vw - 100%));
-	overflow-x: hidden;
+	position: relative;
 	min-height: 100%;
 	padding-top: 68px;
 	/* background: url(../images/bg.jpg) repeat fixed center; */
