@@ -94,7 +94,7 @@
 							message: '请选择性别',
 							validators: {
 								notEmpty: {
-									message: '请选择性别'
+									message: '请选择性别',
 								}
 								// numeric: {
 								// 	message: '请填写数字'
