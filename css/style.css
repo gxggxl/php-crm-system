@@ -4,6 +4,7 @@ html {
 }
 
 body {
+	position: relative;
 	margin-right: calc(-1 * (100vw - 100%));
 	overflow-x: hidden;
 	min-height: 100%;
