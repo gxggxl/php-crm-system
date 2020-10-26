@@ -74,6 +74,13 @@ body {
 	background-color: #f9f2f4;
 }
 
+.login .checkbox-password{
+	/*记住密码*/
+	position: relative;
+	margin-left: 4px;
+	top: -1.5px;
+}
+
 /*login End*/
 
 /*registered start*/

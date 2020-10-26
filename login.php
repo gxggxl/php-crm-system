@@ -29,7 +29,8 @@
                             <input type="text" class="form-control" name="vcode" placeholder="验证码" aria-describedby="sizing-addon1">
                         </div> -->
                         <div class="well-sm text-center">
-                            <input type="checkbox" class="row" name="remember" value="1"><span>记住密码</span>
+                            <input type="checkbox"  name="remember" value="1">
+                            <span class="checkbox-password">记住密码</span>
                         </div>
                         <button type="submit" class="btn btn-success btn-block">登录</button>
                     </div>
