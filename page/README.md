@@ -42,6 +42,7 @@ echo '</table>';
 
 - 分页类效果
   ![分页类效果](https://cdn.jsdelivr.net/gh/gxggxl/oss@master/uPic/2020/10/27/SaaG5J.png)
+
 - [演示地址](https://test.gxusb.com/page/demo.php)
 
 ## 拓展
