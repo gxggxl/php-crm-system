@@ -10,8 +10,8 @@ body {
 	/* background: url(../images/bg.jpg) repeat fixed center; */
 	background: linear-gradient(-45deg, #a6ee90, #64b8ee, #55afef, #90ef81);
 	background-size: 400% 400%;
-	-webkit-animation: moveBg 12s linear infinite;
-	animation: moveBg 12s linear infinite;
+	-webkit-animation: moveBg 10s linear infinite;
+	animation: moveBg 10s linear infinite;
 }
 
 @-webkit-keyframes moveBg {
