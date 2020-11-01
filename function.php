@@ -64,12 +64,12 @@ function menu() {
  *
  * 在线文件大小换算 https://www.bejson.com/convert/filesize
  *
- * @param $num  [Bytes]
+ * @param $num [Bytes]
  * @return string
  */
 function getFilesize($num) {
 	$p = 0;
-	$format = 'Bytes';
+	$format = 'bytes';
 	if ($num > 0 && $num < 1024) {
 		$p = 0;
 		return number_format($num) . ' ' . $format;
