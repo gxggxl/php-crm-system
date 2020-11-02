@@ -100,7 +100,7 @@ body {
 	position: relative;
 	margin: 10px auto 10px auto;
 }
-
+/* 桌面样式 */
 @media (min-width: 992px) {
 	.registered{
 		position: relative;
