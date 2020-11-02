@@ -1,7 +1,7 @@
 ## 客户管理系统
 
 <p align="center">
-    <img alt="Version" src="https://img.shields.io/badge/release-0.0.1-blue"/>
+    <img alt="Version" src="https://img.shields.io/badge/release-0.0.1-blue.svg"/>
     <a href="https://github.com/gxggxl">
         <img alt="Author" src="https://img.shields.io/badge/author-gxggxl-blueviolet.svg"/>
     </a>
