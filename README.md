@@ -2,7 +2,7 @@
 
 <p align="center">
     <img alt="Version" src="https://img.shields.io/badge/release-0.0.1-blue"/>
-    <a href="https://github.com/ruicky">
+    <a href="https://github.com/gxggxl">
         <img alt="Author" src="https://img.shields.io/badge/author-gxggxl-blueviolet"/>
     </a>
 </p>
