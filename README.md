@@ -1,5 +1,12 @@
 ## 客户管理系统
 
+<p align="center">
+    <img alt="Version" src="https://img.shields.io/badge/release-0.0.1-blue"/>
+    <a href="https://github.com/ruicky">
+        <img alt="Author" src="https://img.shields.io/badge/author-gxggxl-blueviolet"/>
+    </a>
+</p>
+
 ## 更新纪录
 
 - 2020\-09\-25 添加 [数据库操作类使用方法](database/README.md)
