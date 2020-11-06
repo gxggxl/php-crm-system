@@ -73,8 +73,8 @@ body {
 	background-color: #f9f2f4;
 }
 
+/*记住密码*/
 .login .checkbox-password{
-	/*记住密码*/
 	position: relative;
 	margin-left: 4px;
 	top: -1.5px;
@@ -88,7 +88,7 @@ body {
 @media (min-width: 992px) {
 	.login{
 		position: relative;
-		margin: 100px auto 80px auto;
+		margin: 110px auto 120px auto;
 	}
 }
 
@@ -104,7 +104,7 @@ body {
 @media (min-width: 992px) {
 	.registered{
 		position: relative;
-		margin: 80px auto 15px auto;
+		margin: 60px auto 60px auto;
 	}
 }
 /*registered End*/
