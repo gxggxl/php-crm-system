@@ -1,6 +1,5 @@
 <?php include 'head.php';?>
 <div class="container registered">
-			<div class="row">
 			<div class="col-md-10 col-md-offset-1">
 			<div class="panel">
 				<h3 class="text-center">用户注册</h3>
@@ -49,7 +48,6 @@
 						</div>
 					</div>
 				</form>
-			</div>
 			</div>
 			</div>
 		</div>
