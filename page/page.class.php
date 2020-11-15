@@ -90,6 +90,7 @@ class Page
 //		$str .= '<a href="' . $this->url . '?page=' . ($this->page - 1) . $this->urlParam . '">上一页</a>&nbsp;&nbsp;';
 //		$str .= '<a href="' . $this->url . '?page=' . ($this->page + 1) . $this->urlParam . '">下一页</a>&nbsp;&nbsp;';
 //		$str .= '<a href="' . $this->url . '?page=' . $this->maxPage . $this->urlParam . '">尾页</a>&nbsp;&nbsp;';
+		
 		$str .= '<a href="' . $homeUrl . '" title="' . $homeUrl . '">首页</a>&nbsp;&nbsp;';
 		$str .= '<a href="' . $upUrl . '" title="' . $upUrl . '">上一页</a>&nbsp;&nbsp;';
 		$str .= '<a href="' . $nextUrl . '" title="' . $nextUrl . '">下一页</a>&nbsp;&nbsp;';
