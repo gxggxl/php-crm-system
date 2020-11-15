@@ -74,12 +74,26 @@ class Page
 	 * @return string
 	 */
 	public function showPage() {
+		// 计算分页信息
+		// 首页
+		$homeUrl = $this->url . '?page=1' . $this->urlParam;
+		// 上一页
+		$upUrl = $this->url . '?page=' . ($this->page - 1) . $this->urlParam;
+		// 下一页
+		$nextUrl = $this->url . '?page=' . ($this->page + 1) . $this->urlParam;
+		// 尾页
+		$endUrl = $this->url . '?page=' . $this->maxPage . $this->urlParam;
+
 		$str = '';
 		$str .= '当前第' . $this->page . '页/共' . $this->maxPage . '页，共' . $this->maxRows . '条记录&nbsp;&nbsp;';
-		$str .= '<a href="' . $this->url . '?page=1' . $this->urlParam . '">首页</a>&nbsp;&nbsp;';
-		$str .= '<a href="' . $this->url . '?page=' . ($this->page - 1) . $this->urlParam . '">上一页</a>&nbsp;&nbsp;';
-		$str .= '<a href="' . $this->url . '?page=' . ($this->page + 1) . $this->urlParam . '">下一页</a>&nbsp;&nbsp;';
-		$str .= '<a href="' . $this->url . '?page=' . $this->maxPage . $this->urlParam . '">尾页</a>&nbsp;&nbsp;';
+//		$str .= '<a href="' . $this->url . '?page=1' . $this->urlParam . '">首页</a>&nbsp;&nbsp;';
+//		$str .= '<a href="' . $this->url . '?page=' . ($this->page - 1) . $this->urlParam . '">上一页</a>&nbsp;&nbsp;';
+//		$str .= '<a href="' . $this->url . '?page=' . ($this->page + 1) . $this->urlParam . '">下一页</a>&nbsp;&nbsp;';
+//		$str .= '<a href="' . $this->url . '?page=' . $this->maxPage . $this->urlParam . '">尾页</a>&nbsp;&nbsp;';
+		$str .= '<a href="' . $homeUrl . '" title="' . $homeUrl . '">首页</a>&nbsp;&nbsp;';
+		$str .= '<a href="' . $upUrl . '" title="' . $upUrl . '">上一页</a>&nbsp;&nbsp;';
+		$str .= '<a href="' . $nextUrl . '" title="' . $nextUrl . '">下一页</a>&nbsp;&nbsp;';
+		$str .= '<a href="' . $endUrl . '" title="' . $endUrl . '">尾页</a>&nbsp;&nbsp;';
 		return $str;
 	}
 
