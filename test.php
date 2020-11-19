@@ -1,4 +1,11 @@
 <?php
+/*
+ * @Author       : gxggxl
+ * @E-mail       : gxggxl@qq.com
+ * @Date         : 2020-10-11 18:29:50
+ * @LastEditTime : 2020-11-07 21:28:13
+ * @FilePath     : /php-crm-system/test.php
+ */
 /**
  * @author   ：gxggxl
  * @BlogURL  : https://gxusb.com
@@ -21,7 +28,7 @@ echo '<pre>用户IP地址：' . $_SERVER['SERVER_ADDR'] . '</pre>';
 //获取用户UA
 echo '<pre>用户UA：' . $_SERVER['HTTP_USER_AGENT'] . '</pre>';
 //var_dump($_SERVER);
-echo '脚本文件路径：'.__DIR__.'<br>';
+//echo '脚本文件路径：' . __DIR__ . '<br>';
 
 // Y ：年（四位数）大写
 // m : 月（两位数，首位不足补0） 小写
@@ -32,7 +39,7 @@ echo '脚本文件路径：'.__DIR__.'<br>';
 // s ：带有首位零的秒（00 -59）
 // a：小写的午前和午后（am 或 pm）
 
-echo '服务器时间：'.date('Y-m-d H:i:s',time()).'<br>';
+echo '服务器时间：' . date('Y-m-d H:i:s', time()) . '<br>';
 // int(1600849580)
 //var_dump($time);
 
@@ -40,3 +47,33 @@ echo '服务器时间：'.date('Y-m-d H:i:s',time()).'<br>';
 //var_dump($str . "<br>");
 ////删除左侧空格
 //var_dump(trim($str));
+
+//判断内容页是否百度收录
+
+function baiduRecord() {
+	$url = $_SERVER['REQUEST_SCHEME'] . '://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+	if (checkBaidu($url) == 1) {
+		echo "百度已收录";
+	} else {
+		echo "<a style=\"color:red;\" rel=\"external nofollow\" title=\"点击提交收录！\" target=\"_blank\" href=\"https://zhanzhang.baidu.com/sitesubmit/index?sitename=$url\">百度未收录</a>";
+	}
+}
+
+function checkBaidu($url) {
+	$url = 'http://www.baidu.com/s?wd=' . urlencode($url);
+	$curl = curl_init();
+	curl_setopt($curl, CURLOPT_URL, $url);
+	curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+	$rs = curl_exec($curl);
+	curl_close($curl);
+	//查没有找到 说明百度没有收录
+	if (strpos($rs, '没有找到')) {
+		return -1;
+	} else {
+		return 1;
+	}
+}
+
+//echo baiduRecord();
+
+$sql = 'SELECT * FROM yourtable WHERE 查询条件 ORDER BY id DESC LIMIT 0,10';
