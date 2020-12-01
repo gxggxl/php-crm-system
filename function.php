@@ -71,7 +71,6 @@ function getFilesize($num) {
 	$p = 0;
 	$format = 'bytes';
 	if ($num > 0 && $num < 1024) {
-		$p = 0;
 		return number_format($num) . ' ' . $format;
 	}
 	if ($num >= 1024 && $num < pow(1024, 2)) {
