@@ -54,7 +54,7 @@ class Sql
 	 */
 	private function connect() {
 		$this->link = @mysqli_connect($this->host, $this->user, $this->password,
-			$this->dbname, $this->port,);
+			$this->dbname, $this->port);
 		# 加工结果
 		if (!$this->link) {
 			# 记录错误信息，返回false
