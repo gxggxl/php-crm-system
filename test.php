@@ -77,3 +77,7 @@ function checkBaidu($url) {
 //echo baiduRecord();
 
 $sql = 'SELECT * FROM yourtable WHERE 查询条件 ORDER BY id DESC LIMIT 0,10';
+
+
+?>
+
