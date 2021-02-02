@@ -55,9 +55,9 @@ if (empty($_COOKIE['username']) && empty($_COOKIE['password'])) {
                         return (bool)($num%2);
                     }
 
-                    echo '<table class="table table-hover table-condensed table-responsive text-nowrap">';
-                    echo '<caption><h1 class="text-center">Users</h1></caption>';
-                    echo '<thead><tr>
+                    echo '<table class="table table-hover table-condensed table-responsive text-nowrap">
+                          <caption><h1 class="text-center">Users</h1></caption>
+                          <thead><tr>
 		                  <th scope="row">用户ID</th>
 		                  <th scope="row">用户名</th>
 		                  <th scope="row">性别</th>
@@ -65,8 +65,8 @@ if (empty($_COOKIE['username']) && empty($_COOKIE['password'])) {
 		                  <th scope="row">手机号码</th>
 		                  <th scope="row">注册时间</th>
 		                  <th scope="row">注册IP地址</th>
-		                  </tr></thead>';
-                    echo '<tbody>';
+		                  </tr></thead>
+                          <tbody>';
                     for ($i = 0, $iMax = count($rows); $i < $iMax; $i++) {
                         //表格隔行加了点颜色
                         if (checkNum($i) === false) {
