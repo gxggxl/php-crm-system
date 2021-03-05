@@ -7,11 +7,12 @@
  */
 
 // 数据库配置项
+/** @var db_info_config $dbinfo */
 $dbinfo = array(
     'host' => 'localhost',
     'port' => '3306',
-    'user' => 'test',
-    'password' => '123456',
-    'dbname' => 'test',
+    'user' => 'crm_gxusb_com',
+    'password' => 'sql@crm',
+    'dbname' => 'crm_gxusb_com',
     'charset' => 'utf8',
 );
