@@ -31,7 +31,7 @@ if (empty($_COOKIE['username']) && empty($_COOKIE['password'])) {
             <div class="col-md-8">
                 <div class="panel panel-default table-responsive">
 					<?php
-					$sql2 = "select * from crm_users";
+					$sql2 = "SELECT * FROM crm_users";
 					$db->readAll($sql2);
 					//获取行数
 					$total = $db->rows;
@@ -41,7 +41,7 @@ if (empty($_COOKIE['username']) && empty($_COOKIE['password'])) {
 
 					$page = new Page($total, $pageSize);
 					$limit = $page->limit();
-					$sql1 = "select * from crm_users limit {$limit}";
+					$sql1 = "SELECT * FROM crm_users LIMIT {$limit}";
 					$rows = $db->readAll($sql1);
 					// var_dump($limit,$page ,$sql1);
 

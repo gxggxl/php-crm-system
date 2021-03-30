@@ -12,7 +12,7 @@ header("Content-Type:text/html;charset=utf-8");
 //数据库连接资源
 $link = mysqli_connect("127.0.0.1", "test", "123456", "test");
 //得到结果集
-$result = mysqli_query($link, "select * from crm_users");
+$result = mysqli_query($link, "SELECT * FROM crm_users");
 //获取记录总条数
 $total = mysqli_num_rows($result);
 //设计每页显示条数
@@ -25,7 +25,7 @@ $page = new Page($total, $pageSize);
 //拿到分页查询条件
 $limit = $page->limit();
 //sql语句
-$sql = "select * from crm_users limit {$limit}";
+$sql = "SELECT * FROM crm_users LIMIT {$limit}";
 //查询数据
 $result = mysqli_query($link, $sql);
 
