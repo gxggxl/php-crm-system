@@ -10,7 +10,7 @@
 include "page.class.php";
 header("Content-Type:text/html;charset=utf-8");
 //数据库连接资源
-$link = mysqli_connect("127.0.0.1", "test", "123456", "test");
+$link = mysqli_connect("127.0.0.1", "crm_gxusb_com", "sql@crm", "crm_gxusb_com");
 //得到结果集
 $result = mysqli_query($link, "SELECT * FROM crm_users");
 //获取记录总条数
