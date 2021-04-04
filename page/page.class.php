@@ -5,8 +5,7 @@
  * @DateTime : 2020/10/10 16:33
  */
 
-class Page
-{
+class Page {
 	//成员属性
 	private $page;//当前页
 	private $maxRows;//总条数
@@ -38,7 +37,7 @@ class Page
 		if ($this->pageSize < 1) {
 			$this->pageSize = 1;
 		}
-		$this->maxPage = @ceil($this->maxRows/$this->pageSize);
+		$this->maxPage = @ceil($this->maxRows / $this->pageSize);
 	}
 
 	//验证当前页
@@ -104,7 +103,7 @@ class Page
 	 * @return string
 	 */
 	public function limit() {
-		$num = ($this->page - 1)*$this->pageSize;
+		$num = ($this->page - 1) * $this->pageSize;
 		return $num . ',' . $this->pageSize;
 	}
 }
