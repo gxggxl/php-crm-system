@@ -1,95 +1,95 @@
 html {
-	margin-right: calc(-1 * (100vw - 100%));
-	overflow-x: hidden;
+    margin-right: calc(-1 * (100vw - 100%));
+    overflow-x: hidden;
 }
 
 body {
-	position: relative;
-	min-height: 100%;
-	padding-top: 68px;
-	/*background: url(../images/bg.jpg) repeat fixed center; */
-	background: linear-gradient(-45deg, #a6ee90, #64b8ee, #55afef, #90ef81);
-	background-size: 200% 200%;
-	-webkit-animation: moveBg 8s linear infinite;
-	animation: moveBg 8s linear infinite;
+    position: relative;
+    min-height: 100%;
+    padding-top: 68px;
+    /*background: url(../images/bg.jpg) repeat fixed center; */
+    background: linear-gradient(-45deg, #a6ee90, #64b8ee, #55afef, #90ef81);
+    background-size: 200% 200%;
+    -webkit-animation: moveBg 8s linear infinite;
+    animation: moveBg 8s linear infinite;
 }
 
 @-webkit-keyframes moveBg {
-	0% {
-		background-position: 0 50%;
-	}
+    0% {
+        background-position: 0 50%;
+    }
 
-	50% {
-		background-position: 100% 50%;
-	}
+    50% {
+        background-position: 100% 50%;
+    }
 
-	100% {
-		background-position: 0 50%;
-	}
+    100% {
+        background-position: 0 50%;
+    }
 }
 
 @keyframes moveBg {
-	0% {
-		background-position: 0 50%;
-	}
+    0% {
+        background-position: 0 50%;
+    }
 
-	50% {
-		background-position: 100% 50%;
-	}
+    50% {
+        background-position: 100% 50%;
+    }
 
-	100% {
-		background-position: 0 50%;
-	}
+    100% {
+        background-position: 0 50%;
+    }
 }
 
 .panel {
-	padding-left: 8px;
-	padding-right: 8px;
+    padding-left: 8px;
+    padding-right: 8px;
 }
 
 /*login start*/
 .login .input-group {
-	margin: 10px 0;
-	/* 输入框上下外边距为10px,左右为0px */
+    margin: 10px 0;
+    /* 输入框上下外边距为10px,左右为0px */
 }
 
 .login .login-title {
-	padding: 5px;
-	border-bottom: 1px solid #ddd;
-	/*h3字体下边框*/
+    padding: 5px;
+    border-bottom: 1px solid #ddd;
+    /*h3字体下边框*/
 }
 
 .login .info-a li {
-	list-style-type: square;
-	/*列表项图标为小正方形*/
-	margin: 10px 0;
-	/*上下外边距是10px*/
+    list-style-type: square;
+    /*列表项图标为小正方形*/
+    margin: 10px 0;
+    /*上下外边距是10px*/
 }
 
 .login .info-a em {
-	/*强调的样式*/
-	color: #c7254e;
-	font-style: inherit;
-	background-color: #f9f2f4;
+    /*强调的样式*/
+    color: #c7254e;
+    font-style: inherit;
+    background-color: #f9f2f4;
 }
 
 /*记住密码*/
-.login .checkbox-password{
-	position: relative;
-	margin-left: 4px;
-	top: -1.5px;
+.login .checkbox-password {
+    position: relative;
+    margin-left: 4px;
+    top: -1.5px;
 }
 
-.login{
-	position: relative;
-	margin: 10px auto 10px auto;
+.login {
+    position: relative;
+    margin: 10px auto 10px auto;
 }
 
 @media (min-width: 992px) {
-	.login{
-		position: relative;
-		margin: 110px auto 120px auto;
-	}
+    .login {
+        position: relative;
+        margin: 110px auto 120px auto;
+    }
 }
 
 /*login End*/
@@ -97,20 +97,22 @@ body {
 
 /*registered start*/
 .registered {
-	position: relative;
-	margin: 10px auto 10px auto;
+    position: relative;
+    margin: 10px auto 10px auto;
 }
+
 /* 桌面样式 */
 @media (min-width: 992px) {
-	.registered{
-		position: relative;
-		margin: 60px auto 60px auto;
-	}
+    .registered {
+        position: relative;
+        margin: 60px auto 60px auto;
+    }
 }
+
 /*registered End*/
 
 .footer {
-	padding: 10px;
-	background-color: #f5f5f5;
-	border-radius: 5px;
+    padding: 10px;
+    background-color: #f5f5f5;
+    border-radius: 5px;
 }
