@@ -25,7 +25,7 @@ $page = new Page($total, $pageSize);
 //拿到分页查询条件
 $limit = $page->limit();
 //sql语句
-$sql = "SELECT * FROM crm_users LIMIT {$limit}";
+$sql = "SELECT * FROM crm_users LIMIT $limit";
 //查询数据
 $result = mysqli_query($link, $sql);
 
