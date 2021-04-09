@@ -83,8 +83,7 @@ class Page {
 		// 尾页
 		$endUrl = $this->url . '?page=' . $this->maxPage . $this->urlParam;
 
-		$str = '';
-		$str .= '当前第' . $this->page . '页/共' . $this->maxPage . '页，共' . $this->maxRows . '条记录&nbsp;&nbsp;';
+		$str = '当前第' . $this->page . '页/共' . $this->maxPage . '页，共' . $this->maxRows . '条记录&nbsp;&nbsp;';
 
 		/*$str .= '<a href="' . $this->url . '?page=1' . $this->urlParam . '">首页</a>&nbsp;&nbsp;';
 		$str .= '<a href="' . $this->url . '?page=' . ($this->page - 1) . $this->urlParam . '">上一页</a>&nbsp;&nbsp;';
