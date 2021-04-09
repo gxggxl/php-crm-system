@@ -16,7 +16,7 @@ function userCheck($db, $tableName, $post, $col) {
 		return false;
 	}
 
-	$sql = "SELECT * FROM {$tableName} WHERE {$col}='{$post}'";
+	$sql = "SELECT * FROM $tableName WHERE $col='$post'";
 	return (bool)$db->read_one($sql);
 }
 
